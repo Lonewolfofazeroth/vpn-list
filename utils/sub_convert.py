@@ -416,13 +416,12 @@ class sub_convert():
                         yaml_url.setdefault('skip-cert-vertify', 'false')
                         if vmess_config['net'] != '':
                             yaml_url.setdefault('network', vmess_config['net'])
+                        vmess_config['path'] = urllib.parse.unquote(vmess_config['path']).split('?')[0]
                         if vmess_config['net'] == 'ws':
                             if vmess_config['path'] == '':
                                 yaml_url.setdefault('ws-opts', {'path': '/'})
                             else:
-                                yaml_url.setdefault('ws-opts', {}).setdefault('path', urllib.parse.unquote(vmess_config['path']).split('?')[0])
-                            # yaml_url.setdefault(
-                            #     'ws-headers', {'Host': vmess_config['add']})
+                                yaml_url.setdefault('ws-opts', {}).setdefault('path', vmess_config['path'])
                             if vmess_config['host'] != '':
                                 if '%22' in vmess_config['host']:
                                     yaml_url.setdefault('ws-opts', {}).setdefault('headers', {'Host': vmess_config['host'].split('%22')[-2]})
@@ -434,7 +433,7 @@ class sub_convert():
                                 yaml_url.setdefault('path', '/')
                             else:
                                 yaml_url.setdefault(
-                                    'path', urllib.parse.unquote(vmess_config['path']).split('?')[0])
+                                    'path', vmess_config['path'])
                         elif vmess_config['net'] == 'grpc':
                             if vmess_config['host'] == '':
                                 yaml_url.setdefault('servername', "")
@@ -444,7 +443,7 @@ class sub_convert():
                                 yaml_url.setdefault('grpc-opts', {'grpc-service-name': '/'})
                             else:
                                 yaml_url.setdefault(
-                                    'grpc-opts', {'grpc-service-name': urllib.parse.unquote(vmess_config['path']).split('?')[0]})
+                                    'grpc-opts', {'grpc-service-name': vmess_config['path']})
                 except Exception as err:
                     print(f'yaml_encode 解析 vmess 节点发生错误: {err}')
                     pass
@@ -618,7 +617,7 @@ class sub_convert():
                         break
                 if cipher_break_flag:
                     continue
-            if yaml_url['server'] == '' or yaml_url['password'] == '' or yaml_url['port'] == '':
+            if yaml_url['server'] == '' or yaml_url['password'] == '' or yaml_url['port'] == '' or yaml_url['port'] == '0':
                 continue
             yaml_node_raw = str(yaml_url)
             yaml_node_body = yaml_node_raw.replace('\'', '')
