@@ -618,6 +618,8 @@ class sub_convert():
                         break
                 if cipher_break_flag:
                     continue
+            if yaml_url['server'] == '' or yaml_url['password'] == '' or yaml_url['port'] == '':
+                continue
             yaml_node_raw = str(yaml_url)
             yaml_node_body = yaml_node_raw.replace('\'', '')
             yaml_node_head = '  - '
