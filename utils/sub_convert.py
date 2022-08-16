@@ -617,7 +617,7 @@ class sub_convert():
                         break
                 if cipher_break_flag:
                     continue
-            if yaml_url['server'] == '' or yaml_url['port'] == '' or yaml_url['port'] == '0':
+            if yaml_url['server'] == '' or yaml_url['port'] == 0:
                 continue
             yaml_node_raw = str(yaml_url)
             yaml_node_body = yaml_node_raw.replace('\'', '')
