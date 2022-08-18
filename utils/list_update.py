@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
 import json
-from calendar import month
 from datetime import datetime, timedelta
 
 import requests
@@ -34,7 +33,7 @@ def check_url(url):  # 判断远程远程链接是否已经更新
 
 class update_url():
 
-    def update_main(update_enable_list=[0, 21, 25, 37, 43]):
+    def update_main(update_enable_list=[0, 21, 25, 35, 37, 43]):
         if len(update_enable_list) > 0:
             for id in update_enable_list:
                 status = update_url.update(id)
@@ -127,6 +126,25 @@ class update_url():
                             return [37, url_update]
                         else:
                             return [37, 404]
+            except Exception as err:
+                print(err)
+                return [37, 404]
+        
+        elif id == 35:
+            url_raw = 'https://raw.githubusercontent.com/arielherself/autosub/main/subs.txt'
+            try:
+                resp = requests.get(url_raw, timeout=2)
+                resp_content = resp.content.decode('utf-8')
+                resp_content = resp_content.split('\n')
+                for line in resp_content:
+                    if 'http' in line:
+                        url_update = line + '|'
+                        if check_url(url_update):
+                            return [35, url_update]
+                        else:
+                            return [35, 404]
+                    else:
+                        continue
             except Exception as err:
                 print(err)
                 return [37, 404]
