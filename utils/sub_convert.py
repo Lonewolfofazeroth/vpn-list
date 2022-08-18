@@ -54,8 +54,13 @@ class sub_convert():
         s.mount('https://', HTTPAdapter(max_retries=5))
         try:
             print('Downloading from:' + raw_input)
-            resp = s.get(raw_input, timeout=5)            
-            lines = resp.text.split('\n')
+            resp = s.get(raw_input, timeout=5) 
+            lines_raw = resp.text
+            if 'ss://' in lines_raw or 'ssr://' in lines_raw or 'trojan://' in lines_raw:
+                lines = lines_raw.split('\n')
+            else:
+                lines_raw = sub_convert.base64_decode(lines_raw)
+                lines = lines_raw.split('\n')
             for line in lines:
                 if 'ss://' in line:
                     sub_content += (line + '\n')
