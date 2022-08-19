@@ -33,7 +33,7 @@ def check_url(url):  # 判断远程远程链接是否已经更新
 
 class update_url():
 
-    def update_main(update_enable_list=[0, 21, 25, 35, 37, 43]):
+    def update_main(update_enable_list=[0, 21, 25, 35, 37, 43, 54]):
         if len(update_enable_list) > 0:
             for id in update_enable_list:
                 status = update_url.update(id)
@@ -148,6 +148,25 @@ class update_url():
             except Exception as err:
                 print(err)
                 return [37, 404]
+        
+        elif id == 54:
+            url_raw = 'https://raw.githubusercontent.com/RenaLio/Mux2sub/main/urllist'
+            try:
+                resp = requests.get(url_raw, timeout=2)
+                resp_content = resp.content.decode('utf-8')
+                resp_content = resp_content.split('\n')
+                for line in resp_content:
+                    if 'http' in line:
+                        url_update = line + '|'
+                        if check_url(url_update):
+                            return [54, url_update]
+                        else:
+                            return [54, 404]
+                    else:
+                        continue
+            except Exception as err:
+                print(err)
+                return [54, 404]
 
 
 # if __name__ == '__main__':
