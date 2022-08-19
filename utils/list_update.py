@@ -132,38 +132,43 @@ class update_url():
         
         elif id == 35:
             url_raw = 'https://raw.githubusercontent.com/arielherself/autosub/main/subs.txt'
+            url_update_array = []
+
             try:
                 resp = requests.get(url_raw, timeout=2)
                 resp_content = resp.content.decode('utf-8')
                 resp_content = resp_content.split('\n')
                 for line in resp_content:
                     if 'http' in line:
-                        url_update = line + '|'
-                        if check_url(url_update):
-                            return [35, url_update]
-                        else:
-                            return [35, 404]
+                        url_update_array.append(line)
                     else:
                         continue
+                url_update = '|'.join(url_update_array)
+                if check_url(url_update):
+                    return [35, url_update]
+                else:
+                    return [35, 404]
             except Exception as err:
                 print(err)
                 return [37, 404]
         
         elif id == 54:
             url_raw = 'https://raw.githubusercontent.com/RenaLio/Mux2sub/main/urllist'
+            url_update_array = []
             try:
                 resp = requests.get(url_raw, timeout=2)
                 resp_content = resp.content.decode('utf-8')
                 resp_content = resp_content.split('\n')
                 for line in resp_content:
                     if 'http' in line:
-                        url_update = line + '|'
-                        if check_url(url_update):
-                            return [54, url_update]
-                        else:
-                            return [54, 404]
+                        url_update_array.append(line)
                     else:
                         continue
+                url_update = '|'.join(url_update_array)
+                if check_url(url_update):
+                    return [54, url_update]
+                else:
+                    return [54, 404]
             except Exception as err:
                 print(err)
                 return [54, 404]
