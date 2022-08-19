@@ -444,16 +444,16 @@ class sub_convert():
                             else:
                                 yaml_url.setdefault('servername', vmess_config['host'])
                             if vmess_config['path'] == '':
-                                yaml_url.setdefault('grpc-opts', {'grpc-service-name': '/'})
+                                yaml_url.setdefault('grpc-opts', {'grpc-service-name': '[/]'})
                             else:
-                                yaml_url.setdefault('grpc-opts', {'grpc-service-name': vmess_config['path']})
+                                yaml_url.setdefault('grpc-opts', {'grpc-service-name': '[' + vmess_config['path'] + ']'})
                         elif vmess_config['net'] == 'http':
                             yaml_url.setdefault('http-opts', {}).setdefault('method', "GET")
                             if vmess_config['path'] == '':
                                 yaml_url.setdefault('http-opts', {}).setdefault('path', '/')
                             else:
                                 yaml_url.setdefault('http-opts', {}).setdefault('path', vmess_config['path'])
-                            yaml_url.setdefault('http-opts', {}).setdefault('headers', {'Connection': 'keep-alive'})
+                            yaml_url.setdefault('http-opts', {}).setdefault('headers', {'Connection': '[keep-alive]'})
                 except Exception as err:
                     print(f'yaml_encode 解析 vmess 节点发生错误: {err}')
                     pass
