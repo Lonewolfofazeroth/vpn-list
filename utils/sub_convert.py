@@ -433,11 +433,11 @@ class sub_convert():
                                 else:
                                     yaml_url.setdefault('ws-opts', {}).setdefault('headers', {'host': vmess_config['host']})
                         elif vmess_config['net'] == 'h2':
-                            yaml_url.setdefault('h2-opts', {'host': vmess_config['host']})
+                            yaml_url.setdefault('h2-opts', {}).setdefault('host', vmess_config['host'])
                             if vmess_config['path'] == '':
-                                yaml_url.setdefault('h2-opts', {'path': '/'})
+                                yaml_url.setdefault('h2-opts', {}).setdefault('path', '/')
                             else:
-                                yaml_url.setdefault('h2-opts', {'path': vmess_config['path']})
+                                yaml_url.setdefault('h2-opts', {}).setdefault('path', vmess_config['path'])
                         elif vmess_config['net'] == 'grpc':
                             if vmess_config['host'] == '':
                                 yaml_url.setdefault('servername', "")
@@ -446,15 +446,13 @@ class sub_convert():
                             if vmess_config['path'] == '':
                                 yaml_url.setdefault('grpc-opts', {'grpc-service-name': '/'})
                             else:
-                                yaml_url.setdefault(
-                                    'grpc-opts', {'grpc-service-name': vmess_config['path']})
+                                yaml_url.setdefault('grpc-opts', {'grpc-service-name': vmess_config['path']})
                         elif vmess_config['net'] == 'http':
-                            yaml_url.setdefault('http-opts',{'method': "GET"})
+                            yaml_url.setdefault('http-opts', {}).setdefault('method', "GET")
                             if vmess_config['path'] == '':
-                                yaml_url.setdefault('http-opts', {'path': '/'})
+                                yaml_url.setdefault('http-opts', {}).setdefault('path', '/')
                             else:
-                                yaml_url.setdefault(
-                                    'http-opts', {'path': vmess_config['path']})
+                                yaml_url.setdefault('http-opts', {}).setdefault('path', vmess_config['path'])
                             yaml_url.setdefault('http-opts', {}).setdefault('headers', {'Connection': 'keep-alive'})
                 except Exception as err:
                     print(f'yaml_encode 解析 vmess 节点发生错误: {err}')
