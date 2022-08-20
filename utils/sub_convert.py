@@ -424,7 +424,7 @@ class sub_convert():
                             if vmess_config['path'] == '':
                                 yaml_url.setdefault('ws-opts', {'path': '/'})
                             else:
-                                yaml_url.setdefault('ws-opts', {}).setdefault('path', '"' + vmess_config['path'] + '"')
+                                yaml_url.setdefault('ws-opts', {}).setdefault('path', vmess_config['path'])
                             if vmess_config['host'] != '':
                                 if '%22' in vmess_config['host']:
                                     yaml_url.setdefault('ws-opts', {}).setdefault('headers', {'host': vmess_config['host'].split('%22')[-2]})
