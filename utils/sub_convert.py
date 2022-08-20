@@ -410,7 +410,7 @@ class sub_convert():
                         yaml_url.setdefault('server', vmess_config['add'])
                         yaml_url.setdefault('port', int(vmess_config['port']))
                         yaml_url.setdefault('type', 'vmess')
-                        if vmess_config['uuid'] != '0':
+                        if vmess_config['id'] != '0':
                             yaml_url.setdefault('uuid', vmess_config['id'])
                         else:
                             continue
