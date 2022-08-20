@@ -644,20 +644,22 @@ class sub_convert():
                                 yaml_url.setdefault('sni', config[4:])
                             elif 'type=' in config:
                                 yaml_url.setdefault('network', config[5:])
-                            if yaml_url['network'] == 'ws':
-                                if 'path=' in config:
-                                    yaml_url.setdefault('ws-opts', {}).setdefault('path', config[5:].split('?')[0])
-                                elif 'host=' in config:
-                                    yaml_url.setdefault('ws-opts', {}).setdefault('headers', {}).setdefault('host', config[5:])
-                            elif yaml_url['network'] == 'grpc':
-                                if 'servicename=' in config:
-                                    yaml_url.setdefault('grpc-opts', {}).setdefault('grpc-service-name', config[12:])
+                            if 'network' in yaml_url.keys():
+                                if yaml_url['network'] == 'ws':
+                                    if 'path=' in config:
+                                        yaml_url.setdefault('ws-opts', {}).setdefault('path', config[5:].split('?')[0])
+                                    elif 'host=' in config:
+                                        yaml_url.setdefault('ws-opts', {}).setdefault('headers', {}).setdefault('host', config[5:])
+                                elif yaml_url['network'] == 'grpc':
+                                    if 'servicename=' in config:
+                                        yaml_url.setdefault('grpc-opts', {}).setdefault('grpc-service-name', config[12:])
                             else:
                                 if 'alpn=' in config:
                                     yaml_url.setdefault('alpn', '[' + config[5:] + ']')
-                    if yaml_url['network'] == 'ws':
-                        if yaml_url['ws-opts']['path'] == '':
-                            yaml_url.setdefault('ws-opts', {}).setdefault('path', '/')
+                    if 'network' in yaml_url.keys():
+                        if yaml_url['network'] == 'ws':
+                            if yaml_url['ws-opts']['path'] == '':
+                                yaml_url.setdefault('ws-opts', {}).setdefault('path', '/')
                     yaml_url.setdefault('tls', 'true')
                     yaml_url.setdefault('skip-cert-verify', 'true')
                 except Exception as err:
