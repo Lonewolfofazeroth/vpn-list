@@ -427,7 +427,7 @@ class sub_convert():
                                 yaml_url.setdefault('ws-opts', {}).setdefault('path', '"' + vmess_config['path'] + '"')
                             if vmess_config['host'] != '':
                                 if '%22' in vmess_config['host']:
-                                    yaml_url.setdefault('ws-opts', {}).setdefault('headers', {'host': vmess_config['host'].replace('%22', '')})
+                                    yaml_url.setdefault('ws-opts', {}).setdefault('headers', {'host': vmess_config['host'].split('%22')[-2]})
                                 else:
                                     yaml_url.setdefault('ws-opts', {}).setdefault('headers', {'host': vmess_config['host']})
                             yaml_url.setdefault('max-early-data', '2048')
