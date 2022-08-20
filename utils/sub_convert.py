@@ -434,7 +434,7 @@ class sub_convert():
                             yaml_url.setdefault('early-data-header-name', 'Sec-WebSocket-Protocol')
                         elif vmess_config['net'] == 'h2':
                             yaml_url.setdefault('tls', 'true')
-                            yaml_url.setdefault('h2-opts', {}).setdefault('host', '"' + vmess_config['host'] + '"')
+                            yaml_url.setdefault('h2-opts', {}).setdefault('host', '[' + vmess_config['host'] + ']')
                             if vmess_config['path'] == '':
                                 yaml_url.setdefault('h2-opts', {}).setdefault('path', '/')
                             else:
@@ -653,7 +653,7 @@ class sub_convert():
                                     yaml_url.setdefault('grpc-opts', {}).setdefault('grpc-service-name', config[12:])
                             else:
                                 if 'alpn=' in config:
-                                    yaml_url.setdefault('alpn', '"' + config[5:] + '"')
+                                    yaml_url.setdefault('alpn', '[' + config[5:] + ']')
                     if yaml_url['network'] == 'ws':
                         if yaml_url['ws-opts']['path'] == '':
                             yaml_url.setdefault('ws-opts', {}).setdefault('path', '/')
