@@ -33,7 +33,7 @@ def check_url(url):  # 判断远程远程链接是否已经更新
 
 class update_url():
 
-    def update_main(update_enable_list=[0, 21, 25, 35, 37, 43, 54]):
+    def update_main(update_enable_list=[0, 25, 35, 37, 43, 54]):
         if len(update_enable_list) > 0:
             for id in update_enable_list:
                 status = update_url.update(id)
@@ -61,29 +61,29 @@ class update_url():
             # remarks: pojiezhiyuanjun/freev2, 将原链接更新至 https://raw.fastgit.org/pojiezhiyuanjun/freev2/master/%MM%(DD - 1).txt
             # today = datetime.today().strftime('%m%d')
             # 得到当前日期前一天 https://blog.csdn.net/wanghuafengc/article/details/42458721
-            today = datetime.today().strftime('%m%d')
+            yesterday = (datetime.today() + timedelta(-1)).strftime('%m%d')
             front_url = 'https://raw.githubusercontent.com/pojiezhiyuanjun/freev2/master/'
             end_url = 'clash.yml'
             # 修改字符串中的某一位字符 https://www.zhihu.com/question/31800070/answer/53345749
-            url_update = front_url + today + end_url
+            url_update = front_url + yesterday + end_url
             if check_url(url_update):
                 return [0, url_update]
             else:
                 return [0, 404]
-        elif id == 21:
-            # remarks: v2raydy/v2ray, 将原链接更新至 https://https://raw.githubusercontent.com/v2raydy/v2ray/main/%MM-%(DD - 1)%str%1.txt
-            # 得到当前日期前一天 https://blog.csdn.net/wanghuafengc/article/details/42458721
-            today = datetime.today().strftime('%m-%d')
+        # elif id == 21:
+        #     # remarks: v2raydy/v2ray, 将原链接更新至 https://https://raw.githubusercontent.com/v2raydy/v2ray/main/%MM-%(DD - 1)%str%1.txt
+        #     # 得到当前日期前一天 https://blog.csdn.net/wanghuafengc/article/details/42458721
+        #     today = datetime.today().strftime('%m-%d')
 
-            front_url = 'https://raw.githubusercontent.com/v2raydy/v2ray/main/'
-            end_url = '1.txt'
-            for ch in 'abcdefghijklmnopqrstuvwxy':
-                # 修改字符串中的某一位字符 https://www.zhihu.com/question/31800070/answer/53345749
-                url_update = front_url + today + ch + end_url
-                if check_url(url_update):
-                    return [21, url_update]
-                else:
-                    return [21, 404]
+        #     front_url = 'https://raw.githubusercontent.com/v2raydy/v2ray/main/'
+        #     end_url = '1.txt'
+        #     for ch in 'abcdefghijklmnopqrstuvwxy':
+        #         # 修改字符串中的某一位字符 https://www.zhihu.com/question/31800070/answer/53345749
+        #         url_update = front_url + today + ch + end_url
+        #         if check_url(url_update):
+        #             return [21, url_update]
+        #         else:
+        #             return [21, 404]
         elif id == 43:
             # remarks: v2raydy/v2ray, 将原链接更新至 https://https://raw.githubusercontent.com/v2raydy/v2ray/main/%MM-%(DD - 1)%str%1.txt
             # 得到当前日期前一天 https://blog.csdn.net/wanghuafengc/article/details/42458721
@@ -98,8 +98,6 @@ class update_url():
                 return [43, 404]
         
         elif id == 25:
-            # remarks: v2raydy/v2ray, 将原链接更新至 https://https://raw.githubusercontent.com/v2raydy/v2ray/main/%MM-%(DD - 1)%str%1.txt
-            # 得到当前日期前一天 https://blog.csdn.net/wanghuafengc/article/details/42458721
             yesterday = (datetime.today() + timedelta(-1)).strftime('%Y%m%d')
             month = datetime.today().strftime('%m') +'/'
             year = datetime.today().strftime('%Y') +'/'
