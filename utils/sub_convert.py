@@ -501,36 +501,37 @@ class sub_convert():
                                 yaml_url.setdefault('plugin', 'obfs')
                             elif 'v2ray-plugin' in parameters:
                                 yaml_url.setdefault('plugin', 'v2ray-plugin')
-                        for parameter in parameters:                                
-                            if 'obfs' in yaml_url['plugin']:
-                                if 'obfs=' in parameter:
-                                    yaml_url.setdefault('plugin-opts', {}).setdefault('mode', parameter.split('=')[-1])
-                                elif 'obfs-host=' in parameter:
-                                    yaml_url.setdefault('plugin-opts', {}).setdefault('host', '"' + parameter.split('=')[-1] + '"')
-                            elif 'v2ray-plugin' in yaml_url['plugin']:
-                                if 'mode=' in parameter:
-                                    yaml_url.setdefault('plugin-opts', {}).setdefault('mode', parameter.split('=')[-1])
-                                elif 'host=' in parameter:
-                                    yaml_url.setdefault('plugin-opts', {}).setdefault('host', parameter.split('=')[-1])
-                                elif 'path=' in parameter:
-                                    if parameter.split('=')[-1] == '':
-                                        yaml_url.setdefault('plugin-opts', {}).setdefault('path', "")
-                                    else:
-                                        yaml_url.setdefault('plugin-opts', {}).setdefault('path', parameter.split('=')[-1])
-                                elif 'obfs-header=' in parameter:
-                                    yaml_url.setdefault('plugin-opts', {}).setdefault('header', {'custom': parameter.split('=')[-1]})
-                        if 'plugin' in yaml_url.keys():
-                            if 'v2ray-plugin' in yaml_url['plugin']:
-                                yaml_url.setdefault('plugin-opts', {}).setdefault('tls', 'true')
-                                yaml_url.setdefault('plugin-opts', {}).setdefault('skip-cert-verify', 'true')
-                                if 'path' not in yaml_url['plugin-opts'].keys():
-                                    yaml_url.setdefault('plugin-opts', {}).setdefault('path', "")
-                                yaml_url.setdefault('plugin-opts', {}).setdefault('mux', 'true')
-                            elif 'obfs' in yaml_url['plugin']:
-                                if 'mode' not in yaml_url['plugin-opts'].keys():
-                                    yaml_url.setdefault('plugin-opts', {}).setdefault('mode', 'tls')
-                        else:
-                            yaml_url.setdefault('udp', 'true')
+                        for parameter in parameters:
+                            if 'plugin' in yaml_url.keys():
+                                if 'obfs' in yaml_url['plugin']:
+                                    if 'obfs=' in parameter:
+                                        yaml_url.setdefault('plugin-opts', {}).setdefault('mode', parameter.split('=')[-1])
+                                    elif 'obfs-host=' in parameter:
+                                        yaml_url.setdefault('plugin-opts', {}).setdefault('host', '"' + parameter.split('=')[-1] + '"')
+                                elif 'v2ray-plugin' in yaml_url['plugin']:
+                                    if 'mode=' in parameter:
+                                        yaml_url.setdefault('plugin-opts', {}).setdefault('mode', parameter.split('=')[-1])
+                                    elif 'host=' in parameter:
+                                        yaml_url.setdefault('plugin-opts', {}).setdefault('host', parameter.split('=')[-1])
+                                    elif 'path=' in parameter:
+                                        if parameter.split('=')[-1] == '':
+                                            yaml_url.setdefault('plugin-opts', {}).setdefault('path', "")
+                                        else:
+                                            yaml_url.setdefault('plugin-opts', {}).setdefault('path', parameter.split('=')[-1])
+                                    elif 'obfs-header=' in parameter:
+                                        yaml_url.setdefault('plugin-opts', {}).setdefault('header', {'custom': parameter.split('=')[-1]})
+                    if 'plugin' in yaml_url.keys():
+                        if 'v2ray-plugin' in yaml_url['plugin']:
+                            yaml_url.setdefault('plugin-opts', {}).setdefault('tls', 'true')
+                            yaml_url.setdefault('plugin-opts', {}).setdefault('skip-cert-verify', 'true')
+                            if 'path' not in yaml_url['plugin-opts'].keys():
+                                yaml_url.setdefault('plugin-opts', {}).setdefault('path', "")
+                            yaml_url.setdefault('plugin-opts', {}).setdefault('mux', 'true')
+                        elif 'obfs' in yaml_url['plugin']:
+                            if 'mode' not in yaml_url['plugin-opts'].keys():
+                                yaml_url.setdefault('plugin-opts', {}).setdefault('mode', 'tls')
+                    else:
+                        yaml_url.setdefault('udp', 'true')
                 except Exception as err:
                     print(f'yaml_encode 解析 ss 节点发生错误: {err}')
                     pass
