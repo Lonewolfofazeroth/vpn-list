@@ -155,8 +155,11 @@ class sub_convert():
             elif 'vmess://' in node:
                 try:
                     node_del_head = node.replace('vmess://', '')
-                    node_json = json.loads(
-                        sub_convert.base64_decode(node_del_head))
+                    node_json_raw = sub_convert.base64_decode(node_del_head)
+                    if '"' in node_json_raw:
+                        node_json = json.loads(node_json_raw)
+                    else:
+                        node_json = eval(node_json_raw)
                     name_renamed = '[vmess]' + sub_convert.find_country(
                         node_json['add']) + node_json['add'] + ':' + str(node_json['port']) + '(' + node_json['id'] + ')'
                     node_json['ps'] = name_renamed
