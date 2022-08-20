@@ -436,8 +436,6 @@ class sub_convert():
                                     yaml_url.setdefault('ws-opts', {}).setdefault('headers', {'host': vmess_config['host'].split('%22')[-2]})
                                 else:
                                     yaml_url.setdefault('ws-opts', {}).setdefault('headers', {'host': vmess_config['host']})
-                            yaml_url.setdefault('max-early-data', '2048')
-                            yaml_url.setdefault('early-data-header-name', 'Sec-WebSocket-Protocol')
                         elif vmess_config['net'] == 'h2':
                             yaml_url.setdefault('tls', 'true')
                             yaml_url.setdefault('h2-opts', {}).setdefault('host', '[' + vmess_config['host'] + ']')
