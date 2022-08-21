@@ -644,8 +644,15 @@ class sub_convert():
                                     yaml_url.setdefault('alpn', '[' + config[5:] + ']')
                         if 'network' in yaml_url.keys():
                             if yaml_url['network'] == 'ws':
+                                if 'ws_opts' not in yaml_url.keys():
+                                    yaml_url.setdefault('ws-opts', {})
                                 if yaml_url['ws-opts']['path'] == '':
                                     yaml_url.setdefault('ws-opts', {}).setdefault('path', '/')
+                            if yaml_url['network'] == 'grpc':
+                                if 'grpc-opts' not in yaml_url.keys():
+                                    yaml_url.setdefault('grpc-opts', {})
+                                if 'grpc-service-name' not in yaml_url['grpc-opts'].keys():
+                                    yaml_url.setdefault('grpc-opts', {}).setdefault('grpc-service-name', '""')
                 except Exception as err:
                     print(f'yaml_encode 解析 trojan 节点发生错误: {err}')
                     pass
