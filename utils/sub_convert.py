@@ -521,9 +521,18 @@ class sub_convert():
                                         else:
                                             yaml_url.setdefault('plugin-opts', {}).setdefault('path', parameter.split('=')[-1])
                         if 'plugin' in yaml_url.keys():
+                            if 'obfs' in yaml_url['plugin']:
+                                if 'mode' not in yaml_url['plugin-opts'].keys():
+                                    yaml_url.setdefault('plugin-opts', {}).setdefault('mode', 'tls')
+                                if 'host' not in yaml_url['plugin-opts'].keys():
+                                    yaml_url.setdefault('plugin-opts', {}).setdefault('host', '""')
                             if 'v2ray-plugin' in yaml_url['plugin']:
+                                if 'mode' not in yaml_url['plugin-opts'].keys():
+                                    yaml_url.setdefault('plugin-opts', {}).setdefault('mode', 'websocket')
                                 if 'tls' not in yaml_url['plugin-opts'].keys():
                                     yaml_url.setdefault('plugin-opts', {}).setdefault('tls', 'false')
+                                if 'host' not in yaml_url['plugin-opts'].keys():
+                                    yaml_url.setdefault('plugin-opts', {}).setdefault('host', '""')
                                 if 'path' not in yaml_url['plugin-opts'].keys():
                                     yaml_url.setdefault('plugin-opts', {}).setdefault('path', '"/"')
                                 if 'mux' not in yaml_url['plugin-opts'].keys():
