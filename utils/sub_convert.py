@@ -517,7 +517,7 @@ class sub_convert():
                                         yaml_url.setdefault('plugin-opts', {}).setdefault('host', parameter.split('=')[-1])
                                     elif 'path=' in parameter:
                                         if parameter.split('=')[-1] == '':
-                                            yaml_url.setdefault('plugin-opts', {}).setdefault('path', '""')
+                                            yaml_url.setdefault('plugin-opts', {}).setdefault('path', '"/"')
                                         else:
                                             yaml_url.setdefault('plugin-opts', {}).setdefault('path', parameter.split('=')[-1])
                         if 'plugin' in yaml_url.keys():
@@ -526,19 +526,9 @@ class sub_convert():
                             if 'obfs' in yaml_url['plugin']:
                                 if 'mode' not in yaml_url['plugin-opts'].keys():
                                     yaml_url.setdefault('plugin-opts', {}).setdefault('mode', 'tls')
-                                if 'host' not in yaml_url['plugin-opts'].keys():
-                                    yaml_url.setdefault('plugin-opts', {}).setdefault('host', '""')
                             if 'v2ray-plugin' in yaml_url['plugin']:
                                 if 'mode' not in yaml_url['plugin-opts'].keys():
                                     yaml_url.setdefault('plugin-opts', {}).setdefault('mode', 'websocket')
-                                if 'tls' not in yaml_url['plugin-opts'].keys():
-                                    yaml_url.setdefault('plugin-opts', {}).setdefault('tls', 'false')
-                                if 'host' not in yaml_url['plugin-opts'].keys():
-                                    yaml_url.setdefault('plugin-opts', {}).setdefault('host', '""')
-                                if 'path' not in yaml_url['plugin-opts'].keys():
-                                    yaml_url.setdefault('plugin-opts', {}).setdefault('path', '"/"')
-                                if 'mux' not in yaml_url['plugin-opts'].keys():
-                                    yaml_url.setdefault('plugin-opts', {}).setdefault('mux', "false")
                 except Exception as err:
                     print(f'yaml_encode 解析 ss 节点发生错误: {err}')
                     pass
