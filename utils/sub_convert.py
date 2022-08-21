@@ -521,6 +521,8 @@ class sub_convert():
                                         else:
                                             yaml_url.setdefault('plugin-opts', {}).setdefault('path', parameter.split('=')[-1])
                         if 'plugin' in yaml_url.keys():
+                            if 'plugin-opts' not in yaml_url.keys():
+                                yaml_url.setdefault('plugin-opts', {})
                             if 'obfs' in yaml_url['plugin']:
                                 if 'mode' not in yaml_url['plugin-opts'].keys():
                                     yaml_url.setdefault('plugin-opts', {}).setdefault('mode', 'tls')
