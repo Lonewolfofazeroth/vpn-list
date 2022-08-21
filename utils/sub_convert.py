@@ -424,9 +424,11 @@ class sub_convert():
                             yaml_url.setdefault('network', vmess_config['net'])
                         vmess_config['path'] = urllib.parse.unquote(vmess_config['path']).split('?')[0]
                         if vmess_config['net'] == 'ws':
-                            yaml_url.setdefault('tls', 'true')
-                            yaml_url.setdefault('udp', 'true')
-                            yaml_url.setdefault('skip-cert-verify', 'true')
+                            if vmess_config['tls'] == 'tls':
+                                yaml_url.setdefault('tls', 'true')
+                            else:
+                                yaml_url.setdefault('tls', 'false')
+                            # yaml_url.setdefault('skip-cert-verify', 'true')
                             if vmess_config['path'] == '':
                                 yaml_url.setdefault('ws-opts', {'path': '/'})
                             else:
@@ -445,9 +447,9 @@ class sub_convert():
                                 yaml_url.setdefault('h2-opts', {}).setdefault('path', vmess_config['path'])
                         elif vmess_config['net'] == 'grpc':
                             yaml_url.setdefault('tls', 'true')
-                            yaml_url.setdefault('skip-cert-verify', 'true')
+                            # yaml_url.setdefault('skip-cert-verify', 'true')
                             if vmess_config['host'] == '':
-                                yaml_url.setdefault('servername', "")
+                                yaml_url.setdefault('servername', '""')
                             else:
                                 yaml_url.setdefault('servername', vmess_config['host'])
                             if vmess_config['path'] == '':
@@ -455,55 +457,47 @@ class sub_convert():
                             else:
                                 yaml_url.setdefault('grpc-opts', {'grpc-service-name': vmess_config['path']})
                         elif vmess_config['net'] == 'http':
-                            yaml_url.setdefault('udp', 'true')
                             yaml_url.setdefault('http-opts', {}).setdefault('method', "GET")
                             if vmess_config['path'] == '':
                                 yaml_url.setdefault('http-opts', {}).setdefault('path', '[/]')
                             else:
                                 yaml_url.setdefault('http-opts', {}).setdefault('path', '[' + vmess_config['path'] + ']')
-                            yaml_url.setdefault('http-opts', {}).setdefault('headers', {'Connection': '[keep-alive]'})
                 except Exception as err:
                     print(f'yaml_encode 解析 vmess 节点发生错误: {err}')
                     pass
 
             if 'ss://' in line and 'vless://' not in line and 'vmess://' not in line:
-                if '#' not in line:
-                    line = line + '#SS%20Node'
                 try:
                     ss_content = line.replace('ss://', '')
-                    # https://www.runoob.com/python/att-string-split.html
-                    part_list = ss_content.split('#', 1)
+                    ss_content_array = re.split('@|\/\?|#', ss_content)
                     yaml_url.setdefault(
-                        'name', '"' + urllib.parse.unquote(part_list[1]) + '"')
-                    if '@' in part_list[0]:
-                        part_list_headpart = part_list[0].split('@', 1)
-                        encrypted_list = sub_convert.base64_decode(part_list_headpart[0]).split(':')
-                    else:
-                        part_list_headpart = sub_convert.base64_decode(part_list[0]).split('@', 1)
-                        encrypted_list = part_list_headpart[0].split(':')
-                    server_list = part_list_headpart[1].split(':')
-                    server_parameters = server_list[1].split('/?')
-                    # 使用多个分隔符 https://blog.csdn.net/shidamowang/article/details/80254476 https://zhuanlan.zhihu.com/p/92287240
-                    yaml_url.setdefault('server', server_list[0])
-                    yaml_url.setdefault('port', server_parameters[0])
+                        'name', '"' + urllib.parse.unquote(ss_content_array[-1]) + '"')
+                    # include cipher password
+                    config_first_decode_list = sub_convert.base64_decode(ss_content_array[0]).split(':')
+                    # include server port
+                    config_second_list = ss_content_array[1].split(':')
+                    yaml_url.setdefault('server', config_second_list[0])
+                    yaml_url.setdefault('port', config_second_list[1])
                     yaml_url.setdefault('type', 'ss')
                     ss_cipher = ["aes-128-gcm", "aes-192-gcm", "aes-256-gcm", "aes-128-cfb", "aes-192-cfb", "aes-256-cfb", "aes-128-ctr", "aes-192-ctr", "aes-256-ctr", "rc4-md5", "chacha20-ietf", "xchacha20", "chacha20-ietf-poly1305", "xchacha20-ietf-poly1305"]
-                    if encrypted_list[0] in ss_cipher:
-                        yaml_url.setdefault('cipher', encrypted_list[0])
+                    if config_first_decode_list[0] in ss_cipher:
+                        yaml_url.setdefault('cipher', config_first_decode_list[0])
                     else:
                         continue
-                    server_password = encrypted_list[1]
+                    server_password = config_first_decode_list[1]
                     if server_password.isdigit() or server_password.replace('.', '').isdigit():
-                        yaml_url.setdefault('password', '!<str> ' + encrypted_list[1])
+                        yaml_url.setdefault('password', '!<str> ' + config_first_decode_list[1])
                     else:
-                        yaml_url.setdefault('password', encrypted_list[1])
-                    if len(server_parameters) > 1:
-                        parameters_raw = urllib.parse.unquote(server_parameters[1])
+                        yaml_url.setdefault('password', config_first_decode_list[1])
+                    if len(ss_content_array) >= 4:
+                        # include more server config
+                        parameters_raw = urllib.parse.unquote(ss_content_array[2])
                         parameters = parameters_raw.split(';')
-                        if 'plugin=' in parameters:
-                            if 'obfs' in parameters:
+                        # or 'plugin=' in parameter for parameter in parameters:
+                        if 'plugin=' in str(parameters):
+                            if 'obfs' in str(parameters):
                                 yaml_url.setdefault('plugin', 'obfs')
-                            elif 'v2ray-plugin' in parameters:
+                            elif 'v2ray-plugin' in str(parameters):
                                 yaml_url.setdefault('plugin', 'v2ray-plugin')
                         for parameter in parameters:
                             if 'plugin' in yaml_url.keys():
@@ -515,27 +509,25 @@ class sub_convert():
                                 elif 'v2ray-plugin' in yaml_url['plugin']:
                                     if 'mode=' in parameter:
                                         yaml_url.setdefault('plugin-opts', {}).setdefault('mode', parameter.split('=')[-1])
+                                    elif 'tls' in parameter:
+                                        yaml_url.setdefault('plugin-opts', {}).setdefault('tls', 'true')
+                                    elif 'mux' in parameter:
+                                        yaml_url.setdefault('plugin-opts', {}).setdefault('mux', 'true')
                                     elif 'host=' in parameter:
                                         yaml_url.setdefault('plugin-opts', {}).setdefault('host', parameter.split('=')[-1])
                                     elif 'path=' in parameter:
                                         if parameter.split('=')[-1] == '':
-                                            yaml_url.setdefault('plugin-opts', {}).setdefault('path', "")
+                                            yaml_url.setdefault('plugin-opts', {}).setdefault('path', '""')
                                         else:
                                             yaml_url.setdefault('plugin-opts', {}).setdefault('path', parameter.split('=')[-1])
-                                    elif 'obfs-header=' in parameter:
-                                        yaml_url.setdefault('plugin-opts', {}).setdefault('header', {'custom': parameter.split('=')[-1]})
-                    if 'plugin' in yaml_url.keys():
-                        if 'v2ray-plugin' in yaml_url['plugin']:
-                            yaml_url.setdefault('plugin-opts', {}).setdefault('tls', 'true')
-                            yaml_url.setdefault('plugin-opts', {}).setdefault('skip-cert-verify', 'true')
-                            if 'path' not in yaml_url['plugin-opts'].keys():
-                                yaml_url.setdefault('plugin-opts', {}).setdefault('path', "")
-                            yaml_url.setdefault('plugin-opts', {}).setdefault('mux', 'true')
-                        elif 'obfs' in yaml_url['plugin']:
-                            if 'mode' not in yaml_url['plugin-opts'].keys():
-                                yaml_url.setdefault('plugin-opts', {}).setdefault('mode', 'tls')
-                    else:
-                        yaml_url.setdefault('udp', 'true')
+                        if 'plugin' in yaml_url.keys():
+                            if 'v2ray-plugin' in yaml_url['plugin']:
+                                if 'tls' not in yaml_url['plugin-opts'].keys():
+                                    yaml_url.setdefault('plugin-opts', {}).setdefault('tls', 'false')
+                                if 'path' not in yaml_url['plugin-opts'].keys():
+                                    yaml_url.setdefault('plugin-opts', {}).setdefault('path', '"/"')
+                                if 'mux' not in yaml_url['plugin-opts'].keys():
+                                    yaml_url.setdefault('plugin-opts', {}).setdefault('mux', "false")
                 except Exception as err:
                     print(f'yaml_encode 解析 ss 节点发生错误: {err}')
                     pass
@@ -544,10 +536,10 @@ class sub_convert():
                 try:
                     ssr_content = sub_convert.base64_decode(line.replace('ssr://', ''))
 
-                    part_list = re.split('/\?', ssr_content)
+                    part_list = ssr_content.split('/?')
                     if '&' in part_list[1]:
                         # 将 SSR content /？后部分参数分割
-                        ssr_part = re.split('&', part_list[1])
+                        ssr_part = part_list[1].split('&')
                         for item in ssr_part:
                             if 'remarks=' in item:
                                 remarks_part = item.replace('remarks=', '')
@@ -600,7 +592,7 @@ class sub_convert():
                             if obfs_param != '':
                                 yaml_url.setdefault('obfs-param', obfs_param.replace('[', '').replace(']', ''))
                             else:
-                                yaml_url.setdefault('obfs-param', "")
+                                yaml_url.setdefault('obfs-param', '""')
                         elif 'protoparam=' in item:
                             protocol_param = sub_convert.base64_decode(
                                 item.replace('protoparam=', ''))
@@ -608,12 +600,11 @@ class sub_convert():
                                 yaml_url.setdefault(
                                     'protocol-param', protocol_param.replace('[', '').replace(']', ''))
                             else:
-                                yaml_url.setdefault('protocol-param', "")
+                                yaml_url.setdefault('protocol-param', '""')
                     if 'obfs-param' not in yaml_url.keys():
-                        yaml_url.setdefault('obfs-param', "")
+                        yaml_url.setdefault('obfs-param', '""')
                     if 'protocol-param' not in yaml_url.keys():
-                        yaml_url.setdefault('protocol-param', "")
-                    yaml_url.setdefault('udp', 'true')
+                        yaml_url.setdefault('protocol-param', '""')
                 except Exception as err:
                     print(f'yaml_encode 解析 ssr 节点发生错误: {err}')
                     pass
@@ -621,34 +612,24 @@ class sub_convert():
             if 'trojan://' in line:
                 try:
                     url_content = line.replace('trojan://', '')
-                    part_list = url_content.split('#')
-                    yaml_url.setdefault(
-                        'name', '"' + urllib.parse.unquote(part_list[1]) + '"')
-                    server_part = part_list[0].replace('trojan://', '')
-                    # 分头尾,各自取值
-                    server_part = server_part.split('?')
-                    server_head = server_part[0]
-                    server_head_part = re.split(':|@', server_head)
-                    yaml_url.setdefault('server', server_head_part[1])
-                    yaml_url.setdefault('port', server_head_part[2].replace('/', ''))
+                    part_list = re.split('@|\?|#', url_content)
+                    yaml_url.setdefault('name', '"' + urllib.parse.unquote(part_list[-1]) + '"')
+                    yaml_url.setdefault('server', part_list[1].split(':')[0])
+                    yaml_url.setdefault('port', part_list[1].split(':')[1])
                     yaml_url.setdefault('type', 'trojan')
-                    server_password = server_head_part[0]
+                    server_password = part_list[0].replace('trojan://', '')
                     if server_password.isdigit() or server_password.replace('.', '').isdigit():
                         yaml_url.setdefault('password', '!<str> ' + server_password)
                     else:
                         yaml_url.setdefault('password', server_password)
-                    yaml_url.setdefault('udp', 'true')
-                    yaml_url.setdefault('sni', server_head_part[1])
-                    # 判定是否超限
-                    if len(server_part) > 1:
-                        server_tail = server_part[1]
-                        server_part_list_parameters = server_tail.split('&')
-                        for config in server_part_list_parameters:
+                    if len(part_list) == 4:
+                        for config in part_list[2].split('&'):
                             if 'sni=' in config:
                                 yaml_url.setdefault('sni', config[4:])
                             elif 'type=' in config:
                                 yaml_url.setdefault('network', config[5:])
                             if 'network' in yaml_url.keys():
+                                yaml_url.setdefault('udp', 'true')
                                 if yaml_url['network'] == 'ws':
                                     if 'path=' in config:
                                         yaml_url.setdefault('ws-opts', {}).setdefault('path', config[5:].split('?')[0])
@@ -660,12 +641,10 @@ class sub_convert():
                             else:
                                 if 'alpn=' in config:
                                     yaml_url.setdefault('alpn', '[' + config[5:] + ']')
-                    if 'network' in yaml_url.keys():
-                        if yaml_url['network'] == 'ws':
-                            if yaml_url['ws-opts']['path'] == '':
-                                yaml_url.setdefault('ws-opts', {}).setdefault('path', '/')
-                    yaml_url.setdefault('tls', 'true')
-                    yaml_url.setdefault('skip-cert-verify', 'true')
+                        if 'network' in yaml_url.keys():
+                            if yaml_url['network'] == 'ws':
+                                if yaml_url['ws-opts']['path'] == '':
+                                    yaml_url.setdefault('ws-opts', {}).setdefault('path', '/')
                 except Exception as err:
                     print(f'yaml_encode 解析 trojan 节点发生错误: {err}')
                     pass
