@@ -436,6 +436,8 @@ class sub_convert():
                             if vmess_config['host'] != '':
                                 if '%22' in vmess_config['host']:
                                     yaml_url.setdefault('ws-opts', {}).setdefault('headers', {'host': vmess_config['host'].split('%22')[-2]})
+                                elif '%' in vmess_config['host']:
+                                    yaml_url.setdefault('ws-opts', {}).setdefault('headers', {'host': '""'})
                                 else:
                                     yaml_url.setdefault('ws-opts', {}).setdefault('headers', {'host': vmess_config['host']})
                         elif vmess_config['net'] == 'h2':
