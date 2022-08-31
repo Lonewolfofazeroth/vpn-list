@@ -1,2 +1,2 @@
 is a demo.
-do not folk or star!
+do not fork or star!
