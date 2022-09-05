@@ -33,7 +33,7 @@ def check_url(url):  # 判断远程远程链接是否已经更新
 
 class update_url():
 
-    def update_main(update_enable_list=[0, 25, 35, 37, 43, 54]):
+    def update_main(update_enable_list=[0, 25, 35, 37, 43, 54, 57]):
         if len(update_enable_list) > 0:
             for id in update_enable_list:
                 status = update_url.update(id)
@@ -170,6 +170,17 @@ class update_url():
             except Exception as err:
                 print(err)
                 return [54, 404]
+        elif id == 57:
+            yesterday = (datetime.today() + timedelta(-1)).strftime('%Y%m%d')
+            month = datetime.today().strftime('%m') +'/'
+            year = datetime.today().strftime('%Y') +'/'
+            front_url = 'https://clashnode.com/wp-content/uploads/'
+            end_url = '.txt'
+            url_update = front_url + year + month + yesterday + end_url
+            if check_url(url_update):
+                return [57, url_update]
+            else:
+                return [57, 404]
 
 
 if __name__ == '__main__':
