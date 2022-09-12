@@ -621,6 +621,8 @@ class sub_convert():
                     server_password = part_list[0].replace('trojan://', '')
                     if server_password.isdigit() or server_password.replace('.', '').isdigit():
                         yaml_url.setdefault('password', '!<str> ' + server_password)
+                    elif not server_password:
+                        yaml_url.setdefault('password', '""')
                     else:
                         yaml_url.setdefault('password', server_password)
                     if len(part_list) == 4:
