@@ -1,5 +1,3 @@
-a = ''
-if not a:
-    print('yes')
-else:
-    print("false")
+a = 'aaa'
+a.replace('!str', '')
+print(a)
