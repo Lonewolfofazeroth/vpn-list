@@ -1,8 +1,4 @@
 proxies:
-  - {name: "[trojan]🇨🇳[CN]bauhinia01.abzoones.xyz:36601(74d856d1-1023-4d31-8609-1491ca4fab59)", server: bauhinia01.abzoones.xyz, port: 36601, type: trojan, password: 74d856d1-1023-4d31-8609-1491ca4fab59}
-  - {name: "[trojan]🇨🇳[CN]bauhinia01.abzoones.xyz:36301(74d856d1-1023-4d31-8609-1491ca4fab59)", server: bauhinia01.abzoones.xyz, port: 36301, type: trojan, password: 74d856d1-1023-4d31-8609-1491ca4fab59}
-  - {name: "[trojan]🇨🇳[CN]bauhinia01.abzoones.xyz:36501(74d856d1-1023-4d31-8609-1491ca4fab59)", server: bauhinia01.abzoones.xyz, port: 36501, type: trojan, password: 74d856d1-1023-4d31-8609-1491ca4fab59}
-  - {name: "[trojan]🇨🇳[CN]bauhinia01.abzoones.xyz:36701(74d856d1-1023-4d31-8609-1491ca4fab59)", server: bauhinia01.abzoones.xyz, port: 36701, type: trojan, password: 74d856d1-1023-4d31-8609-1491ca4fab59}
   - {name: "[trojan]🇨🇳[CN]bauhinia01.abzoones.xyz:36501(c6)", server: bauhinia01.abzoones.xyz, port: 36501, type: trojan, password: c6}
   - {name: "[trojan]🇨🇳[CN]bauhinia01.abzoones.xyz:36701(c6)", server: bauhinia01.abzoones.xyz, port: 36701, type: trojan, password: c6}
   - {name: "[trojan]🇨🇳[CN]bauhinia01.abzoones.xyz:36601(ef221ae8-43b2-4fdf-9b52-d0783822ca33)", server: bauhinia01.abzoones.xyz, port: 36601, type: trojan, password: ef221ae8-43b2-4fdf-9b52-d0783822ca33}
@@ -906,6 +902,7 @@ proxies:
   - {name: "[ss]🇯🇵[JP]85.208.108.58:6697(TEzjfAYq2IjtuoS)", server: 85.208.108.58, port: 6697, type: ss, cipher: aes-256-gcm, password: TEzjfAYq2IjtuoS}
   - {name: "[ss]🇯🇵[JP]85.208.108.93:5601(Y6R9pAtvxxzmGC)", server: 85.208.108.93, port: 5601, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC}
   - {name: "[ss]🇯🇵[JP]85.208.108.61:8008(XKFKl2rULjIp74)", server: 85.208.108.61, port: 8008, type: ss, cipher: aes-256-gcm, password: XKFKl2rULjIp74}
+  - {name: "[ssr]🇯🇵[JP]jp-am48-6.eqnode.net:8081(eAokbaDN6)", server: jp-am48-6.eqnode.net, port: 8081, type: ssr, cipher: aes-256-cfb, password: eAokbaDN6, protocol: origin, obfs: tls1.2_ticket_auth, obfs-param: "", protocol-param: ""}
   - {name: "[vmess]🏁[RELAY]www.digitalocean.com:443(2debb06b-95ce-4e9b-956a-6cf7cadac30c)", server: www.digitalocean.com, port: 443, type: vmess, uuid: 2debb06b-95ce-4e9b-956a-6cf7cadac30c, alterId: 0, cipher: auto, network: ws, tls: true, ws-opts: {path: /bai-piao-wang-zhe-iplc16vws, headers: {host: usyy.884899.cf}}}
   - {name: "[trojan]🏁[RELAY]www.digitalocean.com:443(2debb06b-95ce-4e9b-956a-6cf7cadac30c)", server: www.digitalocean.com, port: 443, type: trojan, password: 2debb06b-95ce-4e9b-956a-6cf7cadac30c, sni: usyy.884899.cf}
   - {name: "[vmess]🏁[RELAY]www.digitalocean.com:443(6132999d-57f6-4fca-8916-bfb78890e3b6)", server: www.digitalocean.com, port: 443, type: vmess, uuid: 6132999d-57f6-4fca-8916-bfb78890e3b6, alterId: 0, cipher: auto, network: ws, tls: true, ws-opts: {path: /bieivws, headers: {host: US158.vincent-jackson2022.tk}}}
@@ -998,3 +995,6 @@ proxies:
   - {name: "[vmess]🏁[RELAY]104.19.34.189:443(bfc6607d-7aa7-4baf-9c22-bf9fb97b573e)", server: 104.19.34.189, port: 443, type: vmess, uuid: bfc6607d-7aa7-4baf-9c22-bf9fb97b573e, alterId: 1, cipher: auto, network: ws, tls: true, ws-opts: {path: /2yevws, headers: {host: ccc.1808.cf}}}
   - {name: "[vmess]🏁[RELAY]104.16.248.130:443(e6397eda-dd27-4832-a693-b3fb156ec0f3)", server: 104.16.248.130, port: 443, type: vmess, uuid: e6397eda-dd27-4832-a693-b3fb156ec0f3, alterId: 0, cipher: auto, network: ws, tls: false, ws-opts: {path: /233blog, headers: {host: rn.man-one.club}}}
   - {name: "[vmess]🏁[RELAY]104.18.8.157:443(8e8b5097-1d75-47c4-ff28-eef6609916c1)", server: 104.18.8.157, port: 443, type: vmess, uuid: 8e8b5097-1d75-47c4-ff28-eef6609916c1, alterId: 0, cipher: auto, network: ws, tls: false, ws-opts: {path: /The-Great-Awakening_vws, headers: {host: vincent-jackson2021.cf}}}
+  - {name: "[vmess]🏁[RELAY]104.19.80.46:8080(657f7981-0138-4c99-9199-51f62002d8e5)", server: 104.19.80.46, port: 8080, type: vmess, uuid: 657f7981-0138-4c99-9199-51f62002d8e5, alterId: 64, cipher: auto, network: ws, tls: false, ws-opts: {path: /1234, headers: {host: 3.ioqr.cn}}}
+  - {name: "[vmess]🏁[RELAY]104.22.3.3:443(8e8b5097-1d75-47c4-ff28-eef6609916c1)", server: 104.22.3.3, port: 443, type: vmess, uuid: 8e8b5097-1d75-47c4-ff28-eef6609916c1, alterId: 0, cipher: auto, network: ws, tls: false, ws-opts: {path: /The-Great-Awakening_vws, headers: {host: vincent-jackson2021.cf}}}
+  - {name: "[vmess]🏁[RELAY]www.digitalocean.com:443(5f4b2e42-ff2b-6666-86fc-b7ba1b5361e8)", server: www.digitalocean.com, port: 443, type: vmess, uuid: 5f4b2e42-ff2b-6666-86fc-b7ba1b5361e8, alterId: 0, cipher: auto, network: ws, tls: true, ws-opts: {path: /The-Great-Awakening_vws, headers: {host: 567567.cf}}}
