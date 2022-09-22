@@ -1,4 +1,11 @@
 proxies:
+  - {name: "[vmess]🏁[RELAY]www.kernels.bid:80(25ec39f7-7cdd-4c3c-bc3c-60e9a8927b4a)", server: www.kernels.bid, port: 80, type: vmess, uuid: 25ec39f7-7cdd-4c3c-bc3c-60e9a8927b4a, alterId: 0, cipher: auto, network: ws, tls: false, ws-opts: {path: /, headers: {host: /ws}}}
+  - {name: "[vmess]🏁[RELAY]www.kernels.bid:80(e235e6b7-3cf5-47b4-f33d-88c68b91306a)", server: www.kernels.bid, port: 80, type: vmess, uuid: e235e6b7-3cf5-47b4-f33d-88c68b91306a, alterId: 0, cipher: auto, network: ws, tls: false, ws-opts: {path: /, headers: {host: /ws}}}
+  - {name: "[vmess]🏁[RELAY]www.kernels.bid:80(fb2470b4-5ad1-00ce-ddcf-89c8febf0003)", server: www.kernels.bid, port: 80, type: vmess, uuid: fb2470b4-5ad1-00ce-ddcf-89c8febf0003, alterId: 0, cipher: auto, network: ws, tls: false, ws-opts: {path: /, headers: {host: /ws}}}
+  - {name: "[vmess]🏁[RELAY]www.kernels.bid:80(0cc3b8e5-5d17-f150-8a93-dcb0d25bbecf)", server: www.kernels.bid, port: 80, type: vmess, uuid: 0cc3b8e5-5d17-f150-8a93-dcb0d25bbecf, alterId: 0, cipher: auto, network: ws, tls: false, ws-opts: {path: /, headers: {host: www.kernels.bid}}}
+  - {name: "[vmess]🏁[RELAY]www.kernels.bid:443(948410e8-b2ed-5a37-3a3d-041b9e14c910)", server: www.kernels.bid, port: 443, type: vmess, uuid: 948410e8-b2ed-5a37-3a3d-041b9e14c910, alterId: 0, cipher: auto, network: ws, tls: false, ws-opts: {path: /, headers: {host: www.kernels.bid}}}
+  - {name: "[vmess]🏁[RELAY]www.kernels.bid:443(70aba362-9be1-6580-21bd-6d5a96d03317)", server: www.kernels.bid, port: 443, type: vmess, uuid: 70aba362-9be1-6580-21bd-6d5a96d03317, alterId: 0, cipher: auto, network: ws, tls: true, ws-opts: {path: /, headers: {host: /ws}}}
+  - {name: "[vmess]🏁[RELAY]amdkr.ptuu.ga:443(a612b67f-a79b-4a71-a82b-a46906752023)", server: amdkr.ptuu.ga, port: 443, type: vmess, uuid: a612b67f-a79b-4a71-a82b-a46906752023, alterId: 0, cipher: auto, network: ws, tls: false, ws-opts: {path: /408, headers: {host: amdkr.ptuu.ga}}}
   - {name: "[vmess]🏁[RELAY]api.ssfree.ru:443(b907fae8-60e4-11ec-9251-000017022008)", server: api.ssfree.ru, port: 443, type: vmess, uuid: b907fae8-60e4-11ec-9251-000017022008, alterId: 64, cipher: auto, network: ws, tls: true, ws-opts: {path: /getweather, headers: {host: api.ssfree.ru}}}
   - {name: "[vmess]🏁[RELAY]api.ssfree.ru:443(22f096d0-6537-11ec-a4a6-000017022008)", server: api.ssfree.ru, port: 443, type: vmess, uuid: 22f096d0-6537-11ec-a4a6-000017022008, alterId: 64, cipher: auto, network: ws, tls: true, ws-opts: {path: /getweather, headers: {host: api.ssfree.ru}}}
   - {name: "[vmess]🏁[RELAY]api.ssfree.ru:443(648cd206-5f52-11ec-b30c-000017022008)", server: api.ssfree.ru, port: 443, type: vmess, uuid: 648cd206-5f52-11ec-b30c-000017022008, alterId: 64, cipher: auto, network: ws, tls: false, ws-opts: {path: /getweather, headers: {host: api.ssfree.ru}}}
@@ -990,10 +997,3 @@ proxies:
   - {name: "[ss]🇺🇸[US]38.68.135.19:3389(Y6R9pAtvxxzmGC)", server: 38.68.135.19, port: 3389, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC}
   - {name: "[ss]🇺🇸[US]38.107.226.146:7307(FoOiGlkAA9yPEGP)", server: 38.107.226.146, port: 7307, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP}
   - {name: "[ss]🇺🇸[US]167.88.62.68:5600(Y6R9pAtvxxzmGC)", server: 167.88.62.68, port: 5600, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC}
-  - {name: "[ss]🇺🇸[US]38.68.134.191:3306(Y6R9pAtvxxzmGC)", server: 38.68.134.191, port: 3306, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC}
-  - {name: "[ss]🇺🇸[US]169.197.141.187:8091(PCnnH6SQSnfoS27)", server: 169.197.141.187, port: 8091, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27}
-  - {name: "[ss]🇺🇸[US]169.197.142.187:7306(FoOiGlkAA9yPEGP)", server: 169.197.142.187, port: 7306, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP}
-  - {name: "[ss]🇺🇸[US]169.197.142.187:6379(zDNVedRFPQexG9v)", server: 169.197.142.187, port: 6379, type: ss, cipher: aes-256-gcm, password: zDNVedRFPQexG9v}
-  - {name: "[ss]🇺🇸[US]169.197.142.187:443(pKEW8JPByTVTLtM)", server: 169.197.142.187, port: 443, type: ss, cipher: aes-256-gcm, password: pKEW8JPByTVTLtM}
-  - {name: "[ss]🇺🇸[US]169.197.142.187:6679(TEzjfAYq2IjtuoS)", server: 169.197.142.187, port: 6679, type: ss, cipher: aes-256-gcm, password: TEzjfAYq2IjtuoS}
-  - {name: "[ss]🇺🇸[US]169.197.142.187:8119(cdBIDV42DCwnfIN)", server: 169.197.142.187, port: 8119, type: ss, cipher: aes-256-gcm, password: cdBIDV42DCwnfIN}
