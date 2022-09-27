@@ -408,7 +408,8 @@ class sub_convert():
                         yaml_url.setdefault('name', '"' + urllib.parse.unquote(vmess_config['ps']) + '"')
                         if '[' in vmess_config['add'] or ']' in vmess_config['add']:
                             yaml_url.setdefault('server', vmess_config['add'].replace('[', '').replace(']', ''))
-                        yaml_url.setdefault('server', vmess_config['add'])
+                        else:
+                            yaml_url.setdefault('server', vmess_config['add'])
                         yaml_url.setdefault('port', int(vmess_config['port']))
                         yaml_url.setdefault('type', 'vmess')
                         if vmess_config['id'] != '0':
