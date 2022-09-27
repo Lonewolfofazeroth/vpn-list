@@ -116,7 +116,7 @@ class update_url():
                 resp_content = resp.content.decode('utf-8')
                 resp_content = resp_content.split('\n')
                 for line in resp_content:
-                    if '本次节点订阅地址' in line:
+                    if '本次' in line:
                         line_split = line.split('：')
                         line_split = line_split[1].split('<')
                         url_update = line_split[0]
