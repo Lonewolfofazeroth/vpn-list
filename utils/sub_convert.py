@@ -405,8 +405,9 @@ class sub_convert():
                     if vmess_config['id'] == '':
                         print('节点格式错误')
                     else:
-                        yaml_url.setdefault(
-                            'name', '"' + urllib.parse.unquote(vmess_config['ps']) + '"')
+                        yaml_url.setdefault('name', '"' + urllib.parse.unquote(vmess_config['ps']) + '"')
+                        if '[' in vmess_config['add'] or ']' in vmess_config['add']:
+                            yaml_url.setdefault('server', vmess_config['add'].replace('[', '').replace(']', ''))
                         yaml_url.setdefault('server', vmess_config['add'])
                         yaml_url.setdefault('port', int(vmess_config['port']))
                         yaml_url.setdefault('type', 'vmess')
