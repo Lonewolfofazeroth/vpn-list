@@ -33,7 +33,7 @@ def check_url(url):  # 判断远程远程链接是否已经更新
 
 class update_url():
 
-    def update_main(update_enable_list=[0, 25, 35, 37, 43, 54, 57]):
+    def update_main(update_enable_list=[0, 25, 35, 43, 54, 57]):
         if len(update_enable_list) > 0:
             for id in update_enable_list:
                 status = update_url.update(id)
@@ -109,24 +109,24 @@ class update_url():
             else:
                 return [25, 404]
                 
-        elif id == 37:
-            url_raw = 'https://raw.githubusercontent.com/Pawdroid/Free-servers/main/README.md'
-            try:
-                resp = requests.get(url_raw, timeout=2)
-                resp_content = resp.content.decode('utf-8')
-                resp_content = resp_content.split('\n')
-                for line in resp_content:
-                    if '本次' in line:
-                        line_split = line.split('：')
-                        line_split = line_split[1].split('<')
-                        url_update = line_split[0]
-                        if check_url(url_update):
-                            return [37, url_update]
-                        else:
-                            return [37, 404]
-            except Exception as err:
-                print(err)
-                return [37, 404]
+        # elif id == 37:
+        #     url_raw = 'https://raw.githubusercontent.com/Pawdroid/Free-servers/main/README.md'
+        #     try:
+        #         resp = requests.get(url_raw, timeout=2)
+        #         resp_content = resp.content.decode('utf-8')
+        #         resp_content = resp_content.split('\n')
+        #         for line in resp_content:
+        #             if '本次' in line:
+        #                 line_split = line.split('：')
+        #                 line_split = line_split[1].split('<')
+        #                 url_update = line_split[0]
+        #                 if check_url(url_update):
+        #                     return [37, url_update]
+        #                 else:
+        #                     return [37, 404]
+        #     except Exception as err:
+        #         print(err)
+        #         return [37, 404]
         
         elif id == 35:
             url_raw = 'https://raw.githubusercontent.com/arielherself/autosub/main/subs.txt'
