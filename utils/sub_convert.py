@@ -625,6 +625,8 @@ class sub_convert():
                         yaml_url.setdefault('password', '!<str> ' + server_password)
                     elif not server_password:
                         yaml_url.setdefault('password', '""')
+                    elif server_password == 'null':
+                        yaml_url.setdefault('password', '"' + server_password + '"')
                     else:
                         yaml_url.setdefault('password', server_password)
                     if len(part_list) == 4:
