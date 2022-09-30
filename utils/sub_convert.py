@@ -488,9 +488,9 @@ class sub_convert():
                         continue
                     server_password = config_first_decode_list[1].replace('!str', '')
                     if server_password.isdigit() or server_password.replace('.', '').isdigit():
-                        yaml_url.setdefault('password', '!<str> ' + config_first_decode_list[1])
+                        yaml_url.setdefault('password', '!<str> ' + server_password)
                     else:
-                        yaml_url.setdefault('password', config_first_decode_list[1])
+                        yaml_url.setdefault('password', server_password)
                     if len(ss_content_array) >= 4:
                         # include more server config
                         parameters_raw = urllib.parse.unquote(ss_content_array[2])
