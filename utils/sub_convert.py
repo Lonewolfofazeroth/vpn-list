@@ -412,10 +412,10 @@ class sub_convert():
                             yaml_url.setdefault('server', vmess_config['add'])
                         yaml_url.setdefault('port', int(vmess_config['port']))
                         yaml_url.setdefault('type', 'vmess')
-                        if vmess_config['id'] != '0':
-                            yaml_url.setdefault('uuid', vmess_config['id'])
-                        else:
+                        if vmess_config['id'] == '0' or re.findall("[f-z]", vmess_config['id']):
                             continue
+                        else:
+                            yaml_url.setdefault('uuid', vmess_config['id'])
                         yaml_url.setdefault('alterId', int(vmess_config['aid']))
                         vmess_cipher = ["auto", "aes-128-gcm", "chacha20-poly1305", "none"]
                         if vmess_config['scy'] in vmess_cipher:
