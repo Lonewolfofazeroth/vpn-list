@@ -1,6 +1,4 @@
 proxies:
-  - {name: "[trojan]🇸🇬[SG]3.1.6.157:443(iyinglong)", server: 3.1.6.157, port: 443, type: trojan, password: iyinglong}
-  - {name: "[trojan]🇭🇰[HK]azhj001.xibai6.top:20716(3d6e81e4-c6df-32ad-a808-e83d4fd1ca1a)", server: azhj001.xibai6.top, port: 20716, type: trojan, password: 3d6e81e4-c6df-32ad-a808-e83d4fd1ca1a}
   - {name: "[trojan]🇸🇬[SG]99tw02.tfzhc.top:443(0ba47cb6-e316-4afe-bb35-9e4853db6447)", server: 99tw02.tfzhc.top, port: 443, type: trojan, password: 0ba47cb6-e316-4afe-bb35-9e4853db6447}
   - {name: "[trojan]🇬🇧[GB]18.130.157.11:443(iyinglong)", server: 18.130.157.11, port: 443, type: trojan, password: iyinglong}
   - {name: "[trojan]🇭🇰[HK]azgy001.xibai6.top:20789(3d6e81e4-c6df-32ad-a808-e83d4fd1ca1a)", server: azgy001.xibai6.top, port: 20789, type: trojan, password: 3d6e81e4-c6df-32ad-a808-e83d4fd1ca1a}
@@ -144,6 +142,7 @@ proxies:
   - {name: "[trojan]🇸🇬[SG]927tw01.tfzhc.top:44319(3ad5547b-609b-4f59-916b-afebd85aba7d)", server: 927tw01.tfzhc.top, port: 44319, type: trojan, password: 3ad5547b-609b-4f59-916b-afebd85aba7d}
   - {name: "[vmess]🇪🇸[ES]185.194.30.40:41443(2F094845-E2BD-EBF7-DEB7-995992436FAF)", server: 185.194.30.40, port: 41443, type: vmess, uuid: 2F094845-E2BD-EBF7-DEB7-995992436FAF, alterId: 0, cipher: auto, network: tcp}
   - {name: "[trojan]🇦🇺[AU]dtua1.bitznet.one:33019(502560b1-6cb2-443e-ba50-361c94ddab3a)", server: dtua1.bitznet.one, port: 33019, type: trojan, password: 502560b1-6cb2-443e-ba50-361c94ddab3a}
+  - {name: "[vmess]🇺🇸[US]dm-us01-direct13.dm-us01.lc-node.com:443(448e6754-0c18-3346-a442-753244895db3)", server: dm-us01-direct13.dm-us01.lc-node.com, port: 443, type: vmess, uuid: 448e6754-0c18-3346-a442-753244895db3, alterId: 2, cipher: auto, network: ws, tls: true, ws-opts: {path: /, headers: {host: dm-us01-direct13.dm-us01.lc-node.com}}}
   - {name: "[vmess]🇨🇳[CN]sd2.cmcuct.org:24402(0d2abc1b-645a-3cee-aa4c-0a851e71116a)", server: sd2.cmcuct.org, port: 24402, type: vmess, uuid: 0d2abc1b-645a-3cee-aa4c-0a851e71116a, alterId: 0, cipher: auto, network: ws, tls: false, ws-opts: {path: /hls, headers: {host: us.domain.com}}}
   - {name: "[ss]🇨🇳[CN]14.29.124.174:11004(QazEdcTgb159@$*)", server: 14.29.124.174, port: 11004, type: ss, cipher: aes-128-cfb, password: QazEdcTgb159@$*}
   - {name: "[ss]🇨🇳[CN]14.29.124.174:11049(QazEdcTgb159@$*)", server: 14.29.124.174, port: 11049, type: ss, cipher: aes-128-cfb, password: QazEdcTgb159@$*}
@@ -883,3 +882,6 @@ proxies:
   - {name: "[ss]🇦🇶[NOWHERE]jdmscys.ljqoal.xyz:25858(nexitally)", server: jdmscys.ljqoal.xyz, port: 25858, type: ss, cipher: aes-128-gcm, password: nexitally, plugin: obfs, plugin-opts: {mode: http, host: "9df3a280ad6a418d.swcdn.apple.com"}}
   - {name: "[ss]🇦🇶[NOWHERE]jdmscys.ljqoal.xyz:29472(nexitally)", server: jdmscys.ljqoal.xyz, port: 29472, type: ss, cipher: aes-128-gcm, password: nexitally, plugin: obfs, plugin-opts: {mode: http, host: "9df3a280ad6a418d.swcdn.apple.com"}}
   - {name: "[ss]🇦🇶[NOWHERE]jdmscys.ljqoal.xyz:29979(nexitally)", server: jdmscys.ljqoal.xyz, port: 29979, type: ss, cipher: aes-128-gcm, password: nexitally, plugin: obfs, plugin-opts: {mode: http, host: "9df3a280ad6a418d.swcdn.apple.com"}}
+  - {name: "[ss]🇦🇶[NOWHERE]jdmscys.ljqoal.xyz:28976(nexitally)", server: jdmscys.ljqoal.xyz, port: 28976, type: ss, cipher: aes-128-gcm, password: nexitally, plugin: obfs, plugin-opts: {mode: http, host: "9df3a280ad6a418d.swcdn.apple.com"}}
+  - {name: "[ss]🇦🇶[NOWHERE]jdmscys.ljqoal.xyz:25768(nexitally)", server: jdmscys.ljqoal.xyz, port: 25768, type: ss, cipher: aes-128-gcm, password: nexitally, plugin: obfs, plugin-opts: {mode: http, host: "9df3a280ad6a418d.swcdn.apple.com"}}
+  - {name: "[ss]🇦🇶[GOOGLE]8.8.8.8:28622(nexitally)", server: 8.8.8.8, port: 28622, type: ss, cipher: aes-128-gcm, password: nexitally, plugin: obfs, plugin-opts: {mode: http, host: "9df3a280ad6a418d.swcdn.apple.com"}}
