@@ -1,16 +1,4 @@
 proxies:
-  - {name: "[ss]🇳🇱[NL]213.183.51.171:9006(FAdUvMJUq5vDgKEq)", server: 213.183.51.171, port: 9006, type: ss, cipher: aes-256-cfb, password: FAdUvMJUq5vDgKEq}
-  - {name: "[ss]🇳🇱[NL]213.183.51.172:9064(cp8pRSUAyLhTfVWH)", server: 213.183.51.172, port: 9064, type: ss, cipher: aes-256-cfb, password: cp8pRSUAyLhTfVWH}
-  - {name: "[ss]🇳🇱[NL]213.183.51.172:9000(a3GFYt36Sm82Vys9)", server: 213.183.51.172, port: 9000, type: ss, cipher: aes-256-cfb, password: a3GFYt36Sm82Vys9}
-  - {name: "[ss]🇳🇱[NL]213.183.51.172:9093(wfLC2y7rzZyCmuyt)", server: 213.183.51.172, port: 9093, type: ss, cipher: aes-256-cfb, password: wfLC2y7rzZyCmuyt}
-  - {name: "[ss]🇳🇱[NL]213.183.51.171:9025(XPtzA9sCug3SPR4c)", server: 213.183.51.171, port: 9025, type: ss, cipher: aes-256-cfb, password: XPtzA9sCug3SPR4c}
-  - {name: "[ss]🇳🇱[NL]213.183.51.172:9050(FG5ddLsMPbV5CutE)", server: 213.183.51.172, port: 9050, type: ss, cipher: aes-256-cfb, password: FG5ddLsMPbV5CutE}
-  - {name: "[ss]🇳🇱[NL]213.183.51.172:9073(daFYagqDdBdA6VTX)", server: 213.183.51.172, port: 9073, type: ss, cipher: aes-256-cfb, password: daFYagqDdBdA6VTX}
-  - {name: "[ss]🇳🇱[NL]213.183.51.171:9046(NvS8N4Vf8qAGPSCL)", server: 213.183.51.171, port: 9046, type: ss, cipher: aes-256-cfb, password: NvS8N4Vf8qAGPSCL}
-  - {name: "[ss]🇳🇱[NL]213.183.51.172:9007(kSPmvwdFzGMMW5pY)", server: 213.183.51.172, port: 9007, type: ss, cipher: aes-256-cfb, password: kSPmvwdFzGMMW5pY}
-  - {name: "[ss]🇳🇱[NL]213.183.51.171:9003(JdmRK9gMEqFgs8nP)", server: 213.183.51.171, port: 9003, type: ss, cipher: aes-256-cfb, password: JdmRK9gMEqFgs8nP}
-  - {name: "[ss]🇳🇱[NL]213.183.51.171:9010(f63gg8EruDnUrmz4)", server: 213.183.51.171, port: 9010, type: ss, cipher: aes-256-cfb, password: f63gg8EruDnUrmz4}
-  - {name: "[ss]🇳🇱[NL]213.183.51.171:9094(rpgbNnU9rDDU4aWZ)", server: 213.183.51.171, port: 9094, type: ss, cipher: aes-256-cfb, password: rpgbNnU9rDDU4aWZ}
   - {name: "[ss]🇦🇺[AU]185.167.116.252:9003(JdmRK9gMEqFgs8nP)", server: 185.167.116.252, port: 9003, type: ss, cipher: aes-256-cfb, password: JdmRK9gMEqFgs8nP}
   - {name: "[ss]🇳🇱[NL]213.183.51.172:9038(gYCYXfkUQEs2TaJQ)", server: 213.183.51.172, port: 9038, type: ss, cipher: aes-256-cfb, password: gYCYXfkUQEs2TaJQ}
   - {name: "[ss]🇳🇱[NL]213.183.51.171:9043(HSZuyJQcWe8dxNdF)", server: 213.183.51.171, port: 9043, type: ss, cipher: aes-256-cfb, password: HSZuyJQcWe8dxNdF}
@@ -95,9 +83,10 @@ proxies:
   - {name: "[ss]🇹🇼[TW]fn600mlines021.fnline.info:443(0ac84efef442)", server: fn600mlines021.fnline.info, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 0ac84efef442, plugin: v2ray-plugin, plugin-opts: {mode: websocket, tls: true, mux: true, host: fn600mlines021.fnline.info}}
   - {name: "[ss]🇹🇼[TW]fn600mliness018.fnline.xyz:443(55011c8548ff)", server: fn600mliness018.fnline.xyz, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 55011c8548ff, plugin: v2ray-plugin, plugin-opts: {mode: websocket, tls: true, mux: true, host: fn600mliness018.fnline.xyz}}
   - {name: "[trojan]🇰🇷[KR]kr1.api-aws.com:443(2e4c54a0-a780-4994-97c0-44eb92857d76)", server: kr1.api-aws.com, port: 443, type: trojan, password: 2e4c54a0-a780-4994-97c0-44eb92857d76}
+  - {name: "[trojan]🇺🇸[US]us.bw2.hyperlinkvpn.xyz:50500(220281b3-650f-4cdf-93f4-8a222e2dff27)", server: us.bw2.hyperlinkvpn.xyz, port: 50500, type: trojan, password: 220281b3-650f-4cdf-93f4-8a222e2dff27}
   - {name: "[vmess]🇨🇳[CN]sd2.cmcuct.org:24402(0d2abc1b-645a-3cee-aa4c-0a851e71116a)", server: sd2.cmcuct.org, port: 24402, type: vmess, uuid: 0d2abc1b-645a-3cee-aa4c-0a851e71116a, alterId: 0, cipher: auto, network: ws, tls: false, ws-opts: {path: /hls, headers: {host: us.domain.com}}}
-  - {name: "[ss]🇸🇬[SG]165.232.169.142:29332(1e5111699c45496da84112f35db665c4)", server: 165.232.169.142, port: 29332, type: ss, cipher: aes-256-cfb, password: 1e5111699c45496da84112f35db665c4}
   - {name: "[ss]🇨🇳[CN]14.29.124.174:11004(QazEdcTgb159@$*)", server: 14.29.124.174, port: 11004, type: ss, cipher: aes-128-cfb, password: QazEdcTgb159@$*}
+  - {name: "[ss]🇸🇬[SG]165.232.169.142:29332(1e5111699c45496da84112f35db665c4)", server: 165.232.169.142, port: 29332, type: ss, cipher: aes-256-cfb, password: 1e5111699c45496da84112f35db665c4}
   - {name: "[trojan]🇨🇳[CN]cu.spacez.cloud:30004(a6510189-57a7-4804-864c-80dbf53abd99)", server: cu.spacez.cloud, port: 30004, type: trojan, password: a6510189-57a7-4804-864c-80dbf53abd99}
   - {name: "[trojan]🇨🇳[CN]cu.spacez.cloud:30002(a6510189-57a7-4804-864c-80dbf53abd99)", server: cu.spacez.cloud, port: 30002, type: trojan, password: a6510189-57a7-4804-864c-80dbf53abd99}
   - {name: "[trojan]🇨🇳[CN]cu.spacez.cloud:30011(3fb48b32-c56f-484e-8820-a4ec0904b3f5)", server: cu.spacez.cloud, port: 30011, type: trojan, password: 3fb48b32-c56f-484e-8820-a4ec0904b3f5}
@@ -872,3 +861,5 @@ proxies:
   - {name: "[vmess]🇳🇱[NL]154.84.1.142:443(7aeba42d-2e90-422b-a345-c1bdc0362c69)", server: 154.84.1.142, port: 443, type: vmess, uuid: 7aeba42d-2e90-422b-a345-c1bdc0362c69, alterId: 64, cipher: auto, network: ws, tls: true, ws-opts: {path: /footers, headers: {host: www.40983279.xyz}}}
   - {name: "[vmess]🇬🇧[GB]51.89.21.57:443(49e62934-7c38-42bb-b7a4-de5107a58509)", server: 51.89.21.57, port: 443, type: vmess, uuid: 49e62934-7c38-42bb-b7a4-de5107a58509, alterId: 64, cipher: auto, network: ws, tls: true, ws-opts: {path: /footers, headers: {host: www.82875.xyz}}}
   - {name: "[vmess]🇬🇧[GB]51.89.7.16:443(0a899b7d-de24-4133-a78d-8bd7498eb3c3)", server: 51.89.7.16, port: 443, type: vmess, uuid: 0a899b7d-de24-4133-a78d-8bd7498eb3c3, alterId: 64, cipher: auto, network: ws, tls: true, ws-opts: {path: /footers, headers: {host: www.particularly.live}}}
+  - {name: "[vmess]🇳🇱[NL]154.84.1.137:443(01d207e9-c633-4164-a3ce-a5d1061865d7)", server: 154.84.1.137, port: 443, type: vmess, uuid: 01d207e9-c633-4164-a3ce-a5d1061865d7, alterId: 64, cipher: auto, network: ws, tls: true, ws-opts: {path: /footers, headers: {host: www.49836114.xyz}}}
+  - {name: "[vmess]🇬🇧[GB]51.89.125.56:443(0a899b7d-de24-4133-a78d-8bd7498eb3c3)", server: 51.89.125.56, port: 443, type: vmess, uuid: 0a899b7d-de24-4133-a78d-8bd7498eb3c3, alterId: 64, cipher: auto, network: ws, tls: true, ws-opts: {path: /footers, headers: {host: www.particularly.live}}}
