@@ -1,4 +1,9 @@
 proxies:
+  - {name: "[ss]🇺🇸[US]167.88.61.175:5600(Y6R9pAtvxxzmGC)", server: 167.88.61.175, port: 5600, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC}
+  - {name: "[ss]🇺🇸[US]167.88.61.175:5004(g5MeD6Ft3CWlJId)", server: 167.88.61.175, port: 5004, type: ss, cipher: aes-256-gcm, password: g5MeD6Ft3CWlJId}
+  - {name: "[ss]🇺🇸[US]38.91.107.72:5500(KixLvKzwjekG00rm)", server: 38.91.107.72, port: 5500, type: ss, cipher: aes-256-gcm, password: KixLvKzwjekG00rm}
+  - {name: "[vmess]🇺🇸[US]app.ssfree.ru:443(112b3816-ddd6-11ec-8d1b-000017022008)", server: app.ssfree.ru, port: 443, type: vmess, uuid: 112b3816-ddd6-11ec-8d1b-000017022008, alterId: 64, cipher: auto, network: ws, tls: false, ws-opts: {path: /getweather, headers: {host: app.ssfree.ru}}}
+  - {name: "[vmess]🇺🇸[US]app.ssfree.ru:443(7babe524-dd71-11ec-a5ae-000017022008)", server: app.ssfree.ru, port: 443, type: vmess, uuid: 7babe524-dd71-11ec-a5ae-000017022008, alterId: 64, cipher: auto, network: ws, tls: true, ws-opts: {path: /getweather, headers: {host: app.ssfree.ru}}}
   - {name: "[vmess]🇺🇸[US]app.ssfree.ru:443(db180bca-be02-11ec-ad91-000017022008)", server: app.ssfree.ru, port: 443, type: vmess, uuid: db180bca-be02-11ec-ad91-000017022008, alterId: 64, cipher: auto, network: ws, tls: false, ws-opts: {path: /getweather, headers: {host: app.ssfree.ru}}}
   - {name: "[vmess]🇺🇸[US]app.ssfree.ru:443(3ca3da44-d9e8-11ec-bbae-000017022008)", server: app.ssfree.ru, port: 443, type: vmess, uuid: 3ca3da44-d9e8-11ec-bbae-000017022008, alterId: 64, cipher: auto, network: ws, tls: false, ws-opts: {path: /getweather, headers: {host: app.ssfree.ru}}}
   - {name: "[vmess]🇺🇸[US]app.ssfree.ru:443(ee05e08a-c579-11ec-824d-000017022008)", server: app.ssfree.ru, port: 443, type: vmess, uuid: ee05e08a-c579-11ec-824d-000017022008, alterId: 64, cipher: auto, network: ws, tls: true, ws-opts: {path: /getweather, headers: {host: app.ssfree.ru}}}
@@ -499,6 +504,7 @@ proxies:
   - {name: "[ss]🇺🇸[US]38.64.138.145:7306(FoOiGlkAA9yPEGP)", server: 38.64.138.145, port: 7306, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP}
   - {name: "[ss]🇺🇸[US]38.64.138.145:5003(g5MeD6Ft3CWlJId)", server: 38.64.138.145, port: 5003, type: ss, cipher: aes-256-gcm, password: g5MeD6Ft3CWlJId}
   - {name: "[ss]🇺🇸[US]167.88.61.175:6379(zDNVedRFPQexG9v)", server: 167.88.61.175, port: 6379, type: ss, cipher: aes-256-gcm, password: zDNVedRFPQexG9v}
+  - {name: "[ss]🇺🇸[US]167.88.61.175:8008(XKFKl2rULjIp74)", server: 167.88.61.175, port: 8008, type: ss, cipher: aes-256-gcm, password: XKFKl2rULjIp74}
   - {name: "[ss]🇺🇸[US]167.88.61.175:8888(Y6R9pAtvxxzmGC)", server: 167.88.61.175, port: 8888, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC}
   - {name: "[ss]🇺🇸[US]38.114.114.67:7306(FoOiGlkAA9yPEGP)", server: 38.114.114.67, port: 7306, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP}
   - {name: "[ss]🇺🇸[US]142.202.48.7:2375(faBAoD54k87UJG7)", server: 142.202.48.7, port: 2375, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7}
@@ -562,7 +568,3 @@ proxies:
   - {name: "[vmess]🇺🇸[US]aop.ssfree.ru:443(6b2b23ac-114e-11ed-9d99-000017022008)", server: aop.ssfree.ru, port: 443, type: vmess, uuid: 6b2b23ac-114e-11ed-9d99-000017022008, alterId: 64, cipher: auto, network: ws, tls: true, ws-opts: {path: /getweather, headers: {host: aop.ssfree.ru}}}
   - {name: "[vmess]🏁[RELAY]172.64.156.14:2083(18ac29c1-273b-4068-c40b-742d51409595)", server: 172.64.156.14, port: 2083, type: vmess, uuid: 18ac29c1-273b-4068-c40b-742d51409595, alterId: 0, cipher: auto, network: ws, tls: true, ws-opts: {path: /kdws, headers: {host: hoot.ml}}}
   - {name: "[vmess]🇺🇸[US]136.175.179.89:443(7bb9dd3b-c8a4-34ac-b856-2c7194306229)", server: 136.175.179.89, port: 443, type: vmess, uuid: 7bb9dd3b-c8a4-34ac-b856-2c7194306229, alterId: 0, cipher: auto, network: ws, tls: true, ws-opts: {path: /}}
-  - {name: "[vmess]🏁[RELAY]www.kernels.bid:443(948410e8-b2ed-5a37-3a3d-041b9e14c910)", server: www.kernels.bid, port: 443, type: vmess, uuid: 948410e8-b2ed-5a37-3a3d-041b9e14c910, alterId: 0, cipher: auto, network: ws, tls: false, ws-opts: {path: /, headers: {host: www.kernels.bid}}}
-  - {name: "[vmess]🏁[RELAY]www.kernels.bid:443(70aba362-9be1-6580-21bd-6d5a96d03317)", server: www.kernels.bid, port: 443, type: vmess, uuid: 70aba362-9be1-6580-21bd-6d5a96d03317, alterId: 0, cipher: auto, network: ws, tls: true, ws-opts: {path: /, headers: {host: /ws}}}
-  - {name: "[vmess]🇺🇸[US]aop.ssfree.ru:443(5b8b2276-4074-11ed-bb78-000017022008)", server: aop.ssfree.ru, port: 443, type: vmess, uuid: 5b8b2276-4074-11ed-bb78-000017022008, alterId: 64, cipher: auto, network: ws, tls: true, ws-opts: {path: /getweather, headers: {host: aop.ssfree.ru}}}
-  - {name: "[vmess]🇺🇸[US]app.ssfree.ru:443(8b603b96-ae4b-11ec-bb21-000017022008)", server: app.ssfree.ru, port: 443, type: vmess, uuid: 8b603b96-ae4b-11ec-bb21-000017022008, alterId: 64, cipher: auto, network: ws, tls: true, ws-opts: {path: /getweather, headers: {host: app.ssfree.ru}}}
