@@ -1,4 +1,5 @@
 proxies:
+  - {name: "[vmess]🇮🇳[IN]in01.v2net.top:443(61D52763-487F-4FE4-B0AC-8BB6AD47C917)", server: in01.v2net.top, port: 443, type: vmess, uuid: 61D52763-487F-4FE4-B0AC-8BB6AD47C917, alterId: 0, cipher: auto, network: ws, tls: false, ws-opts: {path: /ray, headers: {host: in01.v2net.top}}}
   - {name: "[vmess]🇮🇳[IN]139.59.85.231:8080(826b8d0a-e0d3-407a-927d-19953c170779)", server: 139.59.85.231, port: 8080, type: vmess, uuid: 826b8d0a-e0d3-407a-927d-19953c170779, alterId: 0, cipher: auto, network: ws, tls: false, ws-opts: {path: /cctv13/hd.m3u8, headers: {host: 139.59.85.231}}}
   - {name: "[vmess]🇮🇳[IN]139.59.85.231:8080(2ed609d0-7467-471b-94a9-34a734ccc40a)", server: 139.59.85.231, port: 8080, type: vmess, uuid: 2ed609d0-7467-471b-94a9-34a734ccc40a, alterId: 0, cipher: auto, network: ws, tls: false, ws-opts: {path: /cctv13/hd.m3u8, headers: {host: 139.59.85.231}}}
   - {name: "[trojan]🇮🇳[IN]jgwhdlb1.gaox.ml:443(e05c749b-7c6b-41b8-9c71-9dcf685edf4a)", server: jgwhdlb1.gaox.ml, port: 443, type: trojan, password: e05c749b-7c6b-41b8-9c71-9dcf685edf4a}
@@ -206,7 +207,7 @@ proxies:
   - {name: "[trojan]🇯🇵[JP]tw.softbank.mjj-home.com:443(share.mjj-home.com)", server: tw.softbank.mjj-home.com, port: 443, type: trojan, password: share.mjj-home.com}
   - {name: "[trojan]🇯🇵[JP]share.softbank.mjj-home.com:443(share.mjj-home.com)", server: share.softbank.mjj-home.com, port: 443, type: trojan, password: share.mjj-home.com}
   - {name: "[trojan]🇯🇵[JP]jp.useanlo.cf:6523(77065fa6-b38e-302c-beea-4b047967af01)", server: jp.useanlo.cf, port: 6523, type: trojan, password: 77065fa6-b38e-302c-beea-4b047967af01}
-  - {name: "[trojan]🇸🇬[SG]jp.iamnotagoodman.com:443(8aab51da-6b67-4bd2-b6e6-5ab3008cf53e)", server: jp.iamnotagoodman.com, port: 443, type: trojan, password: 8aab51da-6b67-4bd2-b6e6-5ab3008cf53e}
+  - {name: "[trojan]🇯🇵[JP]jp.iamnotagoodman.com:443(8aab51da-6b67-4bd2-b6e6-5ab3008cf53e)", server: jp.iamnotagoodman.com, port: 443, type: trojan, password: 8aab51da-6b67-4bd2-b6e6-5ab3008cf53e}
   - {name: "[ssr]🇯🇵[JP]jp-am48-6.eqnode.net:8081(eAokbaDN6)", server: jp-am48-6.eqnode.net, port: 8081, type: ssr, cipher: aes-256-cfb, password: eAokbaDN6, protocol: origin, obfs: tls1.2_ticket_auth, obfs-param: "", protocol-param: ""}
   - {name: "[trojan]🇯🇵[JP]13.114.216.38:443(f41e6f27-5a33-4eb0-b6be-eb3755c93b78)", server: 13.114.216.38, port: 443, type: trojan, password: f41e6f27-5a33-4eb0-b6be-eb3755c93b78}
   - {name: "[trojan]🇯🇵[JP]jgwdj4.gaox.ml:443(c09eb137-bf68-4658-84e0-102d94b74168)", server: jgwdj4.gaox.ml, port: 443, type: trojan, password: c09eb137-bf68-4658-84e0-102d94b74168}
@@ -315,9 +316,9 @@ proxies:
   - {name: "[ss]🇯🇵[JP]85.208.108.19:3389(Y6R9pAtvxxzmGC)", server: 85.208.108.19, port: 3389, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC}
   - {name: "[ss]🇯🇵[JP]85.208.108.93:6379(zDNVedRFPQexG9v)", server: 85.208.108.93, port: 6379, type: ss, cipher: aes-256-gcm, password: zDNVedRFPQexG9v}
   - {name: "[trojan]🇯🇵[JP]hk2.iamnotagoodman.com:443(e680d8cf-07f4-3e06-b29a-06c52b258232)", server: hk2.iamnotagoodman.com, port: 443, type: trojan, password: e680d8cf-07f4-3e06-b29a-06c52b258232, sni: hk2.iamnotagoodman.com}
-  - {name: "[trojan]🇸🇬[SG]sg2.iamnotagoodman.com:443(e680d8cf-07f4-3e06-b29a-06c52b258232)", server: sg2.iamnotagoodman.com, port: 443, type: trojan, password: e680d8cf-07f4-3e06-b29a-06c52b258232, sni: sg2.iamnotagoodman.com}
-  - {name: "[trojan]🇸🇬[SG]usla2.iamnotagoodman.com:443(e680d8cf-07f4-3e06-b29a-06c52b258232)", server: usla2.iamnotagoodman.com, port: 443, type: trojan, password: e680d8cf-07f4-3e06-b29a-06c52b258232, sni: usla2.iamnotagoodman.com}
-  - {name: "[trojan]🇭🇰[HK]kh2.iamnotagoodman.com:443(e680d8cf-07f4-3e06-b29a-06c52b258232)", server: kh2.iamnotagoodman.com, port: 443, type: trojan, password: e680d8cf-07f4-3e06-b29a-06c52b258232, sni: kh2.iamnotagoodman.com}
+  - {name: "[trojan]🇯🇵[JP]sg2.iamnotagoodman.com:443(e680d8cf-07f4-3e06-b29a-06c52b258232)", server: sg2.iamnotagoodman.com, port: 443, type: trojan, password: e680d8cf-07f4-3e06-b29a-06c52b258232, sni: sg2.iamnotagoodman.com}
+  - {name: "[trojan]🇯🇵[JP]usla2.iamnotagoodman.com:443(e680d8cf-07f4-3e06-b29a-06c52b258232)", server: usla2.iamnotagoodman.com, port: 443, type: trojan, password: e680d8cf-07f4-3e06-b29a-06c52b258232, sni: usla2.iamnotagoodman.com}
+  - {name: "[trojan]🇸🇬[SG]kh2.iamnotagoodman.com:443(e680d8cf-07f4-3e06-b29a-06c52b258232)", server: kh2.iamnotagoodman.com, port: 443, type: trojan, password: e680d8cf-07f4-3e06-b29a-06c52b258232, sni: kh2.iamnotagoodman.com}
   - {name: "[ss]🇯🇵[JP]85.208.108.58:5004(g5MeD6Ft3CWlJId)", server: 85.208.108.58, port: 5004, type: ss, cipher: aes-256-gcm, password: g5MeD6Ft3CWlJId}
   - {name: "[ss]🇯🇵[JP]85.208.108.58:8118(cdBIDV42DCwnfIN)", server: 85.208.108.58, port: 8118, type: ss, cipher: aes-256-gcm, password: cdBIDV42DCwnfIN}
   - {name: "[ss]🇯🇵[JP]85.208.108.58:5601(Y6R9pAtvxxzmGC)", server: 85.208.108.58, port: 5601, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC}
@@ -462,7 +463,6 @@ proxies:
   - {name: "[trojan]🇺🇸[US]fhcamd1.gaox.ml:443(e23f408a-012e-4030-8b31-02022031cb50)", server: fhcamd1.gaox.ml, port: 443, type: trojan, password: e23f408a-012e-4030-8b31-02022031cb50}
   - {name: "[trojan]🇺🇸[US]us.dogintnode.com:443(91a3db80-baf5-3f35-8c0e-b6483aefa1fd)", server: us.dogintnode.com, port: 443, type: trojan, password: 91a3db80-baf5-3f35-8c0e-b6483aefa1fd}
   - {name: "[trojan]🏁[RELAY]172.67.206.66:443(2debb06b-95ce-4e9b-956a-6cf7cadac30c)", server: 172.67.206.66, port: 443, type: trojan, password: 2debb06b-95ce-4e9b-956a-6cf7cadac30c, sni: usyy.884899.cf}
-  - {name: "[trojan]🇺🇸[US]fhcarm2.gaox.ml:443(f39bd244-f5fe-415c-8b98-a1e5250bf178)", server: fhcarm2.gaox.ml, port: 443, type: trojan, password: f39bd244-f5fe-415c-8b98-a1e5250bf178}
   - {name: "[vmess]🏁[RELAY]172.67.143.74:443(A9A56660-4554-4278-863A-D3CE30294B59)", server: 172.67.143.74, port: 443, type: vmess, uuid: A9A56660-4554-4278-863A-D3CE30294B59, alterId: 0, cipher: auto, network: ws, tls: true, ws-opts: {path: /, headers: {host: pure.daycat.space}}}
   - {name: "[ss]🇺🇸[US]169.197.141.14:7002(RexnBgU7EV5ADxG)", server: 169.197.141.14, port: 7002, type: ss, cipher: aes-256-gcm, password: RexnBgU7EV5ADxG}
   - {name: "[vmess]🇺🇸[US]vus4.0bad.com:443(927094d3-d678-4763-8591-e240d0bcae87)", server: vus4.0bad.com, port: 443, type: vmess, uuid: 927094d3-d678-4763-8591-e240d0bcae87, alterId: 0, cipher: auto, network: ws, tls: true, ws-opts: {path: /chat, headers: {host: vus4.0bad.com}}}
@@ -494,6 +494,3 @@ proxies:
   - {name: "[ss]🇺🇸[US]38.91.107.72:5500(KixLvKzwjekG00rm)", server: 38.91.107.72, port: 5500, type: ss, cipher: aes-256-gcm, password: KixLvKzwjekG00rm}
   - {name: "[vmess]🇺🇸[US]app.ssfree.ru:443(112b3816-ddd6-11ec-8d1b-000017022008)", server: app.ssfree.ru, port: 443, type: vmess, uuid: 112b3816-ddd6-11ec-8d1b-000017022008, alterId: 64, cipher: auto, network: ws, tls: false, ws-opts: {path: /getweather, headers: {host: app.ssfree.ru}}}
   - {name: "[vmess]🇺🇸[US]app.ssfree.ru:443(7babe524-dd71-11ec-a5ae-000017022008)", server: app.ssfree.ru, port: 443, type: vmess, uuid: 7babe524-dd71-11ec-a5ae-000017022008, alterId: 64, cipher: auto, network: ws, tls: true, ws-opts: {path: /getweather, headers: {host: app.ssfree.ru}}}
-  - {name: "[vmess]🇺🇸[US]app.ssfree.ru:443(db180bca-be02-11ec-ad91-000017022008)", server: app.ssfree.ru, port: 443, type: vmess, uuid: db180bca-be02-11ec-ad91-000017022008, alterId: 64, cipher: auto, network: ws, tls: false, ws-opts: {path: /getweather, headers: {host: app.ssfree.ru}}}
-  - {name: "[vmess]🇺🇸[US]app.ssfree.ru:443(3ca3da44-d9e8-11ec-bbae-000017022008)", server: app.ssfree.ru, port: 443, type: vmess, uuid: 3ca3da44-d9e8-11ec-bbae-000017022008, alterId: 64, cipher: auto, network: ws, tls: false, ws-opts: {path: /getweather, headers: {host: app.ssfree.ru}}}
-  - {name: "[vmess]🇺🇸[US]app.ssfree.ru:443(ee05e08a-c579-11ec-824d-000017022008)", server: app.ssfree.ru, port: 443, type: vmess, uuid: ee05e08a-c579-11ec-824d-000017022008, alterId: 64, cipher: auto, network: ws, tls: true, ws-opts: {path: /getweather, headers: {host: app.ssfree.ru}}}
