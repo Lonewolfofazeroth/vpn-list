@@ -94,8 +94,7 @@ class sub_convert():
                         server_body = node_part[1].split('/?')[0]
                         password = sub_convert.base64_decode(
                             node_part[0]).split(':')[-1]
-                        name_renamed = '[ss]' + server_head + \
-                            server_body + '(' + password + ')'
+                        name_renamed = server_head + server_body + '(' + password + ')'
                         node_part[2] = urllib.parse.quote(
                             name_renamed, safe='')
                         node_raw = node_part[0] + '@' + \
@@ -112,8 +111,7 @@ class sub_convert():
                         server_head = sub_convert.find_country(
                             server)
                         password = node_part_head[-3]
-                        name_renamed = '[ss]' + server_head + server + \
-                            ':' + server_port + '(' + password + ')'
+                        name_renamed = server_head + server +  ':' + server_port + '(' + password + ')'
                         node_part[1] = urllib.parse.quote(
                             name_renamed, safe='')
                         node_raw = node_part[0] + '#' + node_part[1]
@@ -137,8 +135,7 @@ class sub_convert():
                             break
                         else:
                             continue
-                    name_renamed = '[ssr]' + server_head + node_part_head[0] + ':' + \
-                        node_part_head[1] + '(' + password + ')'
+                    name_renamed = server_head + node_part_head[0] + ':' + node_part_head[1] + '(' + password + ')'
                     node_part_foot = node_part[-1].split('&')
                     for i in range(len(node_part_foot)):
                         if 'remarks' in node_part_foot[i]:
@@ -160,8 +157,7 @@ class sub_convert():
                         node_json = json.loads(node_json_raw)
                     else:
                         node_json = eval(node_json_raw)
-                    name_renamed = '[vmess]' + sub_convert.find_country(
-                        node_json['add']) + node_json['add'] + ':' + str(node_json['port']) + '(' + node_json['id'] + ')'
+                    name_renamed = sub_convert.find_country(node_json['add']) + node_json['add'] + ':' + str(node_json['port']) + '(' + node_json['id'] + ')'
                     node_json['ps'] = name_renamed
                     node_json_dumps = json.dumps(node_json)
                     node_raw = sub_convert.base64_encode(node_json_dumps)
@@ -176,8 +172,7 @@ class sub_convert():
                     server_head = sub_convert.find_country(
                         node_part[1].split(':')[0])
                     password = node_part[0]
-                    name_renamed = '[trojan]' + server_head + \
-                        node_part[1].split('?')[0] + '(' + password + ')'
+                    name_renamed = server_head + node_part[1].split('?')[0] + '(' + password + ')'
                     node_raw = node_part[0] + '@' + \
                         node_part[1] + '#' + urllib.parse.quote(name_renamed)
                     node = 'trojan://' + node_raw
@@ -333,7 +328,7 @@ class sub_convert():
             name_emoji = emoji[country_code]
         else:
             name_emoji = emoji['NOWHERE']
-        return name_emoji + '[' + country_code + ']'
+        return '[' + name_emoji + ']'
 
     def write_to_node(node_list_array, path):
         node_list = '\n'.join(node_list_array)
