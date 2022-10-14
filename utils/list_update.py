@@ -33,7 +33,7 @@ def check_url(url):  # 判断远程远程链接是否已经更新
 
 class update_url():
 
-    def update_main(update_enable_list=[0, 25, 35, 43, 54, 57]):
+    def update_main(update_enable_list=[0, 25, 35, 43, 54, 57, 67]):
         if len(update_enable_list) > 0:
             for id in update_enable_list:
                 status = update_url.update(id)
@@ -181,7 +181,16 @@ class update_url():
                 return [57, url_update]
             else:
                 return [57, 404]
-
+        
+        elif id == 67:
+            today = datetime.today().strftime('%m%d')
+            front_url = 'https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/'
+            url_update = front_url + today
+            if check_url(url_update):
+                return [57, url_update]
+            else:
+                return [57, 404]
+        
 
 if __name__ == '__main__':
     update_url.update_main()
