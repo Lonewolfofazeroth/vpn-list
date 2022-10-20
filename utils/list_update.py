@@ -98,12 +98,12 @@ class update_url():
                 return [43, 404]
         
         elif id == 25:
-            yesterday = (datetime.today() + timedelta(-1)).strftime('%Y%m%d')
+            today = datetime.today().strftime('%Y%m%d')
             month = datetime.today().strftime('%m') +'/'
             year = datetime.today().strftime('%Y') +'/'
             front_url = 'https://v2rayshare.com/wp-content/uploads/'
             end_url = '.txt'
-            url_update = front_url + year + month + yesterday + end_url
+            url_update = front_url + year + month + today + end_url
             if check_url(url_update):
                 return [25, url_update]
             else:
@@ -142,10 +142,8 @@ class update_url():
                     else:
                         continue
                 url_update = '|'.join(url_update_array)
-                if check_url(url_update):
-                    return [35, url_update]
-                else:
-                    return [35, 404]
+                return [35, url_update]
+
             except Exception as err:
                 print(err)
                 return [37, 404]
@@ -163,20 +161,17 @@ class update_url():
                     else:
                         continue
                 url_update = '|'.join(url_update_array)
-                if check_url(url_update):
-                    return [54, url_update]
-                else:
-                    return [54, 404]
+                return [54, url_update]
             except Exception as err:
                 print(err)
                 return [54, 404]
         elif id == 57:
-            yesterday = (datetime.today() + timedelta(-1)).strftime('%Y%m%d')
+            today = datetime.today().strftime('%Y%m%d')
             month = datetime.today().strftime('%m') +'/'
             year = datetime.today().strftime('%Y') +'/'
             front_url = 'https://clashnode.com/wp-content/uploads/'
             end_url = '.txt'
-            url_update = front_url + year + month + yesterday + end_url
+            url_update = front_url + year + month + today + end_url
             if check_url(url_update):
                 return [57, url_update]
             else:
@@ -184,7 +179,7 @@ class update_url():
         
         elif id == 67:
             today = datetime.today().strftime('%m%d')
-            front_url = 'https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/'
+            front_url = 'https://raw.githubusercontent.com/Strongmiao168/v2ray/main/'
             url_update = front_url + today
             if check_url(url_update):
                 return [57, url_update]
