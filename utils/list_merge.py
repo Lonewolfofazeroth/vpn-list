@@ -17,7 +17,7 @@ sub_list_path = './sub/list/'
 
 
 class sub_merge():
-    # 将转换后的所有 Url 链接内容合并转换 YAML or Base64, ，并输出文件，输入订阅列表。
+    # 将转换后的所有 Url 链接内容合并转换 YAML or Base64,并输出文件，输入订阅列表。
     def sub_merge(url_list):
         content_list_array = []
         for index in range(len(url_list)):
