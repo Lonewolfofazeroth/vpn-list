@@ -47,8 +47,9 @@ class sub_merge():
         # https://python3-cookbook.readthedocs.io/zh_CN/latest/c02/p14_combine_and_concatenate_strings.html
         content_list = ''.join(content_list_array)
         # 去重
-        content_array = content_list.split('\n')[:-1]
-        content_array_deduplication = sub_convert.duplicate_removal(content_array)
+        content_array = content_list.split('\n')
+        content_array_deduplication = sub_convert.duplicate_removal(
+            content_array)
         # 写入文件
         sub_convert.write_to_node(
             content_array_deduplication, './sub/node.txt')
