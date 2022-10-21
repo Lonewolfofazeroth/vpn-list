@@ -14,7 +14,7 @@ from requests.adapters import HTTPAdapter
 class sub_convert():
     def get_node_from_sub(url_raw='', server_host='http://127.0.0.1:25500'):
         # 使用远程订阅转换服务
-        # server_host = 'https://api.v1.mk'
+        # server_host = 'https://sub.xeton.dev'
         # 使用本地订阅转换服务
         # 分割订阅链接
         urls = url_raw.split('|')
@@ -32,9 +32,8 @@ class sub_convert():
                 # 如果解析出错，将原始链接内容拷贝下来
                 if 'No nodes were found!' in resp.text:
                     print(resp.text + '\n下载订阅文件……')
-                    node_list = sub_convert.convert(url)
-                else:
-                    node_list = resp.text
+                    resp = s.get(url, timeout=30)
+                node_list = resp.text
             except Exception as err:
                 # 链接有问题，直接返回原始错误
                 print('网络错误，检查订阅转换服务器是否失效:' + '\n' +
@@ -44,36 +43,6 @@ class sub_convert():
             sub_content.append(node_list_formated)
         sub_content_all = ''.join(sub_content)
         return sub_content_all
-
-    # 一般可以通过subconviter生成订阅链接的内容一般都不需要额外处理
-    def convert(raw_input):
-        # convert Url to YAML or Base64
-        sub_content = ''
-        s = requests.Session()
-        s.mount('http://', HTTPAdapter(max_retries=5))
-        s.mount('https://', HTTPAdapter(max_retries=5))
-        try:
-            print('Downloading from:' + raw_input)
-            resp = s.get(raw_input, timeout=5) 
-            lines_raw = resp.text
-            if 'ss://' in lines_raw or 'ssr://' in lines_raw or 'trojan://' in lines_raw:
-                lines = lines_raw.split('\n')
-            else:
-                lines_raw = sub_convert.base64_decode(lines_raw)
-                lines = lines_raw.split('\n')
-            for line in lines:
-                if 'ss://' in line:
-                    sub_content += (line + '\n')
-                elif 'ssr://' in line:
-                    sub_content += (line + '\n')
-                elif 'trojan://' in line:
-                    sub_content += (line + '\n')
-                else:
-                    continue
-            return sub_content
-        except Exception as err:
-            print(err)
-            return ''
 
     def format(node_list):
         # 重命名
@@ -189,16 +158,18 @@ class sub_convert():
         node_list_dr_array = []
         node_name_dr_array = []
         for node in node_list:
-            node_name = sub_convert.get_node_name(node)
-            if '127.' not in node_name or 'localhost' in node_name:
-                if node_name not in node_name_dr_array:
-                    node_name_dr_array.append(node_name)
-                    node_list_dr_array.append(node)
-            else:
-                continue
+            if ("ss://" in node or "ssr://" in node or "trojan://" in node and "vless://" not in node):
+                node_name = sub_convert.get_node_name(node)
+                if '127.' not in node_name or 'localhost' in node_name:
+                    if node_name not in node_name_dr_array:
+                        node_name_dr_array.append(node_name)
+                        node_list_dr_array.append(node)
+                else:
+                    continue
         return node_list_dr_array
 
     def get_node_name(node):
+        name = ""
         if 'ss://' in node and 'vless://' not in node and 'vmess://' not in node:
             try:
                 node_del_head = node.replace('ss://', '')

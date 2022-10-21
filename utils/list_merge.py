@@ -21,15 +21,11 @@ class sub_merge():
     def sub_merge(url_list):
         content_list_array = []
         for index in range(len(url_list)):
-            # 出现三种情况，最复杂的为clash、base64、url三种格式的互相掺杂
-            # 首先用|拆分，然后再进行转换，最后再合并
             url = url_list[index]['url']
             ids = url_list[index]['id']
             remarks = url_list[index]['remarks']
             content = sub_convert.get_node_from_sub(url)
-            # try:
             if content == '':
-                # disable_list(ids)
                 print(f'Writing error of {remarks} to {ids:0>2d}.txt\n')
                 file = open(f'{sub_list_path}{ids:0>2d}.txt',
                             'w', encoding='utf-8')
@@ -86,8 +82,6 @@ class sub_merge():
 
 if __name__ == '__main__':
     update_url.update_main()
-    sub_merge.geoip_update(
-        'https://raw.githubusercontent.com/Loyalsoldier/geoip/release/Country.mmdb')
+    sub_merge.geoip_update('https://raw.githubusercontent.com/Loyalsoldier/geoip/release/Country.mmdb')
     sub_list = sub_merge.read_list(sub_list_json)
     sub_merge.sub_merge(sub_list)
-    # sub_merge.readme_update(readme, sub_list)
