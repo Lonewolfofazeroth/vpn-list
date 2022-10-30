@@ -1,6 +1,6 @@
 from ping3 import ping
 
-if not ping('5.183.176.92',2):
+if not ping('vde1.asdsssa.com',10):
     print("not connected")
 else:
     print("connected")

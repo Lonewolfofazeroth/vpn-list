@@ -8,7 +8,7 @@ import urllib.parse
 
 import geoip2.database
 import requests
-from ping3 import ping
+# from ping3 import ping
 from requests.adapters import HTTPAdapter
 
 
@@ -633,8 +633,8 @@ class sub_convert():
                     pass
             if yaml_url['server'] == '' or yaml_url['port'] == 0:
                 continue
-            if not ping(yaml_url['server'],1):
-                continue
+            # if not ping(yaml_url['server'],1):
+            #     continue
             yaml_node_raw = str(yaml_url)
             yaml_node_body = yaml_node_raw.replace('\'', '')
             yaml_node_head = '  - '
