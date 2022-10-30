@@ -633,7 +633,7 @@ class sub_convert():
                     pass
             if yaml_url['server'] == '' or yaml_url['port'] == 0:
                 continue
-            if not ping(yaml_url['server'],3):
+            if not ping(yaml_url['server'],1):
                 continue
             yaml_node_raw = str(yaml_url)
             yaml_node_body = yaml_node_raw.replace('\'', '')
