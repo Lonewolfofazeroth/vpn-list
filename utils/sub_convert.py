@@ -445,7 +445,7 @@ class sub_convert():
                     config_first_decode_list = sub_convert.base64_decode(ss_content_array[0]).split(':')
                     # include server port
                     config_second_list = ss_content_array[1].split(':')
-                    yaml_url.setdefault('server', ':'.join(config_second_list[:-2]))
+                    yaml_url.setdefault('server', (':'.join(config_second_list[:-1])).replace("]","").replace("[",""))
                     yaml_url.setdefault('port', config_second_list[-1])
                     yaml_url.setdefault('type', 'ss')
                     ss_cipher = ["aes-128-gcm", "aes-192-gcm", "aes-256-gcm", "aes-128-cfb", "aes-192-cfb", "aes-256-cfb", "aes-128-ctr", "aes-192-ctr", "aes-256-ctr", "rc4-md5", "chacha20-ietf", "xchacha20", "chacha20-ietf-poly1305", "xchacha20-ietf-poly1305"]
