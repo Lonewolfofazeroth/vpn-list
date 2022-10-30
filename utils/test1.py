@@ -1,7 +1,6 @@
-import re
+from ping3 import ping
 
-a = 'd405358-95ab-43bc-8476-3b1a6bc60bb3d405358-95ab-43bc-8476-3b1a6bc60bb3'
-if re.findall("[f-z]", a):
-    print("true")
+if not ping('5.183.176.92',2):
+    print("not connected")
 else:
-    print("false")
+    print("connected")
