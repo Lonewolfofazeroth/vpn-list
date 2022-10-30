@@ -8,6 +8,7 @@ import urllib.parse
 
 import geoip2.database
 import requests
+from ping3 import ping
 from requests.adapters import HTTPAdapter
 
 
@@ -631,6 +632,8 @@ class sub_convert():
                     print(f'yaml_encode 解析 trojan 节点发生错误: {err}')
                     pass
             if yaml_url['server'] == '' or yaml_url['port'] == 0:
+                continue
+            if not ping(yaml_url['server']):
                 continue
             yaml_node_raw = str(yaml_url)
             yaml_node_body = yaml_node_raw.replace('\'', '')
