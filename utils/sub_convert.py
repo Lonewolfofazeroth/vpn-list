@@ -589,7 +589,7 @@ class sub_convert():
                     yaml_url.setdefault('server', part_list[1].split(':')[0])
                     yaml_url.setdefault('port', part_list[1].split(':')[1])
                     yaml_url.setdefault('type', 'trojan')
-                    server_password = urllib.parse.unquote(part_list[0].replace('trojan://', ''))
+                    server_password = urllib.parse.unquote(part_list[0].replace('trojan://', '')).replace('!str', '').replace('!<str>', '').replace(' ', '')
                     if server_password.isdigit() or server_password.replace('.', '').isdigit():
                         yaml_url.setdefault('password', '!<str> ' + server_password)
                     elif not server_password:
