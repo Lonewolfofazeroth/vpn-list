@@ -1,4 +1,6 @@
 proxies:
+  - {name: "[🇹🇷]www.v246.top:443(5f78aeea-063c-4057-8d32-9bef4bb14cc5)", server: www.v246.top, port: 443, type: trojan, password: 5f78aeea-063c-4057-8d32-9bef4bb14cc5}
+  - {name: "[🇹🇷]www.v246.top:443(b8a01914-f44f-499d-8a65-26d845ef4fc9)", server: www.v246.top, port: 443, type: trojan, password: b8a01914-f44f-499d-8a65-26d845ef4fc9, sni: www.v246.top}
   - {name: "[🇹🇷]turkey.jcnf.app:443(c753e8a8-e180-4e76-a486-c917273d718b)", server: turkey.jcnf.app, port: 443, type: vmess, uuid: c753e8a8-e180-4e76-a486-c917273d718b, alterId: 0, cipher: auto, network: ws, tls: true, ws-opts: {path: /zcjd, headers: {host: turkey.jcnf.app}}}
   - {name: "[🇦🇶]bx.paolujichang.com:443(c9daa616-3d67-4078-9fa5-29efa4b318e2)", server: bx.paolujichang.com, port: 443, type: trojan, password: c9daa616-3d67-4078-9fa5-29efa4b318e2}
   - {name: "[🇩🇪]vde1.0bad.com:443(927094d3-d678-4763-8591-e240d0bcae87)", server: vde1.0bad.com, port: 443, type: vmess, uuid: 927094d3-d678-4763-8591-e240d0bcae87, alterId: 0, cipher: auto, network: ws, tls: false, ws-opts: {path: /chat, headers: {host: vde1.0bad.com}}}
@@ -95,9 +97,9 @@ proxies:
   - {name: "[🇱🇻]friendhosting.v241p.top:443(b8a01914-f44f-499d-8a65-26d845ef4fc9)", server: friendhosting.v241p.top, port: 443, type: trojan, password: b8a01914-f44f-499d-8a65-26d845ef4fc9, sni: friendhosting.v241p.top}
   - {name: "[🇨🇿]cz.v212.fun:443(9c7a49a2-ddff-4654-925b-baa7913dbc56)", server: cz.v212.fun, port: 443, type: trojan, password: 9c7a49a2-ddff-4654-925b-baa7913dbc56}
   - {name: "[🇸🇬]ap.liangyuandian.top:443(085f3ab6-92fb-4c56-8ed5-6d0df11d8c0c)", server: ap.liangyuandian.top, port: 443, type: trojan, password: 085f3ab6-92fb-4c56-8ed5-6d0df11d8c0c}
+  - {name: "[🇸🇬]usa.liangyuandian.top:443(085f3ab6-92fb-4c56-8ed5-6d0df11d8c0c)", server: usa.liangyuandian.top, port: 443, type: trojan, password: 085f3ab6-92fb-4c56-8ed5-6d0df11d8c0c}
   - {name: "[🇸🇬]ca.liangyuandian.top:443(085f3ab6-92fb-4c56-8ed5-6d0df11d8c0c)", server: ca.liangyuandian.top, port: 443, type: trojan, password: 085f3ab6-92fb-4c56-8ed5-6d0df11d8c0c}
   - {name: "[🇸🇬]sg.liangyuandian.top:443(085f3ab6-92fb-4c56-8ed5-6d0df11d8c0c)", server: sg.liangyuandian.top, port: 443, type: trojan, password: 085f3ab6-92fb-4c56-8ed5-6d0df11d8c0c}
-  - {name: "[🇸🇬]de.liangyuandian.top:443(085f3ab6-92fb-4c56-8ed5-6d0df11d8c0c)", server: de.liangyuandian.top, port: 443, type: trojan, password: 085f3ab6-92fb-4c56-8ed5-6d0df11d8c0c}
   - {name: "[🇸🇬]trojan-ctb-sg01.globalssh.xyz:443(123456)", server: trojan-ctb-sg01.globalssh.xyz, port: 443, type: trojan, password: !<str> 123456}
   - {name: "[🇸🇬]sg-01.tiktokcdn.top:443(bb5b1337-fa9e-4e00-b8c6-1110e626171d)", server: sg-01.tiktokcdn.top, port: 443, type: trojan, password: bb5b1337-fa9e-4e00-b8c6-1110e626171d}
   - {name: "[🇸🇬]sg.vpntransfer.xyz:6524(cb8849d7-3b02-49a4-b305-90e5a0b29c94)", server: sg.vpntransfer.xyz, port: 6524, type: vmess, uuid: cb8849d7-3b02-49a4-b305-90e5a0b29c94, alterId: 0, cipher: auto, network: ws, tls: false, ws-opts: {path: /, headers: {host: sg.vpntransfer.xyz}}}
@@ -325,7 +327,6 @@ proxies:
   - {name: "[🇸🇬]5.44.249.45:3389(8b475d9e868e43e0)", server: 5.44.249.45, port: 3389, type: trojan, password: 8b475d9e868e43e0}
   - {name: "[🇸🇬]5.44.249.45:3389(3febb05ea76a940f)", server: 5.44.249.45, port: 3389, type: trojan, password: 3febb05ea76a940f}
   - {name: "[🇸🇬]5.44.249.44:3389(3c4e10af98c30972)", server: 5.44.249.44, port: 3389, type: trojan, password: 3c4e10af98c30972}
-  - {name: "[🇸🇬]sg-am3.eqsunshine.com:32001(3g0dHlKME)", server: sg-am3.eqsunshine.com, port: 32001, type: ssr, cipher: aes-256-cfb, password: 3g0dHlKME, protocol: origin, obfs: tls1.2_ticket_auth, obfs-param: "", protocol-param: ""}
   - {name: "[🇸🇬]sg3-trojan.bonds.id:443(97fdf760-7bbf-11eb-8e14-1239d0255272)", server: sg3-trojan.bonds.id, port: 443, type: trojan, password: 97fdf760-7bbf-11eb-8e14-1239d0255272}
   - {name: "[🇸🇬]sg6-trojan.bonds.id:443(81e9f5f0-1c92-11ed-8d18-1239d0255272)", server: sg6-trojan.bonds.id, port: 443, type: trojan, password: 81e9f5f0-1c92-11ed-8d18-1239d0255272}
   - {name: "[🇸🇬]sg3-trojan.bonds.id:443(4c7985e0-79e8-11eb-b8d3-1239d0255272)", server: sg3-trojan.bonds.id, port: 443, type: trojan, password: 4c7985e0-79e8-11eb-b8d3-1239d0255272}
@@ -504,15 +505,15 @@ proxies:
   - {name: "[🇯🇵]20.46.182.185:443(2f95d996-e911-4b1b-82b1-1d86bf2c517d)", server: 20.46.182.185, port: 443, type: trojan, password: 2f95d996-e911-4b1b-82b1-1d86bf2c517d}
   - {name: "[🇯🇵]85.208.108.62:443(g5MeD6Ft3CWlJId)", server: 85.208.108.62, port: 443, type: ss, cipher: aes-256-gcm, password: g5MeD6Ft3CWlJId}
   - {name: "[🇯🇵]jpc.onecld.top:55200(c8646420-4993-3c57-933c-60d33696c992)", server: jpc.onecld.top, port: 55200, type: trojan, password: c8646420-4993-3c57-933c-60d33696c992, sni: jpc.onecld.top}
-  - {name: "[🇯🇵]east.vless.tk:55117(c8646420-4993-3c57-933c-60d33696c992)", server: east.vless.tk, port: 55117, type: trojan, password: c8646420-4993-3c57-933c-60d33696c992, sni: tka.onecld.top}
-  - {name: "[🇯🇵]east.vless.tk:55103(c8646420-4993-3c57-933c-60d33696c992)", server: east.vless.tk, port: 55103, type: trojan, password: c8646420-4993-3c57-933c-60d33696c992, sni: tkb.onecld.top}
-  - {name: "[🇯🇵]east.vless.tk:55118(c8646420-4993-3c57-933c-60d33696c992)", server: east.vless.tk, port: 55118, type: trojan, password: c8646420-4993-3c57-933c-60d33696c992, sni: tkc.onecld.top}
-  - {name: "[🇯🇵]east.vless.tk:55104(c8646420-4993-3c57-933c-60d33696c992)", server: east.vless.tk, port: 55104, type: vmess, uuid: c8646420-4993-3c57-933c-60d33696c992, alterId: 0, cipher: auto, network: tcp}
-  - {name: "[🇯🇵]east.vless.tk:55101(c8646420-4993-3c57-933c-60d33696c992)", server: east.vless.tk, port: 55101, type: trojan, password: c8646420-4993-3c57-933c-60d33696c992, sni: jpa.onecld.top}
-  - {name: "[🇯🇵]east.vless.tk:55123(c8646420-4993-3c57-933c-60d33696c992)", server: east.vless.tk, port: 55123, type: trojan, password: c8646420-4993-3c57-933c-60d33696c992, sni: krb.onecld.top}
-  - {name: "[🇯🇵]east.vless.tk:55111(c8646420-4993-3c57-933c-60d33696c992)", server: east.vless.tk, port: 55111, type: trojan, password: c8646420-4993-3c57-933c-60d33696c992, sni: krd.onecld.top}
-  - {name: "[🇰🇷]best.vless.tk:45115(c8646420-4993-3c57-933c-60d33696c992)", server: best.vless.tk, port: 45115, type: trojan, password: c8646420-4993-3c57-933c-60d33696c992, sni: ina.onecld.top}
-  - {name: "[🇰🇷]best.vless.tk:45116(c8646420-4993-3c57-933c-60d33696c992)", server: best.vless.tk, port: 45116, type: trojan, password: c8646420-4993-3c57-933c-60d33696c992, sni: inb.onecld.top}
+  - {name: "[🇭🇰]east.vless.tk:55117(c8646420-4993-3c57-933c-60d33696c992)", server: east.vless.tk, port: 55117, type: trojan, password: c8646420-4993-3c57-933c-60d33696c992, sni: tka.onecld.top}
+  - {name: "[🇭🇰]east.vless.tk:55103(c8646420-4993-3c57-933c-60d33696c992)", server: east.vless.tk, port: 55103, type: trojan, password: c8646420-4993-3c57-933c-60d33696c992, sni: tkb.onecld.top}
+  - {name: "[🇭🇰]east.vless.tk:55118(c8646420-4993-3c57-933c-60d33696c992)", server: east.vless.tk, port: 55118, type: trojan, password: c8646420-4993-3c57-933c-60d33696c992, sni: tkc.onecld.top}
+  - {name: "[🇭🇰]east.vless.tk:55104(c8646420-4993-3c57-933c-60d33696c992)", server: east.vless.tk, port: 55104, type: vmess, uuid: c8646420-4993-3c57-933c-60d33696c992, alterId: 0, cipher: auto, network: tcp}
+  - {name: "[🇭🇰]east.vless.tk:55101(c8646420-4993-3c57-933c-60d33696c992)", server: east.vless.tk, port: 55101, type: trojan, password: c8646420-4993-3c57-933c-60d33696c992, sni: jpa.onecld.top}
+  - {name: "[🇭🇰]east.vless.tk:55123(c8646420-4993-3c57-933c-60d33696c992)", server: east.vless.tk, port: 55123, type: trojan, password: c8646420-4993-3c57-933c-60d33696c992, sni: krb.onecld.top}
+  - {name: "[🇭🇰]east.vless.tk:55111(c8646420-4993-3c57-933c-60d33696c992)", server: east.vless.tk, port: 55111, type: trojan, password: c8646420-4993-3c57-933c-60d33696c992, sni: krd.onecld.top}
+  - {name: "[🇭🇰]best.vless.tk:45115(c8646420-4993-3c57-933c-60d33696c992)", server: best.vless.tk, port: 45115, type: trojan, password: c8646420-4993-3c57-933c-60d33696c992, sni: ina.onecld.top}
+  - {name: "[🇭🇰]best.vless.tk:45116(c8646420-4993-3c57-933c-60d33696c992)", server: best.vless.tk, port: 45116, type: trojan, password: c8646420-4993-3c57-933c-60d33696c992, sni: inb.onecld.top}
   - {name: "[🇯🇵]west.vless.tk:55401(c8646420-4993-3c57-933c-60d33696c992)", server: west.vless.tk, port: 55401, type: trojan, password: c8646420-4993-3c57-933c-60d33696c992, sni: usa.onecld.top}
   - {name: "[🇯🇵]west.vless.tk:55426(c8646420-4993-3c57-933c-60d33696c992)", server: west.vless.tk, port: 55426, type: trojan, password: c8646420-4993-3c57-933c-60d33696c992, sni: usb.onecld.top}
   - {name: "[🇯🇵]west.vless.tk:55405(c8646420-4993-3c57-933c-60d33696c992)", server: west.vless.tk, port: 55405, type: trojan, password: c8646420-4993-3c57-933c-60d33696c992, sni: ausa.onecld.top}
@@ -532,8 +533,8 @@ proxies:
   - {name: "[🇯🇵]test.vless.tk:45002(c8646420-4993-3c57-933c-60d33696c992)", server: test.vless.tk, port: 45002, type: trojan, password: c8646420-4993-3c57-933c-60d33696c992, sni: esgy2.onecld.top}
   - {name: "[🇯🇵]test.vless.tk:45003(c8646420-4993-3c57-933c-60d33696c992)", server: test.vless.tk, port: 45003, type: trojan, password: c8646420-4993-3c57-933c-60d33696c992, sni: krgy.onecld.top}
   - {name: "[🇯🇵]www.cjf0423.cf:443(!str111111)", server: www.cjf0423.cf, port: 443, type: trojan, password: !<str> 111111}
-  - {name: "[🇭🇰]fast.vless.tk:55201(c8646420-4993-3c57-933c-60d33696c992)", server: fast.vless.tk, port: 55201, type: vmess, uuid: c8646420-4993-3c57-933c-60d33696c992, alterId: 0, cipher: auto, network: ws, tls: true, ws-opts: {path: /index, headers: {host: hkx.onecld.top}}}
-  - {name: "[🇭🇰]fast.vless.tk:55202(c8646420-4993-3c57-933c-60d33696c992)", server: fast.vless.tk, port: 55202, type: trojan, password: c8646420-4993-3c57-933c-60d33696c992, sni: tkx.onecld.top}
+  - {name: "[🇯🇵]fast.vless.tk:55201(c8646420-4993-3c57-933c-60d33696c992)", server: fast.vless.tk, port: 55201, type: vmess, uuid: c8646420-4993-3c57-933c-60d33696c992, alterId: 0, cipher: auto, network: ws, tls: true, ws-opts: {path: /index, headers: {host: hkx.onecld.top}}}
+  - {name: "[🇯🇵]fast.vless.tk:55202(c8646420-4993-3c57-933c-60d33696c992)", server: fast.vless.tk, port: 55202, type: trojan, password: c8646420-4993-3c57-933c-60d33696c992, sni: tkx.onecld.top}
   - {name: "[🇯🇵]85.208.108.21:8009(XKFKl2rULjIp74)", server: 85.208.108.21, port: 8009, type: ss, cipher: aes-256-gcm, password: XKFKl2rULjIp74}
   - {name: "[🇯🇵]85.208.108.21:8090(PCnnH6SQSnfoS27)", server: 85.208.108.21, port: 8090, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27}
   - {name: "[🇯🇵]85.208.108.59:3306(Y6R9pAtvxxzmGC)", server: 85.208.108.59, port: 3306, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC}
@@ -723,7 +724,6 @@ proxies:
   - {name: "[🇯🇵]85.208.108.94:2375(faBAoD54k87UJG7)", server: 85.208.108.94, port: 2375, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7}
   - {name: "[🇯🇵]85.208.108.20:2376(faBAoD54k87UJG7)", server: 85.208.108.20, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7}
   - {name: "[🇯🇵]172.104.77.49:443(927094d3-d678-4763-8591-e240d0bcae87)", server: 172.104.77.49, port: 443, type: vmess, uuid: 927094d3-d678-4763-8591-e240d0bcae87, alterId: 0, cipher: auto, network: ws, tls: false, ws-opts: {path: /chat}}
-  - {name: "[🇯🇵]jp-am48-6.eqnode.net:8081(eAokbaDN6)", server: jp-am48-6.eqnode.net, port: 8081, type: ssr, cipher: aes-256-cfb, password: eAokbaDN6, protocol: origin, obfs: tls1.2_ticket_auth, obfs-param: "", protocol-param: ""}
   - {name: "[🇯🇵]141.147.167.153:5369(f3351c14-60a3-4ef3-bf25-f929d542fd0e)", server: 141.147.167.153, port: 5369, type: ss, cipher: chacha20-ietf-poly1305, password: f3351c14-60a3-4ef3-bf25-f929d542fd0e}
   - {name: "[🇯🇵]172.104.85.224:10001(496202d8-19c4-4023-ad85-04217a74e790)", server: 172.104.85.224, port: 10001, type: trojan, password: 496202d8-19c4-4023-ad85-04217a74e790, sni: aewfhe5z1pokrkw8bi9g06.xingbayun.buzz}
   - {name: "[🇯🇵]jp03.170203.xyz:34522(0e8816b4-6962-4711-9f27-b62a645d8edd)", server: jp03.170203.xyz, port: 34522, type: trojan, password: 0e8816b4-6962-4711-9f27-b62a645d8edd, sni: rprknb2lcp.eastasia.cloudapp.azure.com}
@@ -1021,6 +1021,3 @@ proxies:
   - {name: "[🇵🇱]51.77.53.200:7002(RexnBgU7EV5ADxG)", server: 51.77.53.200, port: 7002, type: ss, cipher: aes-256-gcm, password: RexnBgU7EV5ADxG}
   - {name: "[🇵🇱]51.77.53.200:7306(FoOiGlkAA9yPEGP)", server: 51.77.53.200, port: 7306, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP}
   - {name: "[🇵🇱]51.77.53.200:7307(FoOiGlkAA9yPEGP)", server: 51.77.53.200, port: 7307, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP}
-  - {name: "[🇵🇱]51.77.53.200:8000(KixLvKzwjekG00rm)", server: 51.77.53.200, port: 8000, type: ss, cipher: aes-256-gcm, password: KixLvKzwjekG00rm}
-  - {name: "[🇵🇱]51.77.53.200:8008(XKFKl2rULjIp74)", server: 51.77.53.200, port: 8008, type: ss, cipher: aes-256-gcm, password: XKFKl2rULjIp74}
-  - {name: "[🇵🇱]51.77.53.200:8009(XKFKl2rULjIp74)", server: 51.77.53.200, port: 8009, type: ss, cipher: aes-256-gcm, password: XKFKl2rULjIp74}

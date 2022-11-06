@@ -1,4 +1,7 @@
 proxies:
+  - {name: "[🇵🇱]51.77.53.200:8000(KixLvKzwjekG00rm)", server: 51.77.53.200, port: 8000, type: ss, cipher: aes-256-gcm, password: KixLvKzwjekG00rm}
+  - {name: "[🇵🇱]51.77.53.200:8008(XKFKl2rULjIp74)", server: 51.77.53.200, port: 8008, type: ss, cipher: aes-256-gcm, password: XKFKl2rULjIp74}
+  - {name: "[🇵🇱]51.77.53.200:8009(XKFKl2rULjIp74)", server: 51.77.53.200, port: 8009, type: ss, cipher: aes-256-gcm, password: XKFKl2rULjIp74}
   - {name: "[🇵🇱]51.77.53.200:8080(KixLvKzwjekG00rm)", server: 51.77.53.200, port: 8080, type: ss, cipher: aes-256-gcm, password: KixLvKzwjekG00rm}
   - {name: "[🇵🇱]51.77.53.200:8090(PCnnH6SQSnfoS27)", server: 51.77.53.200, port: 8090, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27}
   - {name: "[🇵🇱]51.77.53.200:8091(PCnnH6SQSnfoS27)", server: 51.77.53.200, port: 8091, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27}
@@ -217,6 +220,7 @@ proxies:
   - {name: "[🇺🇸]38.121.43.204:8009(XKFKl2rULjIp74)", server: 38.121.43.204, port: 8009, type: ss, cipher: aes-256-gcm, password: XKFKl2rULjIp74}
   - {name: "[🇺🇸]pro-us1-2.nigirocloud.com:443(H5sVBuzPFUgVTdY8Ry)", server: pro-us1-2.nigirocloud.com, port: 443, type: trojan, password: H5sVBuzPFUgVTdY8Ry}
   - {name: "[🇺🇸]us-trojan.bonds.id:443(1a2ad440-33e8-11ed-954b-1239d0255272)", server: us-trojan.bonds.id, port: 443, type: trojan, password: 1a2ad440-33e8-11ed-954b-1239d0255272}
+  - {name: "[🇺🇸]45.79.79.37:443(9d6cceaa373bf2c8acb22e60b6a58be6)", server: 45.79.79.37, port: 443, type: ss, cipher: aes-256-cfb, password: 9d6cceaa373bf2c8acb22e60b6a58be6}
   - {name: "[🇺🇸]45.33.88.190:443(9d6cceaa373bf2c8acb22e60b6a58be6)", server: 45.33.88.190, port: 443, type: ss, cipher: aes-256-cfb, password: 9d6cceaa373bf2c8acb22e60b6a58be6}
   - {name: "[🏁]172.67.206.66:443(2debb06b-95ce-4e9b-956a-6cf7cadac30c)", server: 172.67.206.66, port: 443, type: trojan, password: 2debb06b-95ce-4e9b-956a-6cf7cadac30c, sni: usyy.884899.cf}
   - {name: "[🇺🇸]upay.com:443(-40f9-475c-bf46-e3883ee7da5c2b60d6a-a2f5-40ff-b7f9-f7658abcbf26)", server: upay.com, port: 443, type: trojan, password: -40f9-475c-bf46-e3883ee7da5c2b60d6a-a2f5-40ff-b7f9-f7658abcbf26}
@@ -246,11 +250,10 @@ proxies:
   - {name: "[🇺🇸]137.175.12.228:443(68d238ce-3ca1-46dc-b833-a0916c829ad3)", server: 137.175.12.228, port: 443, type: vmess, uuid: 68d238ce-3ca1-46dc-b833-a0916c829ad3, alterId: 64, cipher: auto, network: ws, tls: false, ws-opts: {path: /path/350432191028, headers: {host: www.66218164.xyz}}}
   - {name: "[🇺🇸]us.dogintnode.com:443(f0521113-222b-3cf3-996a-d2f362b9f970)", server: us.dogintnode.com, port: 443, type: trojan, password: f0521113-222b-3cf3-996a-d2f362b9f970}
   - {name: "[🇺🇸]88.210.37.123:41007(yPKrexXaVMAXFfez)", server: 88.210.37.123, port: 41007, type: ssr, cipher: chacha20-ietf, password: yPKrexXaVMAXFfez, protocol: auth_aes128_sha1, obfs: tls1.2_ticket_auth, obfs-param: "0ec5428084.download.windowsupdate.com", protocol-param: 28084:kf47Xf}
-  - {name: "[🇺🇸]88.210.37.124:41008(yPKrexXaVMAXFfez)", server: 88.210.37.124, port: 41008, type: ssr, cipher: chacha20-ietf, password: yPKrexXaVMAXFfez, protocol: auth_aes128_sha1, obfs: tls1.2_ticket_auth, obfs-param: "0ec5428084.download.windowsupdate.com", protocol-param: 28084:kf47Xf}
   - {name: "[🇺🇸]us-trojan.bonds.id:443(0c0bb0d0-3763-11ed-84e5-1239d0255272)", server: us-trojan.bonds.id, port: 443, type: trojan, password: 0c0bb0d0-3763-11ed-84e5-1239d0255272}
   - {name: "[🇺🇸]sea.v242p.top:443(b8a01914-f44f-499d-8a65-26d845ef4fc9)", server: sea.v242p.top, port: 443, type: trojan, password: b8a01914-f44f-499d-8a65-26d845ef4fc9, sni: sea.v242p.top}
-  - {name: "[🇺🇸]hk-server-02.selfupay.com:443(36ebef7d1b1d6205fd0c55f28800e674)", server: hk-server-02.selfupay.com, port: 443, type: trojan, password: 36ebef7d1b1d6205fd0c55f28800e674}
-  - {name: "[🇺🇸]hk-server-02.selfupay.com:443(a3fa58b581353bb375d2ddad0f327938)", server: hk-server-02.selfupay.com, port: 443, type: trojan, password: a3fa58b581353bb375d2ddad0f327938}
+  - {name: "[🇳🇱]hk-server-02.selfupay.com:443(36ebef7d1b1d6205fd0c55f28800e674)", server: hk-server-02.selfupay.com, port: 443, type: trojan, password: 36ebef7d1b1d6205fd0c55f28800e674}
+  - {name: "[🇳🇱]hk-server-02.selfupay.com:443(a3fa58b581353bb375d2ddad0f327938)", server: hk-server-02.selfupay.com, port: 443, type: trojan, password: a3fa58b581353bb375d2ddad0f327938}
   - {name: "[🇺🇸]167.88.61.119:5004(g5MeD6Ft3CWlJId)", server: 167.88.61.119, port: 5004, type: ss, cipher: aes-256-gcm, password: g5MeD6Ft3CWlJId}
   - {name: "[🏁]v116a.aagogo.cf:443(c7ba8e84-2d65-38e6-92e8-2c13bb6dd512)", server: v116a.aagogo.cf, port: 443, type: vmess, uuid: c7ba8e84-2d65-38e6-92e8-2c13bb6dd512, alterId: 0, cipher: auto, network: ws, tls: true, ws-opts: {path: /v116-kDPxxx6Otf, headers: {host: v116a.aagogo.cf}}}
   - {name: "[🇺🇸]us06.170203.xyz:45454(98ca182a-2b37-49f0-9d06-39947d952ed6)", server: us06.170203.xyz, port: 45454, type: trojan, password: 98ca182a-2b37-49f0-9d06-39947d952ed6, sni: us06.170203.xyz}
@@ -321,7 +324,6 @@ proxies:
   - {name: "[🇺🇸]usa.838501.xyz:15001(561c24f7-b715-425a-a2f1-971ccbdddd11)", server: usa.838501.xyz, port: 15001, type: trojan, password: 561c24f7-b715-425a-a2f1-971ccbdddd11}
   - {name: "[🇺🇸]usa.838501.xyz:15001(f54fb9b3-0611-4cf5-b733-97a55b260bd0)", server: usa.838501.xyz, port: 15001, type: trojan, password: f54fb9b3-0611-4cf5-b733-97a55b260bd0}
   - {name: "[🇺🇸]5.181.234.254:812(G!yBwPWH3Vao)", server: 5.181.234.254, port: 812, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
-  - {name: "[🏁]tv4.tjvpn.top:443(e64b7c51-d368-4bb2-ba0b-32aeb5e9d8c6)", server: tv4.tjvpn.top, port: 443, type: vmess, uuid: e64b7c51-d368-4bb2-ba0b-32aeb5e9d8c6, alterId: 0, cipher: auto, network: ws, tls: true, ws-opts: {path: /, headers: {host: tv4.tjvpn.top}}}
   - {name: "[🇺🇸]usj.p1.gay:10325(e1f80416-5394-4fcd-af80-12ef9799a92c)", server: usj.p1.gay, port: 10325, type: trojan, password: e1f80416-5394-4fcd-af80-12ef9799a92c, sni: usj.p1.gay}
   - {name: "[🇺🇸]mrk.hotfun.buzz:25151(e1f80416-5394-4fcd-af80-12ef9799a92c)", server: mrk.hotfun.buzz, port: 25151, type: trojan, password: e1f80416-5394-4fcd-af80-12ef9799a92c, sni: mrk.hotfun.buzz}
   - {name: "[🏁]v122.aagogo.cf:443(c7ba8e84-2d65-38e6-92e8-2c13bb6dd512)", server: v122.aagogo.cf, port: 443, type: vmess, uuid: c7ba8e84-2d65-38e6-92e8-2c13bb6dd512, alterId: 0, cipher: auto, network: ws, tls: false, ws-opts: {path: /v122-EthelloAcU, headers: {host: v122.aagogo.cf}}}
@@ -1129,5 +1131,3 @@ proxies:
   - {name: "[🇳🇱]172.99.188.71:8091(PCnnH6SQSnfoS27)", server: 172.99.188.71, port: 8091, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27}
   - {name: "[🇳🇱]172.99.188.71:8008(XKFKl2rULjIp74)", server: 172.99.188.71, port: 8008, type: ss, cipher: aes-256-gcm, password: XKFKl2rULjIp74}
   - {name: "[🇳🇱]172.99.188.71:3389(Y6R9pAtvxxzmGC)", server: 172.99.188.71, port: 3389, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC}
-  - {name: "[🇳🇱]172.99.188.71:6379(zDNVedRFPQexG9v)", server: 172.99.188.71, port: 6379, type: ss, cipher: aes-256-gcm, password: zDNVedRFPQexG9v}
-  - {name: "[🇳🇱]172.99.188.71:5000(Y6R9pAtvxxzmGC)", server: 172.99.188.71, port: 5000, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC}
