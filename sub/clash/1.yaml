@@ -1,4 +1,7 @@
 proxies:
+  - {name: "[🇹🇼]gbo01.vsvideo.shop:10002(c58b5a1f-af92-3108-997e-ca513b1c9747)", server: gbo01.vsvideo.shop, port: 10002, type: trojan, password: c58b5a1f-af92-3108-997e-ca513b1c9747, sni: gbo01.vsvideo.shop}
+  - {name: "[🇹🇼]hinet.yanagm.com:4433(1bf6a984-7e3b-4dbf-a920-297288b10ca3)", server: hinet.yanagm.com, port: 4433, type: trojan, password: 1bf6a984-7e3b-4dbf-a920-297288b10ca3}
+  - {name: "[🇹🇼]pro-tw1-4.nigirocloud.com:443(H5sVBuzPFUgVTdY8Ry)", server: pro-tw1-4.nigirocloud.com, port: 443, type: trojan, password: H5sVBuzPFUgVTdY8Ry}
   - {name: "[🇹🇼]fn600mlines020.fnline.info:443(5dac918f6134)", server: fn600mlines020.fnline.info, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 5dac918f6134}
   - {name: "[🇹🇼]fn600mlines022.fnline.info:443(a57a10279872)", server: fn600mlines022.fnline.info, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: a57a10279872}
   - {name: "[🇹🇼]fn600mlines023.fnline.info:443(4a386af7970a)", server: fn600mlines023.fnline.info, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 4a386af7970a}
@@ -262,6 +265,7 @@ proxies:
   - {name: "[🇸🇬]sgp4.kfcnode.xyz:443(e90f6dea-23f9-47ec-ba23-e2eb5def2e78)", server: sgp4.kfcnode.xyz, port: 443, type: trojan, password: e90f6dea-23f9-47ec-ba23-e2eb5def2e78}
   - {name: "[🇸🇬]hk-5.pannode.top:80(bae86d97-31e2-4736-ba23-219aa7bb32eb)", server: hk-5.pannode.top, port: 80, type: vmess, uuid: bae86d97-31e2-4736-ba23-219aa7bb32eb, alterId: 0, cipher: auto, network: ws, tls: false, ws-opts: {path: /, headers: {host: tms.dingtalk.com}}}
   - {name: "[🇸🇬]v3.583181.xyz:125(c0b5d759-e42d-4ead-b374-33a9b54402aa)", server: v3.583181.xyz, port: 125, type: vmess, uuid: c0b5d759-e42d-4ead-b374-33a9b54402aa, alterId: 0, cipher: auto, network: ws, tls: false, ws-opts: {path: /, headers: {host: pull.free.video.10010.com}}}
+  - {name: "[🇸🇬]146.19.196.146:41005(yPKrexXaVMAXFfez)", server: 146.19.196.146, port: 41005, type: ssr, cipher: chacha20-ietf, password: yPKrexXaVMAXFfez, protocol: auth_aes128_sha1, obfs: tls1.2_ticket_auth, obfs-param: "0ec5428084.download.windowsupdate.com", protocol-param: 28084:kf47Xf}
   - {name: "[🇸🇬]139.162.45.139:443(FLpONjB2Lb)", server: 139.162.45.139, port: 443, type: trojan, password: FLpONjB2Lb}
   - {name: "[🇸🇬]sgp3.kfcnode.xyz:443(e90f6dea-23f9-47ec-ba23-e2eb5def2e78)", server: sgp3.kfcnode.xyz, port: 443, type: trojan, password: e90f6dea-23f9-47ec-ba23-e2eb5def2e78}
   - {name: "[🇸🇬]159.223.89.239:443(bb5b1337-fa9e-4e00-b8c6-1110e626171d)", server: 159.223.89.239, port: 443, type: trojan, password: bb5b1337-fa9e-4e00-b8c6-1110e626171d}
@@ -554,7 +558,6 @@ proxies:
   - {name: "[🇯🇵]168.138.43.89:443(d06a3f01-1ff0-4792-9b8e-a5a604bc74a2)", server: 168.138.43.89, port: 443, type: trojan, password: d06a3f01-1ff0-4792-9b8e-a5a604bc74a2}
   - {name: "[🇯🇵]138.2.45.243:443(c19d1432-8b3e-4818-8837-3d160cf65908)", server: 138.2.45.243, port: 443, type: trojan, password: c19d1432-8b3e-4818-8837-3d160cf65908}
   - {name: "[🇯🇵]150.230.217.213:443(c09eb137-bf68-4658-84e0-102d94b74168)", server: 150.230.217.213, port: 443, type: trojan, password: c09eb137-bf68-4658-84e0-102d94b74168}
-  - {name: "[🇯🇵]150.230.96.103:443(da777aae-defb-41d0-a183-2c27da2b4677)", server: 150.230.96.103, port: 443, type: trojan, password: da777aae-defb-41d0-a183-2c27da2b4677}
   - {name: "[🇯🇵]141.147.191.85:28443(750a29bf-0a40-437f-b120-38de74ae7eaf)", server: 141.147.191.85, port: 28443, type: trojan, password: 750a29bf-0a40-437f-b120-38de74ae7eaf}
   - {name: "[🇯🇵]155.248.172.87:28443(750a29bf-0a40-437f-b120-38de74ae7eaf)", server: 155.248.172.87, port: 28443, type: trojan, password: 750a29bf-0a40-437f-b120-38de74ae7eaf}
   - {name: "[🇯🇵]85.208.108.19:5000(Y6R9pAtvxxzmGC)", server: 85.208.108.19, port: 5000, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC}
@@ -1047,4 +1050,3 @@ proxies:
   - {name: "[🏁]ovh147us118cdn.knctrip.com:443(abd9668e-7ade-437a-b0c7-9e7447031684)", server: ovh147us118cdn.knctrip.com, port: 443, type: vmess, uuid: abd9668e-7ade-437a-b0c7-9e7447031684, alterId: 0, cipher: auto, network: ws, tls: false, ws-opts: {path: /knctrip, headers: {host: ovh147us118cdn.knctrip.com}}}
   - {name: "[🏁]us02.gogogoo.cyou:443(db5d1aa3-908b-44d1-be0a-4e6a8d4e4cda)", server: us02.gogogoo.cyou, port: 443, type: vmess, uuid: db5d1aa3-908b-44d1-be0a-4e6a8d4e4cda, alterId: 4, cipher: auto, network: ws, tls: true, ws-opts: {path: /go, headers: {host: us02.gogogoo.cyou}}}
   - {name: "[🏁]v122.aagogo.cf:443(c7ba8e84-2d65-38e6-92e8-2c13bb6dd512)", server: v122.aagogo.cf, port: 443, type: vmess, uuid: c7ba8e84-2d65-38e6-92e8-2c13bb6dd512, alterId: 0, cipher: auto, network: ws, tls: false, ws-opts: {path: /v122-EthelloAcU, headers: {host: v122.aagogo.cf}}}
-  - {name: "[🏁]shop.ling-car.com:443(a5c3127e-b34c-41d4-a02d-2ce4a1fe11ec)", server: shop.ling-car.com, port: 443, type: trojan, password: a5c3127e-b34c-41d4-a02d-2ce4a1fe11ec}
