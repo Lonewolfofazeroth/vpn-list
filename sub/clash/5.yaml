@@ -1,4 +1,27 @@
 proxies:
+  - {name: "[🇯🇵]13.114.214.6:40236(bcde4c0c-b70d-4504-bae0-d88bd2b775e3)", server: 13.114.214.6, port: 40236, type: vmess, uuid: bcde4c0c-b70d-4504-bae0-d88bd2b775e3, alterId: 0, cipher: auto, network: ws, tls: false, ws-opts: {path: /cctv13/hd.m3u8, headers: {host: 13.114.214.6}}}
+  - {name: "[🇨🇳]120.232.133.202:32016(b5ba96e2-9d7a-40a2-a90e-282fc4a8ff90)", server: 120.232.133.202, port: 32016, type: ss, cipher: chacha20-ietf-poly1305, password: b5ba96e2-9d7a-40a2-a90e-282fc4a8ff90}
+  - {name: "[🇨🇳]20002.purefast2.com:20002(0989fa4f-7b43-34fd-8f7f-ce06427dce06)", server: 20002.purefast2.com, port: 20002, type: trojan, password: 0989fa4f-7b43-34fd-8f7f-ce06427dce06}
+  - {name: "[🇺🇸]54.197.160.19:20456(bcde4c0c-b70d-4504-bae0-d88bd2b775e3)", server: 54.197.160.19, port: 20456, type: vmess, uuid: bcde4c0c-b70d-4504-bae0-d88bd2b775e3, alterId: 0, cipher: auto, network: ws, tls: false, ws-opts: {path: /cctv13/hd.m3u8, headers: {host: 54.197.160.19}}}
+  - {name: "[🇯🇵]13.114.214.6:50236(bcde4c0c-b70d-4504-bae0-d88bd2b775e3)", server: 13.114.214.6, port: 50236, type: vmess, uuid: bcde4c0c-b70d-4504-bae0-d88bd2b775e3, alterId: 0, cipher: auto, network: ws, tls: false, ws-opts: {path: /cctv13/hd.m3u8, headers: {host: 13.114.214.6}}}
+  - {name: "[🇨🇳]120.232.133.202:32003(b5ba96e2-9d7a-40a2-a90e-282fc4a8ff90)", server: 120.232.133.202, port: 32003, type: ss, cipher: chacha20-ietf-poly1305, password: b5ba96e2-9d7a-40a2-a90e-282fc4a8ff90}
+  - {name: "[🇨🇳]120.232.133.202:32003(ac4cc225-f73a-488d-8371-7fadb201dffb)", server: 120.232.133.202, port: 32003, type: ss, cipher: chacha20-ietf-poly1305, password: ac4cc225-f73a-488d-8371-7fadb201dffb}
+  - {name: "[🇨🇳]14.215.164.183:13999(c6781a19-d552-4a2f-86c9-11afb14b5bc8)", server: 14.215.164.183, port: 13999, type: trojan, password: c6781a19-d552-4a2f-86c9-11afb14b5bc8, sni: us03.170203.xyz}
+  - {name: "[🇨🇳]14.215.164.183:46973(7ceffa5e-c148-426a-97b0-2182e1b95923)", server: 14.215.164.183, port: 46973, type: trojan, password: 7ceffa5e-c148-426a-97b0-2182e1b95923, sni: sgmax01.170203.xyz}
+  - {name: "[🇨🇳]183.245.146.6:11001(6e2a6544-6bd5-4584-9568-9726d3b1cb0f)", server: 183.245.146.6, port: 11001, type: trojan, password: 6e2a6544-6bd5-4584-9568-9726d3b1cb0f}
+  - {name: "[🇨🇳]14.215.164.183:30885(6bf1ae5e-a742-446c-a59d-c9e546a4e2df)", server: 14.215.164.183, port: 30885, type: trojan, password: 6bf1ae5e-a742-446c-a59d-c9e546a4e2df, sni: jpmax01.170203.xyz}
+  - {name: "[🇨🇳]120.232.133.202:32007(ac4cc225-f73a-488d-8371-7fadb201dffb)", server: 120.232.133.202, port: 32007, type: ss, cipher: chacha20-ietf-poly1305, password: ac4cc225-f73a-488d-8371-7fadb201dffb}
+  - {name: "[🇨🇳]14.215.164.183:18952(7ceffa5e-c148-426a-97b0-2182e1b95923)", server: 14.215.164.183, port: 18952, type: trojan, password: 7ceffa5e-c148-426a-97b0-2182e1b95923, sni: usmax01.170203.xyz}
+  - {name: "[🇨🇳]124.225.24.191:10285(c6781a19-d552-4a2f-86c9-11afb14b5bc8)", server: 124.225.24.191, port: 10285, type: trojan, password: c6781a19-d552-4a2f-86c9-11afb14b5bc8, sni: hkmax05.170203.xyz}
+  - {name: "[🇨🇳]14.215.164.183:43601(01c24f96-96e8-409c-8307-36e1a4d4ff50)", server: 14.215.164.183, port: 43601, type: trojan, password: 01c24f96-96e8-409c-8307-36e1a4d4ff50, sni: ru02.170203.xyz}
+  - {name: "[🇨🇳]183.245.146.6:61005(6e2a6544-6bd5-4584-9568-9726d3b1cb0f)", server: 183.245.146.6, port: 61005, type: trojan, password: 6e2a6544-6bd5-4584-9568-9726d3b1cb0f}
+  - {name: "[🇨🇳]guangzhou.yd.cn.interface.buzz:18335(bc5fd4ed-c32f-4243-b07b-108f8f7217ec)", server: guangzhou.yd.cn.interface.buzz, port: 18335, type: trojan, password: bc5fd4ed-c32f-4243-b07b-108f8f7217ec, sni: hkmax05.170203.xyz}
+  - {name: "[🇨🇳]14.215.162.120:10414(6bf1ae5e-a742-446c-a59d-c9e546a4e2df)", server: 14.215.162.120, port: 10414, type: trojan, password: 6bf1ae5e-a742-446c-a59d-c9e546a4e2df, sni: sgmax02.170203.xyz}
+  - {name: "[🇨🇳]223.111.202.148:30010(edb71f68-f3b8-4b95-9653-91a42c5c03bf)", server: 223.111.202.148, port: 30010, type: trojan, password: edb71f68-f3b8-4b95-9653-91a42c5c03bf, sni: glc.hruqoaw.cn}
+  - {name: "[🇨🇳]14.215.164.183:13999(01c24f96-96e8-409c-8307-36e1a4d4ff50)", server: 14.215.164.183, port: 13999, type: trojan, password: 01c24f96-96e8-409c-8307-36e1a4d4ff50, sni: us03.170203.xyz}
+  - {name: "[🇨🇳]tongzhi.838501.xyz:13081(3e0772e1-6883-4b92-bda5-d2513a0887ac)", server: tongzhi.838501.xyz, port: 13081, type: ss, cipher: chacha20-ietf-poly1305, password: 3e0772e1-6883-4b92-bda5-d2513a0887ac}
+  - {name: "[🇨🇳]14.215.164.183:27984(bc5fd4ed-c32f-4243-b07b-108f8f7217ec)", server: 14.215.164.183, port: 27984, type: trojan, password: bc5fd4ed-c32f-4243-b07b-108f8f7217ec, sni: sgmax03.170203.xyz}
+  - {name: "[🇨🇳]14.215.164.183:34929(7ceffa5e-c148-426a-97b0-2182e1b95923)", server: 14.215.164.183, port: 34929, type: trojan, password: 7ceffa5e-c148-426a-97b0-2182e1b95923, sni: sg01.170203.xyz}
   - {name: "[🇨🇳]z1.810823.xyz:13081(53a8cc43-7a84-4407-9af6-eccd33d0e922)", server: z1.810823.xyz, port: 13081, type: ss, cipher: chacha20-ietf-poly1305, password: 53a8cc43-7a84-4407-9af6-eccd33d0e922}
   - {name: "[🇨🇳]14.215.164.183:46973(bc5fd4ed-c32f-4243-b07b-108f8f7217ec)", server: 14.215.164.183, port: 46973, type: trojan, password: bc5fd4ed-c32f-4243-b07b-108f8f7217ec, sni: sgmax01.170203.xyz}
   - {name: "[🇨🇳]zj.ecvvvw.cn:47001(c58b5a1f-af92-3108-997e-ca513b1c9747)", server: zj.ecvvvw.cn, port: 47001, type: trojan, password: c58b5a1f-af92-3108-997e-ca513b1c9747, sni: ip153740813.mobgslb.tbcache.com}
@@ -33,6 +56,7 @@ proxies:
   - {name: "[🇨🇳]fa2e2e87-53d3-4659-8b91-2952fcb4827c.qazwsx123.xyz:37521(66067-U3xQKYP8-XFmHXfNzGhdAB5XtgxBmtycC945xasht)", server: fa2e2e87-53d3-4659-8b91-2952fcb4827c.qazwsx123.xyz, port: 37521, type: ss, cipher: aes-256-gcm, password: 66067-U3xQKYP8-XFmHXfNzGhdAB5XtgxBmtycC945xasht}
   - {name: "[🇨🇳]gzct.zzuu.tk:23126(aad768a4-a8a6-41fc-a067-c9995e671345)", server: gzct.zzuu.tk, port: 23126, type: ss, cipher: chacha20-ietf-poly1305, password: aad768a4-a8a6-41fc-a067-c9995e671345}
   - {name: "[🇨🇳]iepl3.dcnode.me:10043(2daf156a-b9ee-4671-913a-4339ddd39021)", server: iepl3.dcnode.me, port: 10043, type: ss, cipher: aes-128-gcm, password: 2daf156a-b9ee-4671-913a-4339ddd39021}
+  - {name: "[🇺🇸]iepl10.dcnode.me:10050(2daf156a-b9ee-4671-913a-4339ddd39021)", server: iepl10.dcnode.me, port: 10050, type: ss, cipher: aes-128-gcm, password: 2daf156a-b9ee-4671-913a-4339ddd39021}
   - {name: "[🇨🇳]gzct.zzuu.tk:23125(aad768a4-a8a6-41fc-a067-c9995e671345)", server: gzct.zzuu.tk, port: 23125, type: ss, cipher: chacha20-ietf-poly1305, password: aad768a4-a8a6-41fc-a067-c9995e671345}
   - {name: "[🇨🇳]124.225.24.140:23123(aad768a4-a8a6-41fc-a067-c9995e671345)", server: 124.225.24.140, port: 23123, type: ss, cipher: chacha20-ietf-poly1305, password: aad768a4-a8a6-41fc-a067-c9995e671345}
   - {name: "[🇨🇳]hnct.zzuu.tk:23123(aad768a4-a8a6-41fc-a067-c9995e671345)", server: hnct.zzuu.tk, port: 23123, type: ss, cipher: chacha20-ietf-poly1305, password: aad768a4-a8a6-41fc-a067-c9995e671345}
@@ -231,6 +255,7 @@ proxies:
   - {name: "[🇨🇳]official.tokyometropolis.chernigov.ua:2053(96983eb4-c8f1-316e-ab00-500014ed3d8b)", server: official.tokyometropolis.chernigov.ua, port: 2053, type: trojan, password: 96983eb4-c8f1-316e-ab00-500014ed3d8b}
   - {name: "[🇨🇳]official.taipeicitygovernment.chernovtsy.ua:8443(96983eb4-c8f1-316e-ab00-500014ed3d8b)", server: official.taipeicitygovernment.chernovtsy.ua, port: 8443, type: trojan, password: 96983eb4-c8f1-316e-ab00-500014ed3d8b}
   - {name: "[🇨🇳]official.taipeicitygovernment.ivano-frankivsk.ua:8443(96983eb4-c8f1-316e-ab00-500014ed3d8b)", server: official.taipeicitygovernment.ivano-frankivsk.ua, port: 8443, type: trojan, password: 96983eb4-c8f1-316e-ab00-500014ed3d8b}
+  - {name: "[🇨🇳]cm01.newcome.xyz:5703(jFa4F1)", server: cm01.newcome.xyz, port: 5703, type: ssr, cipher: chacha20-ietf, password: jFa4F1, protocol: auth_aes128_sha1, obfs: plain, obfs-param: "", protocol-param: ""}
   - {name: "[🇨🇳]opt1.boom.skin:11000(Uk92CS)", server: opt1.boom.skin, port: 11000, type: ssr, cipher: aes-256-cfb, password: Uk92CS, protocol: auth_aes128_sha1, obfs: http_simple, obfs-param: "", protocol-param: ""}
   - {name: "[🇨🇳]116.162.120.23:610(mblank1port)", server: 116.162.120.23, port: 610, type: ssr, cipher: chacha20-ietf, password: mblank1port, protocol: auth_aes128_md5, obfs: plain, obfs-param: "", protocol-param: ""}
   - {name: "[🇨🇳]125.94.215.122:561(mblank1port)", server: 125.94.215.122, port: 561, type: ssr, cipher: chacha20-ietf, password: mblank1port, protocol: auth_aes128_md5, obfs: plain, obfs-param: "", protocol-param: ""}
@@ -538,8 +563,6 @@ proxies:
   - {name: "[🇨🇳]20008.purefast2.com:20008(bab40563-cafe-39c1-9d76-c3e627d73758)", server: 20008.purefast2.com, port: 20008, type: trojan, password: bab40563-cafe-39c1-9d76-c3e627d73758}
   - {name: "[🇨🇳]20005.purefast2.com:20005(bab40563-cafe-39c1-9d76-c3e627d73758)", server: 20005.purefast2.com, port: 20005, type: trojan, password: bab40563-cafe-39c1-9d76-c3e627d73758}
   - {name: "[🇨🇳]20004.purefast2.com:20004(bab40563-cafe-39c1-9d76-c3e627d73758)", server: 20004.purefast2.com, port: 20004, type: trojan, password: bab40563-cafe-39c1-9d76-c3e627d73758}
-  - {name: "[🇨🇳]20016.purefast2.com:20016(a71df8e7-d563-3ebc-a26a-168c8dc8c9f3)", server: 20016.purefast2.com, port: 20016, type: trojan, password: a71df8e7-d563-3ebc-a26a-168c8dc8c9f3}
-  - {name: "[🇨🇳]20004.purefast2.com:20004(07730e7a-427a-35b5-8095-b70a6535fd23)", server: 20004.purefast2.com, port: 20004, type: trojan, password: 07730e7a-427a-35b5-8095-b70a6535fd23}
   - {name: "[🇨🇳]20012.purefast2.com:20012(a71df8e7-d563-3ebc-a26a-168c8dc8c9f3)", server: 20012.purefast2.com, port: 20012, type: trojan, password: a71df8e7-d563-3ebc-a26a-168c8dc8c9f3}
   - {name: "[🇨🇳]20010.purefast2.com:20010(a71df8e7-d563-3ebc-a26a-168c8dc8c9f3)", server: 20010.purefast2.com, port: 20010, type: trojan, password: a71df8e7-d563-3ebc-a26a-168c8dc8c9f3}
   - {name: "[🇨🇳]20008.purefast2.com:20008(a71df8e7-d563-3ebc-a26a-168c8dc8c9f3)", server: 20008.purefast2.com, port: 20008, type: trojan, password: a71df8e7-d563-3ebc-a26a-168c8dc8c9f3}
@@ -549,14 +572,23 @@ proxies:
   - {name: "[🇨🇳]20003.purefast2.com:20003(a71df8e7-d563-3ebc-a26a-168c8dc8c9f3)", server: 20003.purefast2.com, port: 20003, type: trojan, password: a71df8e7-d563-3ebc-a26a-168c8dc8c9f3}
   - {name: "[🇨🇳]20000.purefast2.com:20000(a71df8e7-d563-3ebc-a26a-168c8dc8c9f3)", server: 20000.purefast2.com, port: 20000, type: trojan, password: a71df8e7-d563-3ebc-a26a-168c8dc8c9f3}
   - {name: "[🇨🇳]20002.purefast2.com:20002(a71df8e7-d563-3ebc-a26a-168c8dc8c9f3)", server: 20002.purefast2.com, port: 20002, type: trojan, password: a71df8e7-d563-3ebc-a26a-168c8dc8c9f3}
-  - {name: "[🇨🇳]20009.purefast2.com:20009(a71df8e7-d563-3ebc-a26a-168c8dc8c9f3)", server: 20009.purefast2.com, port: 20009, type: trojan, password: a71df8e7-d563-3ebc-a26a-168c8dc8c9f3}
   - {name: "[🇨🇳]20000.purefast2.com:20000(a1d4c471-61d1-3f61-8502-63b14b8b56be)", server: 20000.purefast2.com, port: 20000, type: trojan, password: a1d4c471-61d1-3f61-8502-63b14b8b56be}
   - {name: "[🇨🇳]20002.purefast2.com:20002(a1d4c471-61d1-3f61-8502-63b14b8b56be)", server: 20002.purefast2.com, port: 20002, type: trojan, password: a1d4c471-61d1-3f61-8502-63b14b8b56be}
   - {name: "[🇨🇳]20004.purefast2.com:20004(a1d4c471-61d1-3f61-8502-63b14b8b56be)", server: 20004.purefast2.com, port: 20004, type: trojan, password: a1d4c471-61d1-3f61-8502-63b14b8b56be}
   - {name: "[🇨🇿]92.118.149.85:443(3gLlCYBipVwr6Y5F)", server: 92.118.149.85, port: 443, type: trojan, password: 3gLlCYBipVwr6Y5F}
   - {name: "[🇳🇱]213.183.51.171:9001(UkXRsXvR6buDMG2Y)", server: 213.183.51.171, port: 9001, type: ss, cipher: aes-256-cfb, password: UkXRsXvR6buDMG2Y}
+  - {name: "[🇳🇱]213.183.51.171:9050(FG5ddLsMPbV5CutE)", server: 213.183.51.171, port: 9050, type: ss, cipher: aes-256-cfb, password: FG5ddLsMPbV5CutE}
+  - {name: "[🇸🇬]ap.liangyuandian.top:443(176196e4-7cf7-4561-87a9-21a1b4e344be)", server: ap.liangyuandian.top, port: 443, type: trojan, password: 176196e4-7cf7-4561-87a9-21a1b4e344be}
+  - {name: "[🇭🇰]jp.liangyuandian.top:443(176196e4-7cf7-4561-87a9-21a1b4e344be)", server: jp.liangyuandian.top, port: 443, type: trojan, password: 176196e4-7cf7-4561-87a9-21a1b4e344be}
+  - {name: "[🇭🇰]sg.liangyuandian.top:443(2b2b1b4f-3372-47f7-9f90-26097c7683f9)", server: sg.liangyuandian.top, port: 443, type: trojan, password: 2b2b1b4f-3372-47f7-9f90-26097c7683f9}
+  - {name: "[🇭🇰]sg.liangyuandian.top:443(b341f309-7e2b-45c4-a316-9e23037e3711)", server: sg.liangyuandian.top, port: 443, type: trojan, password: b341f309-7e2b-45c4-a316-9e23037e3711}
+  - {name: "[🇭🇰]jp.liangyuandian.top:443(18304160-03d4-4c55-95c1-586c0a5f3a0a)", server: jp.liangyuandian.top, port: 443, type: trojan, password: 18304160-03d4-4c55-95c1-586c0a5f3a0a}
   - {name: "[🇺🇸]38.86.135.27:8091(PCnnH6SQSnfoS27)", server: 38.86.135.27, port: 8091, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27}
   - {name: "[🇺🇸]38.86.135.27:5003(g5MeD6Ft3CWlJId)", server: 38.86.135.27, port: 5003, type: ss, cipher: aes-256-gcm, password: g5MeD6Ft3CWlJId}
+  - {name: "[🇭🇰]ap.liangyuandian.top:443(53f20cd4-b381-4a80-8059-7bcd484bbb52)", server: ap.liangyuandian.top, port: 443, type: trojan, password: 53f20cd4-b381-4a80-8059-7bcd484bbb52}
+  - {name: "[🇭🇰]jp.liangyuandian.top:443(53f20cd4-b381-4a80-8059-7bcd484bbb52)", server: jp.liangyuandian.top, port: 443, type: trojan, password: 53f20cd4-b381-4a80-8059-7bcd484bbb52}
+  - {name: "[🇭🇰]sg.liangyuandian.top:443(53f20cd4-b381-4a80-8059-7bcd484bbb52)", server: sg.liangyuandian.top, port: 443, type: trojan, password: 53f20cd4-b381-4a80-8059-7bcd484bbb52}
+  - {name: "[🇨🇳]20009.purefast2.com:20009(a71df8e7-d563-3ebc-a26a-168c8dc8c9f3)", server: 20009.purefast2.com, port: 20009, type: trojan, password: a71df8e7-d563-3ebc-a26a-168c8dc8c9f3}
   - {name: "[🇨🇳]124.225.25.7:42740(77e1c7e2-ce47-4826-8959-296fbc2257ac)", server: 124.225.25.7, port: 42740, type: trojan, password: 77e1c7e2-ce47-4826-8959-296fbc2257ac, sni: wel-hgc.optage.moe}
   - {name: "[🇨🇳]223.111.202.148:30050(5c54ba16-ecba-48b1-a69c-62000267ab7e)", server: 223.111.202.148, port: 30050, type: trojan, password: 5c54ba16-ecba-48b1-a69c-62000267ab7e, sni: mzy.hruqoaw.cn}
   - {name: "[🇨🇳]223.111.202.148:30060(5c54ba16-ecba-48b1-a69c-62000267ab7e)", server: 223.111.202.148, port: 30060, type: trojan, password: 5c54ba16-ecba-48b1-a69c-62000267ab7e, sni: mzy.hruqoaw.cn}
