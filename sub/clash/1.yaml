@@ -1,4 +1,10 @@
 proxies:
+  - {name: "[🇺🇦]217.12.223.190:443(WacwetCif)", server: 217.12.223.190, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: WacwetCif}
+  - {name: "[🇺🇦]91.210.164.133:444(ocaptUfI)", server: 91.210.164.133, port: 444, type: ss, cipher: chacha20-ietf-poly1305, password: ocaptUfI}
+  - {name: "[🇺🇦]176.103.61.162:444(IjBemsAg)", server: 176.103.61.162, port: 444, type: ss, cipher: chacha20-ietf-poly1305, password: IjBemsAg}
+  - {name: "[🇺🇦]194.38.23.137:444(Neavloims)", server: 194.38.23.137, port: 444, type: ss, cipher: chacha20-ietf-poly1305, password: Neavloims}
+  - {name: "[🇺🇦]91.210.164.133:443(ocaptUfI)", server: 91.210.164.133, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: ocaptUfI}
+  - {name: "[🇮🇷]185.143.233.120:80(35d25899-ed20-46d9-9c7c-99c0d414d5e4)", server: 185.143.233.120, port: 80, type: vmess, uuid: 35d25899-ed20-46d9-9c7c-99c0d414d5e4, alterId: 0, cipher: auto, network: ws, tls: false, ws-opts: {path: /}}
   - {name: "[🇮🇷]www.ir1.kimo.vip:443(45dae594-8299-4e98-a353-eea69ee5ad06)", server: www.ir1.kimo.vip, port: 443, type: vmess, uuid: 45dae594-8299-4e98-a353-eea69ee5ad06, alterId: 0, cipher: auto, network: ws, tls: true, ws-opts: {path: /c3b05c12/, headers: {host: king2.ir1.kimo.vip}}}
   - {name: "[🇮🇷]ir1.kimo.vip:443(3336a490-1077-4735-a224-83ae08e0133d)", server: ir1.kimo.vip, port: 443, type: vmess, uuid: 3336a490-1077-4735-a224-83ae08e0133d, alterId: 0, cipher: auto, network: ws, tls: true, ws-opts: {path: /ffe24fa8d8c295f/, headers: {host: king.ir1.kimo.vip}}}
   - {name: "[🇮🇷]gate.azadrah22.com:80(35d25899-ed20-46d9-9c7c-99c0d414d5e4)", server: gate.azadrah22.com, port: 80, type: vmess, uuid: 35d25899-ed20-46d9-9c7c-99c0d414d5e4, alterId: 0, cipher: auto, network: ws, tls: false, ws-opts: {path: /user, headers: {host: gate.azadrah22.com}}}
@@ -38,7 +44,6 @@ proxies:
   - {name: "[🇷🇺]194.38.9.6:48081(5ADDADF4-E05B-65E6-A409-E08CEA8826DF)", server: 194.38.9.6, port: 48081, type: vmess, uuid: 5ADDADF4-E05B-65E6-A409-E08CEA8826DF, alterId: 0, cipher: auto, network: tcp}
   - {name: "[🇷🇺]194.38.9.6:48081(2F094845-E2BD-EBF7-DEB7-995992436FAF)", server: 194.38.9.6, port: 48081, type: vmess, uuid: 2F094845-E2BD-EBF7-DEB7-995992436FAF, alterId: 0, cipher: auto, network: tcp}
   - {name: "[🇷🇺]176.119.159.245:37672(86b4e35c-1061-47b3-8c6c-811d1853a477)", server: 176.119.159.245, port: 37672, type: vmess, uuid: 86b4e35c-1061-47b3-8c6c-811d1853a477, alterId: 64, cipher: auto, network: tcp}
-  - {name: "[🇷🇺]ssru.v2.ru01.2yun.win:3306(d62a116e-c014-33e5-9458-d1b6e271e7a5)", server: ssru.v2.ru01.2yun.win, port: 3306, type: vmess, uuid: d62a116e-c014-33e5-9458-d1b6e271e7a5, alterId: 0, cipher: auto, network: ws, tls: true, ws-opts: {path: /v2ray, headers: {host: ssru.v2.ru01.2yun.win}}}
   - {name: "[🇧🇬]my.ishosting.v231-p.top:443(b8a01914-f44f-499d-8a65-26d845ef4fc9)", server: my.ishosting.v231-p.top, port: 443, type: trojan, password: b8a01914-f44f-499d-8a65-26d845ef4fc9, sni: my.ishosting.v231-p.top}
   - {name: "[🇨🇦]134.195.198.106:8009(XKFKl2rULjIp74)", server: 134.195.198.106, port: 8009, type: ss, cipher: aes-256-gcm, password: XKFKl2rULjIp74}
   - {name: "[🇨🇦]134.195.196.149:3306(Y6R9pAtvxxzmGC)", server: 134.195.196.149, port: 3306, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC}
@@ -601,6 +606,7 @@ proxies:
   - {name: "[🇩🇪]de.838501.xyz:15001(821f5e02-729b-4644-a80a-3aaeaf07938d)", server: de.838501.xyz, port: 15001, type: trojan, password: 821f5e02-729b-4644-a80a-3aaeaf07938d}
   - {name: "[🇩🇪]de.838501.xyz:15001(709091f9-1aad-4b01-b6bc-ece1295aa79d)", server: de.838501.xyz, port: 15001, type: trojan, password: 709091f9-1aad-4b01-b6bc-ece1295aa79d}
   - {name: "[🇩🇪]de.838501.xyz:15001(808fb2a4-52cd-4561-a165-180389386ad6)", server: de.838501.xyz, port: 15001, type: trojan, password: 808fb2a4-52cd-4561-a165-180389386ad6}
+  - {name: "[🇩🇪]172.104.146.93:443(927094d3-d678-4763-8591-e240d0bcae87)", server: 172.104.146.93, port: 443, type: vmess, uuid: 927094d3-d678-4763-8591-e240d0bcae87, alterId: 0, cipher: auto, network: ws, tls: false, ws-opts: {path: /chat}}
   - {name: "[🇩🇪]de.838501.xyz:15001(1a5da055-2863-4fd5-862e-fbde6ee9eee6)", server: de.838501.xyz, port: 15001, type: trojan, password: 1a5da055-2863-4fd5-862e-fbde6ee9eee6}
   - {name: "[🇩🇪]de.838501.xyz:15001(db7286ca-b29b-4f71-8813-c5f71799d5f3)", server: de.838501.xyz, port: 15001, type: trojan, password: db7286ca-b29b-4f71-8813-c5f71799d5f3}
   - {name: "[🇩🇪]de.838501.xyz:15001(099ef845-18ed-476f-9167-3015179cb65c)", server: de.838501.xyz, port: 15001, type: trojan, password: 099ef845-18ed-476f-9167-3015179cb65c}
@@ -935,20 +941,20 @@ proxies:
   - {name: "[🇯🇵]85.208.108.18:7001(RexnBgU7EV5ADxG)", server: 85.208.108.18, port: 7001, type: ss, cipher: aes-256-gcm, password: RexnBgU7EV5ADxG}
   - {name: "[🇯🇵]85.208.108.93:7306(FoOiGlkAA9yPEGP)", server: 85.208.108.93, port: 7306, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP}
   - {name: "[🇯🇵]jp.liangyuandian.top:443(18304160-03d4-4c55-95c1-586c0a5f3a0a)", server: jp.liangyuandian.top, port: 443, type: trojan, password: 18304160-03d4-4c55-95c1-586c0a5f3a0a}
-  - {name: "[🇯🇵]de.liangyuandian.top:443(176196e4-7cf7-4561-87a9-21a1b4e344be)", server: de.liangyuandian.top, port: 443, type: trojan, password: 176196e4-7cf7-4561-87a9-21a1b4e344be}
-  - {name: "[🇯🇵]ap.liangyuandian.top:443(18304160-03d4-4c55-95c1-586c0a5f3a0a)", server: ap.liangyuandian.top, port: 443, type: trojan, password: 18304160-03d4-4c55-95c1-586c0a5f3a0a}
-  - {name: "[🇯🇵]jp.liangyuandian.top:443(176196e4-7cf7-4561-87a9-21a1b4e344be)", server: jp.liangyuandian.top, port: 443, type: trojan, password: 176196e4-7cf7-4561-87a9-21a1b4e344be}
-  - {name: "[🇯🇵]ap.liangyuandian.top:443(b341f309-7e2b-45c4-a316-9e23037e3711)", server: ap.liangyuandian.top, port: 443, type: trojan, password: b341f309-7e2b-45c4-a316-9e23037e3711}
-  - {name: "[🇸🇬]uk.liangyuandian.top:443(18304160-03d4-4c55-95c1-586c0a5f3a0a)", server: uk.liangyuandian.top, port: 443, type: trojan, password: 18304160-03d4-4c55-95c1-586c0a5f3a0a}
-  - {name: "[🇸🇬]ap.liangyuandian.top:443(176196e4-7cf7-4561-87a9-21a1b4e344be)", server: ap.liangyuandian.top, port: 443, type: trojan, password: 176196e4-7cf7-4561-87a9-21a1b4e344be}
-  - {name: "[🇸🇬]jp.liangyuandian.top:443(53f20cd4-b381-4a80-8059-7bcd484bbb52)", server: jp.liangyuandian.top, port: 443, type: trojan, password: 53f20cd4-b381-4a80-8059-7bcd484bbb52}
+  - {name: "[🇸🇬]de.liangyuandian.top:443(176196e4-7cf7-4561-87a9-21a1b4e344be)", server: de.liangyuandian.top, port: 443, type: trojan, password: 176196e4-7cf7-4561-87a9-21a1b4e344be}
+  - {name: "[🇸🇬]ap.liangyuandian.top:443(18304160-03d4-4c55-95c1-586c0a5f3a0a)", server: ap.liangyuandian.top, port: 443, type: trojan, password: 18304160-03d4-4c55-95c1-586c0a5f3a0a}
+  - {name: "[🇸🇬]jp.liangyuandian.top:443(176196e4-7cf7-4561-87a9-21a1b4e344be)", server: jp.liangyuandian.top, port: 443, type: trojan, password: 176196e4-7cf7-4561-87a9-21a1b4e344be}
+  - {name: "[🇸🇬]ap.liangyuandian.top:443(b341f309-7e2b-45c4-a316-9e23037e3711)", server: ap.liangyuandian.top, port: 443, type: trojan, password: b341f309-7e2b-45c4-a316-9e23037e3711}
+  - {name: "[🇯🇵]uk.liangyuandian.top:443(18304160-03d4-4c55-95c1-586c0a5f3a0a)", server: uk.liangyuandian.top, port: 443, type: trojan, password: 18304160-03d4-4c55-95c1-586c0a5f3a0a}
+  - {name: "[🇯🇵]ap.liangyuandian.top:443(176196e4-7cf7-4561-87a9-21a1b4e344be)", server: ap.liangyuandian.top, port: 443, type: trojan, password: 176196e4-7cf7-4561-87a9-21a1b4e344be}
+  - {name: "[🇯🇵]jp.liangyuandian.top:443(53f20cd4-b381-4a80-8059-7bcd484bbb52)", server: jp.liangyuandian.top, port: 443, type: trojan, password: 53f20cd4-b381-4a80-8059-7bcd484bbb52}
   - {name: "[🇯🇵]150.230.217.213:443(c09eb137-bf68-4658-84e0-102d94b74168)", server: 150.230.217.213, port: 443, type: trojan, password: c09eb137-bf68-4658-84e0-102d94b74168}
   - {name: "[🇯🇵]141.147.191.85:28443(750a29bf-0a40-437f-b120-38de74ae7eaf)", server: 141.147.191.85, port: 28443, type: trojan, password: 750a29bf-0a40-437f-b120-38de74ae7eaf}
   - {name: "[🇯🇵]jgwdj4.gaox.ml:443(c09eb137-bf68-4658-84e0-102d94b74168)", server: jgwdj4.gaox.ml, port: 443, type: trojan, password: c09eb137-bf68-4658-84e0-102d94b74168}
-  - {name: "[🇸🇬]ap.liangyuandian.top:443(53f20cd4-b381-4a80-8059-7bcd484bbb52)", server: ap.liangyuandian.top, port: 443, type: trojan, password: 53f20cd4-b381-4a80-8059-7bcd484bbb52}
+  - {name: "[🇯🇵]ap.liangyuandian.top:443(53f20cd4-b381-4a80-8059-7bcd484bbb52)", server: ap.liangyuandian.top, port: 443, type: trojan, password: 53f20cd4-b381-4a80-8059-7bcd484bbb52}
   - {name: "[🇯🇵]155.248.172.87:28443(750a29bf-0a40-437f-b120-38de74ae7eaf)", server: 155.248.172.87, port: 28443, type: trojan, password: 750a29bf-0a40-437f-b120-38de74ae7eaf}
   - {name: "[🇯🇵]150.230.96.103:443(da777aae-defb-41d0-a183-2c27da2b4677)", server: 150.230.96.103, port: 443, type: trojan, password: da777aae-defb-41d0-a183-2c27da2b4677}
-  - {name: "[🇸🇬]de.liangyuandian.top:443(085f3ab6-92fb-4c56-8ed5-6d0df11d8c0c)", server: de.liangyuandian.top, port: 443, type: trojan, password: 085f3ab6-92fb-4c56-8ed5-6d0df11d8c0c}
+  - {name: "[🇯🇵]de.liangyuandian.top:443(085f3ab6-92fb-4c56-8ed5-6d0df11d8c0c)", server: de.liangyuandian.top, port: 443, type: trojan, password: 085f3ab6-92fb-4c56-8ed5-6d0df11d8c0c}
   - {name: "[🇯🇵]usay.liangyuandian.top:443(21a387ca-5461-47d5-bf2c-a68bad0ca970)", server: usay.liangyuandian.top, port: 443, type: trojan, password: 21a387ca-5461-47d5-bf2c-a68bad0ca970, sni: usay.liangyuandian.top}
   - {name: "[🇯🇵]usay.liangyuandian.top:443(176196e4-7cf7-4561-87a9-21a1b4e344be)", server: usay.liangyuandian.top, port: 443, type: trojan, password: 176196e4-7cf7-4561-87a9-21a1b4e344be, sni: usay.liangyuandian.top}
   - {name: "[🇯🇵]usay.liangyuandian.top:443(53f20cd4-b381-4a80-8059-7bcd484bbb52)", server: usay.liangyuandian.top, port: 443, type: trojan, password: 53f20cd4-b381-4a80-8059-7bcd484bbb52}
@@ -1383,11 +1389,3 @@ proxies:
   - {name: "[🇯🇵]paopao.v2.jp05.paopaocloud.cyou:3307(15c1aa40-6382-393e-95b4-7549d75a2246)", server: paopao.v2.jp05.paopaocloud.cyou, port: 3307, type: vmess, uuid: 15c1aa40-6382-393e-95b4-7549d75a2246, alterId: 0, cipher: auto, network: ws, tls: true, ws-opts: {path: /v2ray, headers: {host: jp05.ssru4.fun}}}
   - {name: "[🇯🇵]172.105.236.230:3389(4bacb8f1a089763b)", server: 172.105.236.230, port: 3389, type: trojan, password: 4bacb8f1a089763b}
   - {name: "[🇯🇵]jp.mosi.buzz:3471(4647cf23-457d-4e00-8f9c-61935705d433)", server: jp.mosi.buzz, port: 3471, type: trojan, password: 4647cf23-457d-4e00-8f9c-61935705d433}
-  - {name: "[🇯🇵]jp.838501.xyz:15001(808fb2a4-52cd-4561-a165-180389386ad6)", server: jp.838501.xyz, port: 15001, type: trojan, password: 808fb2a4-52cd-4561-a165-180389386ad6}
-  - {name: "[🇯🇵]jp.838501.xyz:15001(709091f9-1aad-4b01-b6bc-ece1295aa79d)", server: jp.838501.xyz, port: 15001, type: trojan, password: 709091f9-1aad-4b01-b6bc-ece1295aa79d}
-  - {name: "[🇯🇵]jp.838501.xyz:15001(1d8ae363-1053-4574-9b25-3b239221702e)", server: jp.838501.xyz, port: 15001, type: trojan, password: 1d8ae363-1053-4574-9b25-3b239221702e}
-  - {name: "[🇯🇵]jp.838501.xyz:15001(821f5e02-729b-4644-a80a-3aaeaf07938d)", server: jp.838501.xyz, port: 15001, type: trojan, password: 821f5e02-729b-4644-a80a-3aaeaf07938d}
-  - {name: "[🇯🇵]jp.838501.xyz:15001(2ce84336-46b2-4c8c-ad29-239aacca8343)", server: jp.838501.xyz, port: 15001, type: trojan, password: 2ce84336-46b2-4c8c-ad29-239aacca8343}
-  - {name: "[🇯🇵]usa.liangyuandian.top:443(b7bc6b1c-610d-4d39-ad29-18a0d6902348)", server: usa.liangyuandian.top, port: 443, type: trojan, password: b7bc6b1c-610d-4d39-ad29-18a0d6902348}
-  - {name: "[🇯🇵]usa.liangyuandian.top:443(53f20cd4-b381-4a80-8059-7bcd484bbb52)", server: usa.liangyuandian.top, port: 443, type: trojan, password: 53f20cd4-b381-4a80-8059-7bcd484bbb52}
-  - {name: "[🇯🇵]usa.liangyuandian.top:443(085f3ab6-92fb-4c56-8ed5-6d0df11d8c0c)", server: usa.liangyuandian.top, port: 443, type: trojan, password: 085f3ab6-92fb-4c56-8ed5-6d0df11d8c0c}
