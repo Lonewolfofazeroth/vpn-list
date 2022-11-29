@@ -1,14 +1,11 @@
 proxies:
-  - {name: "[🇦🇶]a41dd943b40fc7733.awsglobalaccelerator.com:80(2a7a0324-e68e-4cb5-9e4c-dbc0060840ee)", server: a41dd943b40fc7733.awsglobalaccelerator.com, port: 80, type: vmess, uuid: 2a7a0324-e68e-4cb5-9e4c-dbc0060840ee, alterId: 64, cipher: auto, network: tcp}
-  - {name: "[🇭🇰]212.102.42.204:40093(x23Z4LGkGDkThZ9Kaz4DURQp)", server: 212.102.42.204, port: 40093, type: ss, cipher: aes-256-gcm, password: x23Z4LGkGDkThZ9Kaz4DURQp}
-  - {name: "[🇭🇰]84.17.37.154:33992(8n6pwAcrrv2pj6tFY2p3TbQ6)", server: 84.17.37.154, port: 33992, type: ss, cipher: aes-256-gcm, password: 8n6pwAcrrv2pj6tFY2p3TbQ6}
   - {name: "[🇭🇰]212.102.42.194:40093(x23Z4LGkGDkThZ9Kaz4DURQp)", server: 212.102.42.194, port: 40093, type: ss, cipher: aes-256-gcm, password: x23Z4LGkGDkThZ9Kaz4DURQp}
   - {name: "[🇭🇰]212.102.42.204:33992(8n6pwAcrrv2pj6tFY2p3TbQ6)", server: 212.102.42.204, port: 33992, type: ss, cipher: aes-256-gcm, password: 8n6pwAcrrv2pj6tFY2p3TbQ6}
-  - {name: "[🇭🇰]jp.iamnotagoodman.com:443(f8d19ba5-8684-45f2-8523-77dbea588955)", server: jp.iamnotagoodman.com, port: 443, type: trojan, password: f8d19ba5-8684-45f2-8523-77dbea588955}
   - {name: "[🇨🇳]cm.kapoknode.com:25897(d8ce2bc1-14a2-4693-9739-e73b7b75cd65)", server: cm.kapoknode.com, port: 25897, type: vmess, uuid: d8ce2bc1-14a2-4693-9739-e73b7b75cd65, alterId: 0, cipher: auto, network: ws, tls: false, ws-opts: {path: /, headers: {host: cm.kapoknode.com}}}
-  - {name: "[🇨🇳]cm.kapoknode.com:25897(d0413204-9076-4b80-b322-e6b62d3284d9)", server: cm.kapoknode.com, port: 25897, type: vmess, uuid: d0413204-9076-4b80-b322-e6b62d3284d9, alterId: 0, cipher: auto, network: ws, tls: false, ws-opts: {path: /, headers: {host: cm.kapoknode.com}}}
-  - {name: "[🇨🇳]gzct.xqxayjr.us:11258(87OIxQkaz9)", server: gzct.xqxayjr.us, port: 11258, type: ss, cipher: aes-128-gcm, password: 87OIxQkaz9}
-  - {name: "[🇯🇵]jp.iamnotagoodman.com:443(2ac7fc8a-68b5-4809-8bd2-73a593bae292)", server: jp.iamnotagoodman.com, port: 443, type: trojan, password: 2ac7fc8a-68b5-4809-8bd2-73a593bae292}
+  - {name: "[🇸🇬]usa.liangyuandian.top:443(cc55e294-b76f-425a-9301-c18afbecaa22)", server: usa.liangyuandian.top, port: 443, type: trojan, password: cc55e294-b76f-425a-9301-c18afbecaa22}
+  - {name: "[🇭🇰]de.iamnotagoodman.com:443(4f8c0e41-dbdb-40f1-99cb-2c2a0b909b52)", server: de.iamnotagoodman.com, port: 443, type: trojan, password: 4f8c0e41-dbdb-40f1-99cb-2c2a0b909b52}
+  - {name: "[🇭🇰]jp.iamnotagoodman.com:443(4f8c0e41-dbdb-40f1-99cb-2c2a0b909b52)", server: jp.iamnotagoodman.com, port: 443, type: trojan, password: 4f8c0e41-dbdb-40f1-99cb-2c2a0b909b52}
+  - {name: "[🇭🇰]lux.iamnotagoodman.com:443(4f8c0e41-dbdb-40f1-99cb-2c2a0b909b52)", server: lux.iamnotagoodman.com, port: 443, type: trojan, password: 4f8c0e41-dbdb-40f1-99cb-2c2a0b909b52}
   - {name: "[🇸🇬]165.154.253.167:443(b345cf5c-a24f-468e-b110-0011a134cd47)", server: 165.154.253.167, port: 443, type: trojan, password: b345cf5c-a24f-468e-b110-0011a134cd47}
   - {name: "[🇮🇩]38.9.140.66:443(vvip-periantara)", server: 38.9.140.66, port: 443, type: trojan, password: vvip-periantara}
   - {name: "[🇩🇪]157.245.19.162:443(TvBypqQJ9b)", server: 157.245.19.162, port: 443, type: trojan, password: TvBypqQJ9b}
@@ -18,7 +15,6 @@ proxies:
   - {name: "[🇬🇧]172.99.190.39:8000(KixLvKzwjekG00rm)", server: 172.99.190.39, port: 8000, type: ss, cipher: aes-256-gcm, password: KixLvKzwjekG00rm}
   - {name: "[🇺🇸]38.86.135.36:5000(Y6R9pAtvxxzmGC)", server: 38.86.135.36, port: 5000, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC}
   - {name: "[🇯🇵]85.208.108.94:8882(kDWvXYZoTBcGkC4)", server: 85.208.108.94, port: 8882, type: ss, cipher: aes-256-gcm, password: kDWvXYZoTBcGkC4}
-  - {name: "[🇸🇬]81.90.189.41:809(G!yBwPWH3Vao)", server: 81.90.189.41, port: 809, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
   - {name: "[🇺🇸]38.107.226.146:8080(KixLvKzwjekG00rm)", server: 38.107.226.146, port: 8080, type: ss, cipher: aes-256-gcm, password: KixLvKzwjekG00rm}
   - {name: "[🇺🇸]162.251.61.221:809(G!yBwPWH3Vao)", server: 162.251.61.221, port: 809, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
   - {name: "[🇺🇸]167.88.61.14:8090(PCnnH6SQSnfoS27)", server: 167.88.61.14, port: 8090, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27}
@@ -129,6 +125,7 @@ proxies:
   - {name: "[🇨🇳]cos-ap-beijing.westdatacloud.xyz:20067(8A613C3A-E24E-18C2-4B5E-CB104D83C88C)", server: cos-ap-beijing.westdatacloud.xyz, port: 20067, type: trojan, password: 8A613C3A-E24E-18C2-4B5E-CB104D83C88C, sni: v12.kwaicdn.com}
   - {name: "[🇨🇳]cos-ap-beijing.westdatacloud.top:20060(E06FCC31-2D2F-497F-385D-B0064063AB82)", server: cos-ap-beijing.westdatacloud.top, port: 20060, type: trojan, password: E06FCC31-2D2F-497F-385D-B0064063AB82, sni: v12.kwaicdn.com}
   - {name: "[🇨🇳]cos-ap-beijing.westdatacloud.top:20053(C66435F1-5582-9D56-D7CA-4F5E271BCBAC)", server: cos-ap-beijing.westdatacloud.top, port: 20053, type: trojan, password: C66435F1-5582-9D56-D7CA-4F5E271BCBAC, sni: v12.kwaicdn.com}
+  - {name: "[🇰🇷]kr1.api-aws.com:443(84773125-8f79-481c-a80b-e1f4aad86850)", server: kr1.api-aws.com, port: 443, type: trojan, password: 84773125-8f79-481c-a80b-e1f4aad86850}
   - {name: "[🇨🇳]cos-ap-beijing.westdatacloud.top:20067(0391F657-F5A0-D0EB-D06F-7C9B0A32F246)", server: cos-ap-beijing.westdatacloud.top, port: 20067, type: trojan, password: 0391F657-F5A0-D0EB-D06F-7C9B0A32F246, sni: v12.kwaicdn.com}
   - {name: "[🇨🇳]oss-cn-shanghai.westdatacloud.xyz:20062(8A613C3A-E24E-18C2-4B5E-CB104D83C88C)", server: oss-cn-shanghai.westdatacloud.xyz, port: 20062, type: trojan, password: 8A613C3A-E24E-18C2-4B5E-CB104D83C88C, sni: v12.kwaicdn.com}
   - {name: "[🇨🇳]oss-cn-shanghai.westdatacloud.top:20063(F2CA8552-FE39-0F58-3484-B2763D7D9883)", server: oss-cn-shanghai.westdatacloud.top, port: 20063, type: trojan, password: F2CA8552-FE39-0F58-3484-B2763D7D9883, sni: v12.kwaicdn.com}
