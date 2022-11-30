@@ -1,4 +1,5 @@
 proxies:
+  - {name: "[🇺🇸]us01.170203.xyz:45454(198942cd-beb7-4e1b-ac8c-2ef88a87f097)", server: us01.170203.xyz, port: 45454, type: trojan, password: 198942cd-beb7-4e1b-ac8c-2ef88a87f097, sni: us01.170203.xyz}
   - {name: "[🏁]172.67.65.166:443(c8ba97b8-3ad5-491c-c35c-58451d5b08d1)", server: 172.67.65.166, port: 443, type: vmess, uuid: c8ba97b8-3ad5-491c-c35c-58451d5b08d1, alterId: 0, cipher: auto, network: ws, tls: false, ws-opts: {path: /, headers: {host: 172.67.65.166}}}
   - {name: "[🇺🇸]134.195.101.32:3389(3c4e10af98c30972)", server: 134.195.101.32, port: 3389, type: trojan, password: 3c4e10af98c30972}
   - {name: "[🏁]172.64.147.224:443(20000000-0000-0000-0000-000000000020)", server: 172.64.147.224, port: 443, type: vmess, uuid: 20000000-0000-0000-0000-000000000020, alterId: 0, cipher: auto, network: ws, tls: false, ws-opts: {path: /20, headers: {host: dosg.cdn.securevpn.cc}}}
@@ -66,7 +67,6 @@ proxies:
   - {name: "[🇬🇧]jgwld1.gaox.ml:443(02e653c9-7c93-46a9-999d-11834bd0c577)", server: jgwld1.gaox.ml, port: 443, type: trojan, password: 02e653c9-7c93-46a9-999d-11834bd0c577, sni: jgwld1.gaox.ml}
   - {name: "[🇬🇧]132.145.51.172:443(02e653c9-7c93-46a9-999d-11834bd0c577)", server: 132.145.51.172, port: 443, type: trojan, password: 02e653c9-7c93-46a9-999d-11834bd0c577}
   - {name: "[🇬🇧]vuk2.0bad.com:443(927094d3-d678-4763-8591-e240d0bcae87)", server: vuk2.0bad.com, port: 443, type: vmess, uuid: 927094d3-d678-4763-8591-e240d0bcae87, alterId: 0, cipher: auto, network: ws, tls: false, ws-opts: {path: /chat, headers: {host: vuk2.0bad.com}}}
-  - {name: "[🇬🇧]88.150.137.201:1021(sEscPBiAD9K$&@79)", server: 88.150.137.201, port: 1021, type: ssr, cipher: aes-128-ctr, password: sEscPBiAD9K$&@79, protocol: auth_aes128_md5, obfs: tls1.2_ticket_auth, obfs-param: "", protocol-param: ""}
   - {name: "[🇬🇧]gb1.elknode.top:443(cb4b57f4-f898-3f4e-9478-7ed2a148ac23)", server: gb1.elknode.top, port: 443, type: trojan, password: cb4b57f4-f898-3f4e-9478-7ed2a148ac23, sni: gb1.elknode.top}
   - {name: "[🇬🇧]v3.583181.xyz:125(c0b5d759-e42d-4ead-b374-33a9b54402aa)", server: v3.583181.xyz, port: 125, type: vmess, uuid: c0b5d759-e42d-4ead-b374-33a9b54402aa, alterId: 0, cipher: auto, network: ws, tls: false, ws-opts: {path: /, headers: {host: pull.free.video.10010.com}}}
   - {name: "[🇬🇧]v4.583181.xyz:126(cb8849d7-3b02-49a4-b305-90e5a0b29c94)", server: v4.583181.xyz, port: 126, type: vmess, uuid: cb8849d7-3b02-49a4-b305-90e5a0b29c94, alterId: 0, cipher: auto, network: ws, tls: false, ws-opts: {path: /, headers: {host: pull.free.video.10010.com}}}
@@ -583,9 +583,3 @@ proxies:
   - {name: "[🇭🇰]hk1.sanfen001.pics:443(e7e73e1d-2418-4766-8831-d1b3b83cc877)", server: hk1.sanfen001.pics, port: 443, type: vmess, uuid: e7e73e1d-2418-4766-8831-d1b3b83cc877, alterId: 0, cipher: auto, network: ws, tls: false, ws-opts: {path: /zh-cn, headers: {host: www.microsoft.com}}}
   - {name: "[🇭🇰]xmssmf02.xmss.vip:17777(10657658-502a-42fd-97fd-1e08f538e13d)", server: xmssmf02.xmss.vip, port: 17777, type: ss, cipher: chacha20-ietf-poly1305, password: 10657658-502a-42fd-97fd-1e08f538e13d}
   - {name: "[🇭🇰]sg01.awcloud.top:443(7f9ef59e-20fb-4343-bafc-3a84fa22fe70)", server: sg01.awcloud.top, port: 443, type: trojan, password: 7f9ef59e-20fb-4343-bafc-3a84fa22fe70, sni: sg01.awcloud.top}
-  - {name: "[🇭🇰]3.douluos.icu:51003(66b458b0-5e95-32be-9db9-9a4dd206e740)", server: 3.douluos.icu, port: 51003, type: vmess, uuid: 66b458b0-5e95-32be-9db9-9a4dd206e740, alterId: 2, cipher: auto, network: tcp}
-  - {name: "[🇭🇰]18.douluos.icu:54018(66b458b0-5e95-32be-9db9-9a4dd206e740)", server: 18.douluos.icu, port: 54018, type: vmess, uuid: 66b458b0-5e95-32be-9db9-9a4dd206e740, alterId: 2, cipher: auto, network: tcp}
-  - {name: "[🇭🇰]12.douluos.icu:53012(66b458b0-5e95-32be-9db9-9a4dd206e740)", server: 12.douluos.icu, port: 53012, type: vmess, uuid: 66b458b0-5e95-32be-9db9-9a4dd206e740, alterId: 2, cipher: auto, network: tcp}
-  - {name: "[🇭🇰]9.douluos.icu:33009(66b458b0-5e95-32be-9db9-9a4dd206e740)", server: 9.douluos.icu, port: 33009, type: vmess, uuid: 66b458b0-5e95-32be-9db9-9a4dd206e740, alterId: 2, cipher: auto, network: tcp}
-  - {name: "[🇭🇰]7.douluos.icu:53007(66b458b0-5e95-32be-9db9-9a4dd206e740)", server: 7.douluos.icu, port: 53007, type: vmess, uuid: 66b458b0-5e95-32be-9db9-9a4dd206e740, alterId: 2, cipher: auto, network: tcp}
-  - {name: "[🇭🇰]6.douluos.icu:54006(501d9e0c-ba3b-36ab-acd6-5a46e88b58c7)", server: 6.douluos.icu, port: 54006, type: vmess, uuid: 501d9e0c-ba3b-36ab-acd6-5a46e88b58c7, alterId: 2, cipher: auto, network: ws, tls: false, ws-opts: {path: /index, headers: {host: 6.douluo.icu}}}
