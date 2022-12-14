@@ -1,4 +1,5 @@
 proxies:
+  - {name: "[🇸🇬]18.143.199.239:10020(c05ad447-3b27-4bcc-83d9-22ad300584ed)", server: 18.143.199.239, port: 10020, type: vmess, uuid: c05ad447-3b27-4bcc-83d9-22ad300584ed, alterId: 0, cipher: auto, network: ws, tls: false, ws-opts: {path: /}}
   - {name: "[🇸🇬]5.44.249.42:3389(0c6a3341e8d5ab17)", server: 5.44.249.42, port: 3389, type: trojan, password: 0c6a3341e8d5ab17}
   - {name: "[🇸🇬]5.44.249.53:3389(0c6a3341e8d5ab17)", server: 5.44.249.53, port: 3389, type: trojan, password: 0c6a3341e8d5ab17}
   - {name: "[🇸🇬]5.44.249.44:3389(0c6a3341e8d5ab17)", server: 5.44.249.44, port: 3389, type: trojan, password: 0c6a3341e8d5ab17}
@@ -247,6 +248,7 @@ proxies:
   - {name: "[🏁]api.ssfree.ru:443(5b7b0866-7b9c-11ec-8936-000017022008)", server: api.ssfree.ru, port: 443, type: vmess, uuid: 5b7b0866-7b9c-11ec-8936-000017022008, alterId: 64, cipher: auto, network: ws, tls: false, ws-opts: {path: /getweather, headers: {host: api.ssfree.ru}}}
   - {name: "[🏁]vps.gpdsm.top:443(8c99d825-821d-4999-a1ac-9276c38e8c58)", server: vps.gpdsm.top, port: 443, type: vmess, uuid: 8c99d825-821d-4999-a1ac-9276c38e8c58, alterId: 0, cipher: auto, network: ws, tls: false, ws-opts: {path: /, headers: {host: vps.gpdsm.top}}}
   - {name: "[🇨🇳]cdnssr.ssrsub.com:443(cdnssr.ssrsub.com)", server: cdnssr.ssrsub.com, port: 443, type: ss, cipher: aes-256-cfb, password: cdnssr.ssrsub.com}
+  - {name: "[🇺🇸]cdnssr.ssrsub.com:443(cdnssr.ssrsub.com)", server: cdnssr.ssrsub.com, port: 443, type: ss, cipher: aes-256-cfb, password: cdnssr.ssrsub.com}
   - {name: "[🇺🇸]us.he.06.nekocloud.cn:19035(iluulrzviik)", server: us.he.06.nekocloud.cn, port: 19035, type: ssr, cipher: aes-128-cfb, password: iluulrzviik, protocol: auth_aes128_md5, obfs: plain, obfs-param: "2c46b42613.wns.windows.com", protocol-param: 42613:4gvqxX}
   - {name: "[🇺🇸]sh73gxpe.0xnwy1fyrtlb.com:11115(iuo7tbw4ks)", server: sh73gxpe.0xnwy1fyrtlb.com, port: 11115, type: ssr, cipher: aes-256-cfb, password: iuo7tbw4ks, protocol: auth_aes128_sha1, obfs: tls1.2_ticket_auth, obfs-param: "V2xSR2JGcHRVWGxQUkUxM1RsTTFhVmxYYkd0a1V6VnFZakl3", protocol-param: 28305:ZukOkl}
   - {name: "[🇺🇸]nd94jsk0.0xnwy1fyrtlb.com:12104(iuo7tbw4ks)", server: nd94jsk0.0xnwy1fyrtlb.com, port: 12104, type: ssr, cipher: aes-256-cfb, password: iuo7tbw4ks, protocol: auth_aes128_sha1, obfs: tls1.2_ticket_auth, obfs-param: "V2xSR2JGcHRVWGxQUkUxM1RsTTFhVmxYYkd0a1V6VnFZakl3", protocol-param: 28305:ZukOkl}
@@ -406,6 +408,3 @@ proxies:
   - {name: "[🇭🇰]8.210.57.239:38309(d8d413a1-d60c-4b8c-b48b-aedc9b221ca7)", server: 8.210.57.239, port: 38309, type: vmess, uuid: d8d413a1-d60c-4b8c-b48b-aedc9b221ca7, alterId: 0, cipher: auto, network: http, http-opts: {method: GET, path: [/]}}
   - {name: "[🇭🇰]219.76.13.180:443(F3CSSRxD8uljgF73IAn34C3aE9wSqAzZDp5ZOCpxDBRacNYelOYayKTe826Xy0)", server: 219.76.13.180, port: 443, type: trojan, password: F3CSSRxD8uljgF73IAn34C3aE9wSqAzZDp5ZOCpxDBRacNYelOYayKTe826Xy0, sni: stutter.freetrade.link}
   - {name: "[🇭🇰]v2-hkg-cm.clsnet.online:543(7ee5a840-75d1-34a8-bd2a-187cdb286792)", server: v2-hkg-cm.clsnet.online, port: 543, type: vmess, uuid: 7ee5a840-75d1-34a8-bd2a-187cdb286792, alterId: 0, cipher: auto, network: tcp}
-  - {name: "[🇯🇵]sg.liangyuandian.top:443(51c44c4e-f8c2-4419-a52b-b4b7bd915078)", server: sg.liangyuandian.top, port: 443, type: trojan, password: 51c44c4e-f8c2-4419-a52b-b4b7bd915078}
-  - {name: "[🇸🇬]sg.liangyuandian.top:443(b7bc6b1c-610d-4d39-ad29-18a0d6902348)", server: sg.liangyuandian.top, port: 443, type: trojan, password: b7bc6b1c-610d-4d39-ad29-18a0d6902348}
-  - {name: "[🇭🇰]sg.liangyuandian.top:443(ceaea123-1b4b-469b-8358-bcd5f5529305)", server: sg.liangyuandian.top, port: 443, type: trojan, password: ceaea123-1b4b-469b-8358-bcd5f5529305}
