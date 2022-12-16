@@ -41,7 +41,7 @@ class sub_convert():
             except Exception as err:
                 # 链接有问题，直接返回原始错误
                 print('网络错误，检查订阅转换服务器是否失效:' + '\n' +
-                      converted_url + '\n' + err + '\n')
+                      converted_url + '\n' + str(err) + '\n')
             # 改名
             node_list_formated = sub_convert.format(node_list)
             sub_content.append(node_list_formated)
