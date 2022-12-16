@@ -22,9 +22,9 @@ class sub_convert():
         sub_content = []
         for url in urls:
             # 对url进行ASCII编码
-            # 切换代理
-            if "github" in url:
-                url = url.replace("githubusercontent.com","fastgit.org")
+            # # 切换代理
+            # if "github" in url:
+            #     url = url.replace("githubusercontent.com","fastgit.org")
             url_quote = urllib.parse.quote(url, safe='')
             # 转换并获取订阅链接数据
             converted_url = server_host+'/sub?target=mixed&url='+url_quote+'&list=true'
