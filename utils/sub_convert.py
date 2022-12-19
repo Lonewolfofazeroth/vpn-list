@@ -15,7 +15,7 @@ from requests.adapters import HTTPAdapter
 class sub_convert():
     def get_node_from_sub(url_raw='', server_host='http://127.0.0.1:25500'):
         # 使用远程订阅转换服务
-        # server_host = 'https://sub.xeton.dev'
+        server_host = 'https://sub.xeton.dev'
         # 使用本地订阅转换服务
         # 分割订阅链接
         urls = url_raw.split('|')
@@ -335,10 +335,7 @@ class sub_convert():
         return base64_content
 
     def base64_decode(url_content):  # Base64 转换为 URL 链接内容
-        if '-' in url_content:
-            url_content = url_content.replace('-', '+')
-        elif '_' in url_content:
-            url_content = url_content.replace('_', '/')
+        url_content = url_content.replace('-', '+').replace('_', '/')
         # print(len(url_content))
         missing_padding = len(url_content) % 4
         if missing_padding != 0:
@@ -436,7 +433,7 @@ class sub_convert():
                                 yaml_url.setdefault('http-opts', {}).setdefault('path', '[' + vmess_config['path'] + ']')
                 except Exception as err:
                     print(f'yaml_encode 解析 vmess 节点发生错误: {err}')
-                    pass
+                    continue
 
             if 'ss://' in line and 'vless://' not in line and 'vmess://' not in line:
                 try:
@@ -509,7 +506,7 @@ class sub_convert():
                                     yaml_url.setdefault('plugin-opts', {}).setdefault('mode', 'websocket')
                 except Exception as err:
                     print(f'yaml_encode 解析 ss 节点发生错误: {err}')
-                    pass
+                    continue
 
             if 'ssr://' in line:
                 try:
@@ -589,7 +586,7 @@ class sub_convert():
                         yaml_url.setdefault('protocol-param', '""')
                 except Exception as err:
                     print(f'yaml_encode 解析 ssr 节点发生错误: {err}')
-                    pass
+                    continue
 
             if 'trojan://' in line:
                 try:
@@ -640,7 +637,7 @@ class sub_convert():
                                     yaml_url.setdefault('grpc-opts', {}).setdefault('grpc-service-name', '""')
                 except Exception as err:
                     print(f'yaml_encode 解析 trojan 节点发生错误: {err}')
-                    pass
+                    continue
             if yaml_url['server'] == '' or yaml_url['port'] == 0:
                 continue
             # if not ping(yaml_url['server'],1):
