@@ -14,7 +14,6 @@ proxies:
   - {name: "[🇫🇷]pl-ss.sshmax.xyz:8388(MDA3MTVm)", server: pl-ss.sshmax.xyz, port: 8388, type: ss, cipher: chacha20-ietf-poly1305, password: MDA3MTVm}
   - {name: "[🇫🇷]de2-ss.sshstores.net:8388(9hS0A)", server: de2-ss.sshstores.net, port: 8388, type: ss, cipher: chacha20-ietf-poly1305, password: 9hS0A}
   - {name: "[🇫🇷]151.80.152.248:8388(eNB7v)", server: 151.80.152.248, port: 8388, type: ss, cipher: chacha20-ietf-poly1305, password: eNB7v}
-  - {name: "[🇫🇷]fr1-ss.sshstores.net:8388(eNB7v)", server: fr1-ss.sshstores.net, port: 8388, type: ss, cipher: chacha20-ietf-poly1305, password: eNB7v}
   - {name: "[🇫🇷]51.178.87.37:810(G!yBwPWH3Vao)", server: 51.178.87.37, port: 810, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
   - {name: "[🇫🇷]95.142.161.114:855(bhcoDfavlz5r)", server: 95.142.161.114, port: 855, type: ss, cipher: chacha20-ietf-poly1305, password: bhcoDfavlz5r}
   - {name: "[🇫🇷]155.133.129.142:443(KxwAbGHAup8D)", server: 155.133.129.142, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: KxwAbGHAup8D}
@@ -24,7 +23,6 @@ proxies:
   - {name: "[🇫🇷]ak1552.free.www.outline.network:2376(faBAoD54k87UJG7)", server: ak1552.free.www.outline.network, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7}
   - {name: "[🇫🇷]ak1485.free.www.outline.network:8119(cdBIDV42DCwnfIN)", server: ak1485.free.www.outline.network, port: 8119, type: ss, cipher: aes-256-gcm, password: cdBIDV42DCwnfIN}
   - {name: "[🇫🇷]fr2.archnet.ir:2052(8ce6f8a8-9aca-4029-994a-cedc1ba8292c)", server: fr2.archnet.ir, port: 2052, type: trojan, password: 8ce6f8a8-9aca-4029-994a-cedc1ba8292c, sni: hozix.xyz}
-  - {name: "[🇫🇷]51.91.11.29:80(e0d44ae7-cb7d-4acc-a8c0-9861a6f5eaad)", server: 51.91.11.29, port: 80, type: trojan, password: e0d44ae7-cb7d-4acc-a8c0-9861a6f5eaad, sni: fr1.trojanvh.xyz}
   - {name: "[🇫🇷]ukt-2.opensvr.net:443(opentunnel.net-trhrst5ju45s)", server: ukt-2.opensvr.net, port: 443, type: trojan, password: opentunnel.net-trhrst5ju45s}
   - {name: "[🇫🇷]ukt-2.opensvr.net:443(opentunnel.net-rw8uuv207taq)", server: ukt-2.opensvr.net, port: 443, type: trojan, password: opentunnel.net-rw8uuv207taq}
   - {name: "[🇫🇷]46.226.111.148:443(vPwCvtbOUMkb)", server: 46.226.111.148, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: vPwCvtbOUMkb}
@@ -84,8 +82,8 @@ proxies:
   - {name: "[🇭🇰]ru02.170203.xyz:34234(0301cba3-7d42-4610-9b64-dc8901c2812a)", server: ru02.170203.xyz, port: 34234, type: trojan, password: 0301cba3-7d42-4610-9b64-dc8901c2812a, sni: ru02.170203.xyz}
   - {name: "[🇭🇰]ru02.170203.xyz:34234(e814e4bf-6497-4182-9b73-8e18c901f126)", server: ru02.170203.xyz, port: 34234, type: trojan, password: e814e4bf-6497-4182-9b73-8e18c901f126, sni: ru02.170203.xyz}
   - {name: "[🇦🇺]v2au1.594888.xyz:34561(737a7a5a-a372-3398-b695-d9c90d71568b)", server: v2au1.594888.xyz, port: 34561, type: vmess, uuid: 737a7a5a-a372-3398-b695-d9c90d71568b, alterId: 0, cipher: auto, network: ws, tls: false, ws-opts: {path: /v2ray, headers: {host: v2au1.594888.xyz}}}
+  - {name: "[🇲🇴]45.64.22.22:443(4bd74c27-d23a-4083-be2a-5c2c139dadb4)", server: 45.64.22.22, port: 443, type: vmess, uuid: 4bd74c27-d23a-4083-be2a-5c2c139dadb4, alterId: 0, cipher: auto, network: ws, tls: true, ws-opts: {path: /P3gjm, headers: {host: g.pgypgykmoljklj.xyz}}}
   - {name: "[🇲🇴]45.64.22.41:443(14bdba6dede262387ebdebaa706e1c90)", server: 45.64.22.41, port: 443, type: trojan, password: 14bdba6dede262387ebdebaa706e1c90, sni: trs09.bolab.net}
-  - {name: "[🇲🇴]45.64.22.41:443(f2117e99-9b6e-47fd-b0a9-634a0b15b998)", server: 45.64.22.41, port: 443, type: trojan, password: f2117e99-9b6e-47fd-b0a9-634a0b15b998, sni: jgw2.gaox.ml}
   - {name: "[🇲🇴]cdn.chigua.tk:443(2cc54dbd-d448-4cc0-b61c-1d1ba6317307)", server: cdn.chigua.tk, port: 443, type: vmess, uuid: 2cc54dbd-d448-4cc0-b61c-1d1ba6317307, alterId: 0, cipher: auto, network: ws, tls: true, ws-opts: {path: /2cc54dbd, headers: {host: earth-identity-devel-pubmed.trycloudflare.com}}}
   - {name: "[🇲🇴]cdn.chigua.tk:443(71cec520-8514-4b24-a9eb-783c4d8d0dd6)", server: cdn.chigua.tk, port: 443, type: vmess, uuid: 71cec520-8514-4b24-a9eb-783c4d8d0dd6, alterId: 0, cipher: auto, network: ws, tls: true, ws-opts: {path: /71cec520, headers: {host: slightly-invention-mem-address.trycloudflare.com}}}
   - {name: "[🇲🇴]45.64.22.22:443(Z3YS0KxB8u5jgp736e834y3DaXwSOYzxlFDFqpNCaalDA9CEIRceZOCAnR2yTS)", server: 45.64.22.22, port: 443, type: trojan, password: Z3YS0KxB8u5jgp736e834y3DaXwSOYzxlFDFqpNCaalDA9CEIRceZOCAnR2yTS}
@@ -123,7 +121,6 @@ proxies:
   - {name: "[🇺🇸]134.195.101.32:3389(3c4e10af98c30972)", server: 134.195.101.32, port: 3389, type: trojan, password: 3c4e10af98c30972}
   - {name: "[🇺🇸]vipus04.ajdkjaljdj.xyz:4088(cad23ca0-336a-3463-a4b4-44c1ece96b30)", server: vipus04.ajdkjaljdj.xyz, port: 4088, type: vmess, uuid: cad23ca0-336a-3463-a4b4-44c1ece96b30, alterId: 4, cipher: auto, network: ws, tls: false, ws-opts: {path: /, headers: {host: vipus04.ajdkjaljdj.xyz}}}
   - {name: "[🇺🇸]134.195.101.32:3389(8b475d9e868e43e0)", server: 134.195.101.32, port: 3389, type: trojan, password: 8b475d9e868e43e0}
-  - {name: "[🇺🇸]134.195.101.32:3389(36fe28a331638747)", server: 134.195.101.32, port: 3389, type: trojan, password: 36fe28a331638747}
   - {name: "[🇺🇸]134.195.101.32:3389(0cc6b4268dea0ba8)", server: 134.195.101.32, port: 3389, type: trojan, password: 0cc6b4268dea0ba8}
   - {name: "[🇺🇸]134.195.101.32:3389(4bacb8f1a089763b)", server: 134.195.101.32, port: 3389, type: trojan, password: 4bacb8f1a089763b}
   - {name: "[🇺🇸]134.195.101.32:3389(26a663656e575c0b)", server: 134.195.101.32, port: 3389, type: trojan, password: 26a663656e575c0b}
@@ -143,13 +140,12 @@ proxies:
   - {name: "[🇺🇸]134.195.101.32:3389(ca4596fb9bc63cf2)", server: 134.195.101.32, port: 3389, type: trojan, password: ca4596fb9bc63cf2}
   - {name: "[🇺🇸]134.195.101.32:3389(d66013c645b93c5c)", server: 134.195.101.32, port: 3389, type: trojan, password: d66013c645b93c5c}
   - {name: "[🇺🇸]134.195.101.32:3389(7b06d22a8a7c764f)", server: 134.195.101.32, port: 3389, type: trojan, password: 7b06d22a8a7c764f}
+  - {name: "[🇺🇸]nd94jsk0.0xnwy1fyrtlb.com:12101(iuo7tbw4ks)", server: nd94jsk0.0xnwy1fyrtlb.com, port: 12101, type: ssr, cipher: aes-256-cfb, password: iuo7tbw4ks, protocol: auth_aes128_sha1, obfs: tls1.2_ticket_auth, obfs-param: "V2xSR2JGcHRVWGxQUkUxM1RsTTFhVmxYYkd0a1V6VnFZakl3", protocol-param: 28305:ZukOkl}
   - {name: "[🇺🇸]66.154.105.8:443(70206490-8292-4242-b263-e7d11589362e)", server: 66.154.105.8, port: 443, type: vmess, uuid: 70206490-8292-4242-b263-e7d11589362e, alterId: 0, cipher: auto, network: ws, tls: true, ws-opts: {path: /down, headers: {host: wx.adbse.xyz}}}
   - {name: "[🇺🇸]node-do-us-1.gitspeed.cyou:443(pNDxTmWL)", server: node-do-us-1.gitspeed.cyou, port: 443, type: trojan, password: pNDxTmWL, sni: node-do-us-1.gitspeed.cyou}
   - {name: "[🇺🇸]bgroup.node5.v.nodelist-gfwairport1.download:50001(501e4691-3868-483c-a379-c2e2c8e85741)", server: bgroup.node5.v.nodelist-gfwairport1.download, port: 50001, type: vmess, uuid: 501e4691-3868-483c-a379-c2e2c8e85741, alterId: 0, cipher: auto, network: tcp}
   - {name: "[🏁]141.193.213.20:2053(ce02a636-88ac-4c29-963d-e09961ec3b3d)", server: 141.193.213.20, port: 2053, type: vmess, uuid: ce02a636-88ac-4c29-963d-e09961ec3b3d, alterId: 0, cipher: auto, network: ws, tls: true, ws-opts: {path: /DQsafRJn/, headers: {host: v2ray.wefuckgfw.ga}}}
   - {name: "[🇺🇸]ak1473.free.www.outline.network:1036()1N1E6v0SU_rGTpg)", server: ak1473.free.www.outline.network, port: 1036, type: ss, cipher: chacha20-ietf-poly1305, password: )1N1E6v0SU_rGTpg}
-  - {name: "[🏁]172.67.199.34:443(776352ac-0a91-3d71-8450-d3b3a2b43c73)", server: 172.67.199.34, port: 443, type: vmess, uuid: 776352ac-0a91-3d71-8450-d3b3a2b43c73, alterId: 0, cipher: auto, network: ws, tls: true, ws-opts: {path: /das212, headers: {host: do3.yyhm9.com}}}
-  - {name: "[🇺🇸]tr2.tgcunzhang.xyz:54858(2a9ba60d-10ce-4f79-97e7-817334456195)", server: tr2.tgcunzhang.xyz, port: 54858, type: trojan, password: 2a9ba60d-10ce-4f79-97e7-817334456195}
   - {name: "[🇺🇸]tr8.tgcunzhang.xyz:54485(2a9ba60d-10ce-4f79-97e7-817334456195)", server: tr8.tgcunzhang.xyz, port: 54485, type: trojan, password: 2a9ba60d-10ce-4f79-97e7-817334456195}
   - {name: "[🏁]can01.cf.ssru7.casa:443(393863a5-2354-3eb1-86bc-102ed72823d8)", server: can01.cf.ssru7.casa, port: 443, type: vmess, uuid: 393863a5-2354-3eb1-86bc-102ed72823d8, alterId: 0, cipher: auto, network: ws, tls: true, ws-opts: {path: /v2ray, headers: {host: can01.paopaocloud.cyou}}}
   - {name: "[🏁]lu01.cf.ssru7.casa:443(393863a5-2354-3eb1-86bc-102ed72823d8)", server: lu01.cf.ssru7.casa, port: 443, type: vmess, uuid: 393863a5-2354-3eb1-86bc-102ed72823d8, alterId: 0, cipher: auto, network: ws, tls: true, ws-opts: {path: /v2ray, headers: {host: lu01.ssru3.casa}}}
@@ -167,7 +163,8 @@ proxies:
   - {name: "[🇺🇸]tr7.tgcunzhang.xyz:54748(2a9ba60d-10ce-4f79-97e7-817334456195)", server: tr7.tgcunzhang.xyz, port: 54748, type: trojan, password: 2a9ba60d-10ce-4f79-97e7-817334456195}
   - {name: "[🇺🇸]27mg.mealstream.xyz:443(8578dc92-3097-4dd5-941a-5e6ebeaa91ba)", server: 27mg.mealstream.xyz, port: 443, type: vmess, uuid: 8578dc92-3097-4dd5-941a-5e6ebeaa91ba, alterId: 0, cipher: auto, network: tcp}
   - {name: "[🏁]lu01.cf.ssru7.casa:443(e3178b9a-24e2-38ea-a564-1c8c0c076231)", server: lu01.cf.ssru7.casa, port: 443, type: vmess, uuid: e3178b9a-24e2-38ea-a564-1c8c0c076231, alterId: 0, cipher: auto, network: ws, tls: false, ws-opts: {path: /, headers: {host: lu01.ssru3.casa}}}
-  - {name: "[🇺🇸]us3.caoyyds.top:9009(1e74a724-8a33-480e-9337-903c3b9b05bc)", server: us3.caoyyds.top, port: 9009, type: vmess, uuid: 1e74a724-8a33-480e-9337-903c3b9b05bc, alterId: 0, cipher: auto, network: ws, tls: false, ws-opts: {path: /cao, headers: {host: us3.caoyyds.top}}}
+  - {name: "[🇺🇸]88.210.37.46:22576(2F094845-E2BD-EBF7-DEB7-995992436FAF)", server: 88.210.37.46, port: 22576, type: vmess, uuid: 2F094845-E2BD-EBF7-DEB7-995992436FAF, alterId: 0, cipher: auto, network: tcp}
+  - {name: "[🏁]jp1.caoyyds.top:8443(1e74a724-8a33-480e-9337-903c3b9b05bc)", server: jp1.caoyyds.top, port: 8443, type: vmess, uuid: 1e74a724-8a33-480e-9337-903c3b9b05bc, alterId: 0, cipher: auto, network: ws, tls: true, ws-opts: {path: /cao, headers: {host: jp1.caoyyds.top}}}
   - {name: "[🇨🇳]us2.netflix6.com:443(737a7a5a-a372-3398-b695-d9c90d71568b)", server: us2.netflix6.com, port: 443, type: vmess, uuid: 737a7a5a-a372-3398-b695-d9c90d71568b, alterId: 0, cipher: auto, network: ws, tls: true, ws-opts: {path: /hls/us2.m3u8, headers: {host: us2.netflix6.com}}}
   - {name: "[🏁]172.67.199.34:443(4bd74c27-d23a-4083-be2a-5c2c139dadb4)", server: 172.67.199.34, port: 443, type: vmess, uuid: 4bd74c27-d23a-4083-be2a-5c2c139dadb4, alterId: 0, cipher: auto, network: ws, tls: false, ws-opts: {path: /P3gjm, headers: {host: g.pgypgykmoljklj.xyz}}}
   - {name: "[🇺🇸]bgroup.node5.s.nodelist-gfwairport1.download:50001(501e4691-3868-483c-a379-c2e2c8e85741)", server: bgroup.node5.s.nodelist-gfwairport1.download, port: 50001, type: ss, cipher: chacha20-ietf-poly1305, password: 501e4691-3868-483c-a379-c2e2c8e85741}
@@ -189,7 +186,6 @@ proxies:
   - {name: "[🇺🇸]135.148.148.4:80(800eb26c-cd0c-4269-aae7-e63d75de4edd)", server: 135.148.148.4, port: 80, type: trojan, password: 800eb26c-cd0c-4269-aae7-e63d75de4edd, sni: us3.trojanvh.xyz}
   - {name: "[🇺🇸]135.148.148.4:80(76fcac80-9943-4eab-8717-0ebebea94b70)", server: 135.148.148.4, port: 80, type: trojan, password: 76fcac80-9943-4eab-8717-0ebebea94b70, sni: us3.trojanvh.xyz}
   - {name: "[🇺🇸]135.148.148.4:80(ee2bccd3-0f30-42d4-86d6-3d393ad230bd)", server: 135.148.148.4, port: 80, type: trojan, password: ee2bccd3-0f30-42d4-86d6-3d393ad230bd, sni: us3.trojanvh.xyz}
-  - {name: "[🇺🇸]nd94jsk0.0xnwy1fyrtlb.com:12104(iuo7tbw4ks)", server: nd94jsk0.0xnwy1fyrtlb.com, port: 12104, type: ssr, cipher: aes-256-cfb, password: iuo7tbw4ks, protocol: auth_aes128_sha1, obfs: tls1.2_ticket_auth, obfs-param: "V2xSR2JGcHRVWGxQUkUxM1RsTTFhVmxYYkd0a1V6VnFZakl3", protocol-param: 28305:ZukOkl}
   - {name: "[🇺🇸]us2.trojanvh.xyz:443(011eb011-c68e-4f92-80eb-f9bbef707bef)", server: us2.trojanvh.xyz, port: 443, type: trojan, password: 011eb011-c68e-4f92-80eb-f9bbef707bef, sni: us2.trojanvh.xyz}
   - {name: "[🏁]172.67.199.34:2086(ad1454a4-c9e2-4836-c98d-66e3646c2aa4)", server: 172.67.199.34, port: 2086, type: vmess, uuid: ad1454a4-c9e2-4836-c98d-66e3646c2aa4, alterId: 0, cipher: auto, network: ws, tls: false, ws-opts: {path: /, headers: {host: uk.cloudflare.quest}}}
   - {name: "[🏁]zfc.windowsupdate1.com:443(7edae83d-a4c0-4ac7-a40c-1e0a0cd80b60)", server: zfc.windowsupdate1.com, port: 443, type: vmess, uuid: 7edae83d-a4c0-4ac7-a40c-1e0a0cd80b60, alterId: 0, cipher: auto, network: ws, tls: false, ws-opts: {path: /guolicheng/hinet, headers: {host: hinet.guolicheng.cyou}}}
@@ -326,6 +322,7 @@ proxies:
   - {name: "[🇬🇧]kp1.sshub.xyz:443(61605c66-6d41-4b9d-a496-b9898f3f95d0)", server: kp1.sshub.xyz, port: 443, type: trojan, password: 61605c66-6d41-4b9d-a496-b9898f3f95d0, sni: kp1.sshub.xyz}
   - {name: "[🇬🇧]series1.samanehha.co:443(OPIGHSeIZVBS7hDX)", server: series1.samanehha.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: OPIGHSeIZVBS7hDX}
   - {name: "[🇬🇧]185.44.76.188:443(8697fe6b-1lWNFc1RmRBNk5NQU5KSnga3fa58ac5a3ef0-b4ab-11eb-b65e-1239d0255272)", server: 185.44.76.188, port: 443, type: trojan, password: 8697fe6b-1lWNFc1RmRBNk5NQU5KSnga3fa58ac5a3ef0-b4ab-11eb-b65e-1239d0255272}
+  - {name: "[🇬🇧]content-provider4.cdn-delivery.akamaicd.com:443(shefelnak)", server: content-provider4.cdn-delivery.akamaicd.com, port: 443, type: trojan, password: shefelnak}
   - {name: "[🇬🇧]145.239.7.164:443(pKEW8JPByTVTLtM)", server: 145.239.7.164, port: 443, type: ss, cipher: aes-256-gcm, password: pKEW8JPByTVTLtM}
   - {name: "[🏁]188.114.99.9:443(40d496a6-ceeb-4096-baeb-4cc52b205621)", server: 188.114.99.9, port: 443, type: vmess, uuid: 40d496a6-ceeb-4096-baeb-4cc52b205621, alterId: 0, cipher: auto, network: ws, tls: false, ws-opts: {path: /, headers: {host: lg1.trump2023.us}}}
   - {name: "[🇳🇱]nl.archnet.ir:4439(ce5441f1-51a8-45b9-8172-c7f04de6d5cb)", server: nl.archnet.ir, port: 4439, type: ss, cipher: aes-256-gcm, password: ce5441f1-51a8-45b9-8172-c7f04de6d5cb}
@@ -339,7 +336,6 @@ proxies:
   - {name: "[🇳🇱]89.208.105.63:41443(2F094845-E2BD-EBF7-DEB7-995992436FAF)", server: 89.208.105.63, port: 41443, type: vmess, uuid: 2F094845-E2BD-EBF7-DEB7-995992436FAF, alterId: 0, cipher: auto, network: tcp}
   - {name: "[🇳🇱]89.208.105.63:44443(217F677E-C1A0-1AF0-D13B-F7956CBD313E)", server: 89.208.105.63, port: 44443, type: vmess, uuid: 217F677E-C1A0-1AF0-D13B-F7956CBD313E, alterId: 0, cipher: auto, network: tcp}
   - {name: "[🇳🇱]nl-full.privateip.net:443(e31abdc5-65c4-4af6-9073-99803fe19b75)", server: nl-full.privateip.net, port: 443, type: trojan, password: e31abdc5-65c4-4af6-9073-99803fe19b75}
-  - {name: "[🇳🇱]ak1444.free.www.outline.network:2375(faBAoD54k87UJG7)", server: ak1444.free.www.outline.network, port: 2375, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7}
   - {name: "[🇳🇱]ak1519.free.www.outline.network:8000(KixLvKzwjekG00rm)", server: ak1519.free.www.outline.network, port: 8000, type: ss, cipher: aes-256-gcm, password: KixLvKzwjekG00rm}
   - {name: "[🇳🇱]nl.archnet.ir:4439(8ce6f8a8-9aca-4029-994a-cedc1ba8292c)", server: nl.archnet.ir, port: 4439, type: ss, cipher: aes-256-gcm, password: 8ce6f8a8-9aca-4029-994a-cedc1ba8292c}
   - {name: "[🇳🇱]nl.archnet.cyou:2086(8ce6f8a8-9aca-4029-994a-cedc1ba8292c)", server: nl.archnet.cyou, port: 2086, type: trojan, password: 8ce6f8a8-9aca-4029-994a-cedc1ba8292c, sni: https%3A%2F%2Fsnappfood.ir%2F}
@@ -415,6 +411,7 @@ proxies:
   - {name: "[🇨🇳]preshdata1.anihpvhiv2333.xyz:11021(Sj10bnYDe7w6V29E)", server: preshdata1.anihpvhiv2333.xyz, port: 11021, type: ss, cipher: aes-128-gcm, password: Sj10bnYDe7w6V29E}
   - {name: "[🇨🇳]preshdata1.anihpvhiv2333.xyz:10002(Sj10bnYDe7w6V29E)", server: preshdata1.anihpvhiv2333.xyz, port: 10002, type: ss, cipher: aes-128-gcm, password: Sj10bnYDe7w6V29E}
   - {name: "[🇨🇳]preshdata1.anihpvhiv2333.xyz:12022(Sj10bnYDe7w6V29E)", server: preshdata1.anihpvhiv2333.xyz, port: 12022, type: ss, cipher: aes-128-gcm, password: Sj10bnYDe7w6V29E}
+  - {name: "[🇨🇳]preshdata1.anihpvhiv2333.xyz:11024(Sj10bnYDe7w6V29E)", server: preshdata1.anihpvhiv2333.xyz, port: 11024, type: ss, cipher: aes-128-gcm, password: Sj10bnYDe7w6V29E}
   - {name: "[🇭🇰]jp.mjt001.com:443(459d23f4-dcfd-4fef-9ba3-ef0ad10fc336)", server: jp.mjt001.com, port: 443, type: trojan, password: 459d23f4-dcfd-4fef-9ba3-ef0ad10fc336, sni: jp.mjt001.com}
   - {name: "[🇭🇰]ru.mjt001.com:443(5a035db3-34ea-48ca-9aa2-72c8229e1532)", server: ru.mjt001.com, port: 443, type: trojan, password: 5a035db3-34ea-48ca-9aa2-72c8229e1532, sni: ru.mjt001.com}
   - {name: "[🇭🇰]hkt.mjt001.com:443(5a035db3-34ea-48ca-9aa2-72c8229e1532)", server: hkt.mjt001.com, port: 443, type: trojan, password: 5a035db3-34ea-48ca-9aa2-72c8229e1532, sni: hkt.mjt001.com}
@@ -525,8 +522,3 @@ proxies:
   - {name: "[🇭🇰]hk1.vpnjantit.com:10000(7691be04-4907-11ed-be92-00163e019e6e)", server: hk1.vpnjantit.com, port: 10000, type: vmess, uuid: 7691be04-4907-11ed-be92-00163e019e6e, alterId: 0, cipher: auto, network: ws, tls: false, ws-opts: {path: /vpnjantit, headers: {host: hk1.vpnjantit.com}}}
   - {name: "[🇭🇰]xmssmf01.xmss.vip:16666(10657658-502a-42fd-97fd-1e08f538e13d)", server: xmssmf01.xmss.vip, port: 16666, type: ss, cipher: chacha20-ietf-poly1305, password: 10657658-502a-42fd-97fd-1e08f538e13d}
   - {name: "[🇭🇰]hk1.vpnjantit.com:10000(b3bcddd8-54c2-11ed-9ee9-00163e019e6e)", server: hk1.vpnjantit.com, port: 10000, type: vmess, uuid: b3bcddd8-54c2-11ed-9ee9-00163e019e6e, alterId: 0, cipher: auto, network: ws, tls: false, ws-opts: {path: /vpnjantit, headers: {host: hk1.vpnjantit.com}}}
-  - {name: "[🇭🇰]hk1.vpnjantit.com:10000(d6da43ba-5d90-11ed-b1ad-00163e019e6e)", server: hk1.vpnjantit.com, port: 10000, type: vmess, uuid: d6da43ba-5d90-11ed-b1ad-00163e019e6e, alterId: 0, cipher: auto, network: ws, tls: false, ws-opts: {path: /vpnjantit, headers: {host: hk1.vpnjantit.com}}}
-  - {name: "[🇭🇰]azhj001.xibai6.top:20758(e0ef6178-23ad-3385-9e72-b93820a847da)", server: azhj001.xibai6.top, port: 20758, type: trojan, password: e0ef6178-23ad-3385-9e72-b93820a847da, sni: ssl.ssl12.xyz}
-  - {name: "[🇭🇰]AZQT.xibai6.top:20746(e0ef6178-23ad-3385-9e72-b93820a847da)", server: AZQT.xibai6.top, port: 20746, type: trojan, password: e0ef6178-23ad-3385-9e72-b93820a847da, sni: ssl.ssl12.xyz}
-  - {name: "[🇭🇰]azhj001.xibai6.top:20757(e0ef6178-23ad-3385-9e72-b93820a847da)", server: azhj001.xibai6.top, port: 20757, type: trojan, password: e0ef6178-23ad-3385-9e72-b93820a847da, sni: ssl.ssl12.xyz}
-  - {name: "[🇭🇰]tr01.kczz2038.online:443(70342897-826e-4ffe-ba96-da4824ad7b85)", server: tr01.kczz2038.online, port: 443, type: trojan, password: 70342897-826e-4ffe-ba96-da4824ad7b85}
