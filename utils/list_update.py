@@ -7,7 +7,7 @@ import requests
 from requests.adapters import HTTPAdapter
 
 # 文件路径定义
-sub_list_json = './sub/sub_list.json'
+sub_list_json = './subscription/others/sub_list.json'
 
 
 with open(sub_list_json, 'r', encoding='utf-8') as f:  # 载入订阅链接
