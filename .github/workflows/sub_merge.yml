@@ -39,7 +39,8 @@ jobs:
         run: |
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
-          git add ./
+          git add ./subscription
+          git add ./Country.mmdb
           git commit -m "$(date '+%Y-%m-%d %H:%M:%S') Merge Nodes"
 
       - name: push
