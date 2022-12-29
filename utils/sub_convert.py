@@ -379,7 +379,7 @@ class sub_convert():
                             yaml_url.setdefault('server', vmess_config['add'])
                         yaml_url.setdefault('port', int(vmess_config['port']))
                         yaml_url.setdefault('type', 'vmess')
-                        if vmess_config['id'] == '0' or re.findall("[f-z]", vmess_config['id']):
+                        if vmess_config['id'] == '0' or re.findall("[f-z]", vmess_config['id']) or len(vmess_config['id']) != 36:
                             continue
                         else:
                             yaml_url.setdefault('uuid', vmess_config['id'])
@@ -403,7 +403,7 @@ class sub_convert():
                             else:
                                 yaml_url.setdefault('ws-opts', {}).setdefault('path', vmess_config['path'])
                             if vmess_config['host'] != '':
-                                if '%' in vmess_config['host']:
+                                if '%' in vmess_config['host'] or '[' in vmess_config['host']:
                                     yaml_url.setdefault('ws-opts', {}).setdefault('headers', {'host': '"' + vmess_config['host'] + '"'})
                                 else:
                                     yaml_url.setdefault('ws-opts', {}).setdefault('headers', {'host': vmess_config['host']})
@@ -463,7 +463,7 @@ class sub_convert():
                     elif (server_password == ''):
                         continue
                     else:
-                        yaml_url.setdefault('password', server_password)
+                        yaml_url.setdefault('password', '"' + server_password + '"')
                     if len(ss_content_array) >= 4:
                         # include more server config
                         parameters_raw = urllib.parse.unquote(ss_content_array[2])
