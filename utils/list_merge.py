@@ -12,8 +12,8 @@ from sub_convert import sub_convert
 
 # 文件路径定义
 # readme = './README.md'
-sub_list_json = './sub/sub_list.json'
-sub_list_path = './sub/list/'
+sub_list_json = './subscription/others/sub_list.json'
+sub_list_path = './subscription/others/list/'
 
 
 class sub_merge():
@@ -48,10 +48,10 @@ class sub_merge():
             content_array)
         # 写入文件
         sub_convert.write_to_node(
-            content_array_deduplication, './sub/node.txt')
+            content_array_deduplication, './subscription/others/node.txt')
         sub_convert.write_to_base64(
-            content_array_deduplication, './sub/base64')
-        sub_convert.write_to_clash(content_array_deduplication, './sub/clash/')
+            content_array_deduplication, './subscription/others/base64')
+        sub_convert.write_to_clash(content_array_deduplication, './subscription/')
         print('Done!\n')
 
     def read_list(json_file):  # 将 sub_list.json Url 内容读取为列表
@@ -73,7 +73,7 @@ class sub_merge():
     def geoip_update(url):
         print('Downloading Country.mmdb...')
         try:
-            request.urlretrieve(url, './utils/Country.mmdb')
+            request.urlretrieve(url, './Country.mmdb')
             print('Success!\n')
         except Exception:
             print('Failed!\n')
