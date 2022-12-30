@@ -1,6 +1,4 @@
 proxies:
-  - {name: "[🇺🇸]38.114.114.67:4444(pKEW8JPByTVTLtM)", server: 38.114.114.67, port: 4444, type: ss, cipher: aes-256-gcm, password: "pKEW8JPByTVTLtM"}
-  - {name: "[🇸🇪]37.252.9.76:989(f8f7aCzcPKbsF8p3)", server: 37.252.9.76, port: 989, type: ss, cipher: aes-256-cfb, password: "f8f7aCzcPKbsF8p3"}
   - {name: "[🇦🇪]45.9.249.250:50000(3135771619)", server: 45.9.249.250, port: 50000, type: ss, cipher: aes-256-cfb, password: !<str> 3135771619}
   - {name: "[🇳🇱]213.183.59.209:9070(bf7v334KKDV3YDhH)", server: 213.183.59.209, port: 9070, type: ss, cipher: aes-256-cfb, password: "bf7v334KKDV3YDhH"}
   - {name: "[🇹🇷]107.150.94.26:989(f8f7aCzcPKbsF8p3)", server: 107.150.94.26, port: 989, type: ss, cipher: aes-256-cfb, password: "f8f7aCzcPKbsF8p3"}
@@ -201,6 +199,7 @@ proxies:
   - {name: "[🇨🇳]bs3.jymzffbquawl.com:3046(RenzheCloudSS)", server: bs3.jymzffbquawl.com, port: 3046, type: ss, cipher: rc4-md5, password: "RenzheCloudSS", plugin: obfs, plugin-opts: {mode: http, host: "c7ea4198729.microsoft.com"}}
   - {name: "[🇨🇳]pr3.jymzffbquawl.com:5601(RenzheCloudSS)", server: pr3.jymzffbquawl.com, port: 5601, type: ss, cipher: rc4-md5, password: "RenzheCloudSS", plugin: obfs, plugin-opts: {mode: http, host: "c7ea4198729.microsoft.com"}}
   - {name: "[🇨🇳]pr3.jymzffbquawl.com:5600(RenzheCloudSS)", server: pr3.jymzffbquawl.com, port: 5600, type: ss, cipher: rc4-md5, password: "RenzheCloudSS", plugin: obfs, plugin-opts: {mode: http, host: "c7ea4198729.microsoft.com"}}
+  - {name: "[🇺🇸]techplanet.today:2083(8a21b84d-183e-450d-ec82-8d45855d8180)", server: techplanet.today, port: 2083, type: vmess, uuid: 8a21b84d-183e-450d-ec82-8d45855d8180, alterId: 0, cipher: auto, network: ws, tls: true, ws-opts: {path: /, headers: {host: xui.mycf.ml}}}
   - {name: "[🇨🇳]bs3.jymzffbquawl.com:6602(RenzheCloudSS)", server: bs3.jymzffbquawl.com, port: 6602, type: ss, cipher: rc4-md5, password: "RenzheCloudSS", plugin: obfs, plugin-opts: {mode: http, host: "c7ea4198729.microsoft.com"}}
   - {name: "[🇨🇳]bs3.jymzffbquawl.com:6601(RenzheCloudSS)", server: bs3.jymzffbquawl.com, port: 6601, type: ss, cipher: rc4-md5, password: "RenzheCloudSS", plugin: obfs, plugin-opts: {mode: http, host: "c7ea4198729.microsoft.com"}}
   - {name: "[🇦🇶]v.acuteclaydoll.xyz:2053(cc)", server: v.acuteclaydoll.xyz, port: 2053, type: trojan, password: cc}
@@ -238,6 +237,7 @@ proxies:
   - {name: "[🇺🇸]38.68.134.191:8090(PCnnH6SQSnfoS27)", server: 38.68.134.191, port: 8090, type: ss, cipher: aes-256-gcm, password: "PCnnH6SQSnfoS27"}
   - {name: "[🇺🇸]38.68.134.85:8080(KixLvKzwjekG00rm)", server: 38.68.134.85, port: 8080, type: ss, cipher: aes-256-gcm, password: "KixLvKzwjekG00rm"}
   - {name: "[🇺🇸]38.68.134.85:2375(faBAoD54k87UJG7)", server: 38.68.134.85, port: 2375, type: ss, cipher: aes-256-gcm, password: "faBAoD54k87UJG7"}
+  - {name: "[🇺🇸]38.68.134.85:5003(g5MeD6Ft3CWlJId)", server: 38.68.134.85, port: 5003, type: ss, cipher: aes-256-gcm, password: "g5MeD6Ft3CWlJId"}
   - {name: "[🇺🇸]38.68.134.191:5000(Y6R9pAtvxxzmGC)", server: 38.68.134.191, port: 5000, type: ss, cipher: aes-256-gcm, password: "Y6R9pAtvxxzmGC"}
   - {name: "[🇺🇸]38.68.134.85:3306(Y6R9pAtvxxzmGC)", server: 38.68.134.85, port: 3306, type: ss, cipher: aes-256-gcm, password: "Y6R9pAtvxxzmGC"}
   - {name: "[🇺🇸]38.91.107.225:802(G!yBwPWH3Vao)", server: 38.91.107.225, port: 802, type: ss, cipher: chacha20-ietf-poly1305, password: "G!yBwPWH3Vao"}
@@ -466,7 +466,6 @@ proxies:
   - {name: "[🇨🇳]gg.hongkongnode.top:22741(b9af5214-14a4-3616-abfa-bf93b4266c2d)", server: gg.hongkongnode.top, port: 22741, type: trojan, password: b9af5214-14a4-3616-abfa-bf93b4266c2d, sni: dufu.hongkongnode.top}
   - {name: "[🇨🇳]hn.xiaohouzi.club:14185(f52e6827-d087-3fd0-9c66-ef87874c69ba)", server: hn.xiaohouzi.club, port: 14185, type: trojan, password: f52e6827-d087-3fd0-9c66-ef87874c69ba, sni: hktnew01.xiaohouzi.club}
   - {name: "[🇨🇳]120.240.163.163:560(mblank1port)", server: 120.240.163.163, port: 560, type: ssr, cipher: chacha20-ietf, password: mblank1port, protocol: auth_aes128_md5, obfs: plain, obfs-param: "23ffd711.microsoft.com", protocol-param: 43697:SVIPTIZ8}
-  - {name: "[🇨🇳]14.152.92.79:12127(68xdgu9eyif)", server: 14.152.92.79, port: 12127, type: ssr, cipher: aes-256-cfb, password: 68xdgu9eyif, protocol: auth_aes128_sha1, obfs: http_simple, obfs-param: "0f099600777.v23f7nM0", protocol-param: 600777:154T8b}
   - {name: "[🇨🇳]223.166.145.18:568(mblank1port)", server: 223.166.145.18, port: 568, type: ssr, cipher: chacha20-ietf, password: mblank1port, protocol: auth_aes128_md5, obfs: plain, obfs-param: "23ffd711.microsoft.com", protocol-param: 43020:SVIPTIZ8}
   - {name: "[🇨🇳]120.232.126.100:13584(Cskw6d)", server: 120.232.126.100, port: 13584, type: ssr, cipher: rc4-md5, password: Cskw6d, protocol: auth_aes128_md5, obfs: tls1.2_ticket_auth, obfs-param: "t.me/vpnhat", protocol-param: 400218:vCQCEl}
   - {name: "[🇨🇳]120.232.126.108:13231(Cskw6d)", server: 120.232.126.108, port: 13231, type: ssr, cipher: rc4-md5, password: Cskw6d, protocol: auth_aes128_md5, obfs: tls1.2_ticket_auth, obfs-param: "t.me/vpnhat", protocol-param: 400218:vCQCEl}
