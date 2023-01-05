@@ -65,8 +65,8 @@ proxy-groups:
       - 4.c
       - 5.c
       - 6.c
-      # - 7.c
-      # - 8.c
+      - 7.c
+      - 8.c
       # - 9.c
       # - 10.c
       # - 11.c
@@ -152,25 +152,25 @@ proxy-providers:
       interval: 1800
       url: "http://www.gstatic.com/generate_204"
 
-  # 7.c:
-  #   type: http
-  #   url: "https://raw.fastgit.org/songtao1873/clash/main/subscription/7.yaml"
-  #   interval: 7200
-  #   path: subscription/7.yaml
-  #   health-check:
-  #     enable: true
-  #     interval: 1800
-  #     url: "http://www.gstatic.com/generate_204"
+  7.c:
+    type: http
+    url: "https://raw.fastgit.org/songtao1873/clash/main/subscription/7.yaml"
+    interval: 7200
+    path: subscription/7.yaml
+    health-check:
+      enable: true
+      interval: 1800
+      url: "http://www.gstatic.com/generate_204"
 
-  # 8.c:
-  #   type: http
-  #   url: "https://raw.fastgit.org/songtao1873/clash/main/subscription/8.yaml"
-  #   interval: 7200
-  #   path: subscription/8.yaml
-  #   health-check:
-  #     enable: true
-  #     interval: 1800
-  #     url: "http://www.gstatic.com/generate_204"
+  8.c:
+    type: http
+    url: "https://raw.fastgit.org/songtao1873/clash/main/subscription/8.yaml"
+    interval: 7200
+    path: subscription/8.yaml
+    health-check:
+      enable: true
+      interval: 1800
+      url: "http://www.gstatic.com/generate_204"
 
   # 9.c:
   #   type: http
