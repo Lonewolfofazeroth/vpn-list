@@ -321,11 +321,11 @@ class sub_convert():
     def write_to_clash(node_list_array, path):
         # 使用远程订阅转换服务
         # server_host = 'https://api.v1.mk'
-        for i in range(0, len(node_list_array), 2000):
-            node_list_array_part = node_list_array[i:i + 2000]
+        for i in range(0, len(node_list_array), 3000):
+            node_list_array_part = node_list_array[i:i + 3000]
             node_list_part = sub_convert.yaml_encode(node_list_array_part)
             node_list_part_file = open(
-                f'{path}{(i+1)//2000}.yaml', 'w', encoding='utf-8')
+                f'{path}{(i+1)//3000}.yaml', 'w', encoding='utf-8')
             node_list_part_file.write(node_list_part)
             node_list_part_file.close()
 
