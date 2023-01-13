@@ -33,7 +33,7 @@ def check_url(url):  # 判断远程远程链接是否已经更新
 
 class update_url():
 
-    def update_main(update_enable_list=[0, 25, 35, 43, 54, 57, 67]):
+    def update_main(update_enable_list=[0, 25, 35, 43, 54, 57, 67, 75]):
         if len(update_enable_list) > 0:
             for id in update_enable_list:
                 status = update_url.update(id)
@@ -108,25 +108,6 @@ class update_url():
                 return [25, url_update]
             else:
                 return [25, 404]
-                
-        # elif id == 37:
-        #     url_raw = 'https://raw.githubusercontent.com/Pawdroid/Free-servers/main/README.md'
-        #     try:
-        #         resp = requests.get(url_raw, timeout=2)
-        #         resp_content = resp.content.decode('utf-8')
-        #         resp_content = resp_content.split('\n')
-        #         for line in resp_content:
-        #             if '本次' in line:
-        #                 line_split = line.split('：')
-        #                 line_split = line_split[1].split('<')
-        #                 url_update = line_split[0]
-        #                 if check_url(url_update):
-        #                     return [37, url_update]
-        #                 else:
-        #                     return [37, 404]
-        #     except Exception as err:
-        #         print(err)
-        #         return [37, 404]
         
         elif id == 35:
             url_raw = 'https://raw.githubusercontent.com/arielherself/autosub/main/subs.txt'
@@ -165,6 +146,7 @@ class update_url():
             except Exception as err:
                 print(err)
                 return [54, 404]
+
         elif id == 57:
             today = datetime.today().strftime('%Y%m%d')
             month = datetime.today().strftime('%m') +'/'
@@ -185,7 +167,23 @@ class update_url():
                 return [57, url_update]
             else:
                 return [57, 404]
-        
+
+        elif id == 75:
+            url_raw = 'https://raw.githubusercontent.com/RiverFlowsInUUU/collectSub/main/sub/' + str(datetime.today().year) +'/'+ str(datetime.today().month) + '/' + str(datetime.today().month)+'-'+str(datetime.today().day)+'.yaml'
+            try:
+                resp = requests.get(url_raw, timeout=2)
+                resp_content = resp.content.decode('utf-8')
+                resp_content = resp_content.split('\n')
+                url_update_array = []
+                for line in resp_content:
+                    if '- ' in line:
+                        line = line.replace("- ", "")
+                        url_update_array.append(line)
+                url_update = '|'.join(url_update_array)
+                return [75, url_update]
+            except Exception as err:
+                print(err)
+                return [75, 404]
 
 if __name__ == '__main__':
     update_url.update_main()
