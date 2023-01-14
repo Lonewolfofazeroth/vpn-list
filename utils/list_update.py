@@ -66,10 +66,7 @@ class update_url():
             end_url = 'clash.yml'
             # 修改字符串中的某一位字符 https://www.zhihu.com/question/31800070/answer/53345749
             url_update = front_url + yesterday + end_url
-            if check_url(url_update):
-                return [0, url_update]
-            else:
-                return [0, 404]
+            return [0, url_update]
         # elif id == 21:
         #     # remarks: v2raydy/v2ray, 将原链接更新至 https://https://raw.githubusercontent.com/v2raydy/v2ray/main/%MM-%(DD - 1)%str%1.txt
         #     # 得到当前日期前一天 https://blog.csdn.net/wanghuafengc/article/details/42458721
