@@ -121,7 +121,6 @@ class update_url():
                         continue
                 url_update = '|'.join(url_update_array)
                 return [35, url_update]
-
             except Exception as err:
                 print(err)
                 return [37, 404]
@@ -167,19 +166,22 @@ class update_url():
 
         elif id == 75:
             url_raw = 'https://raw.githubusercontent.com/RiverFlowsInUUU/collectSub/main/sub/' + str(datetime.today().year) +'/'+ str(datetime.today().month) + '/' + str(datetime.today().month)+'-'+str(datetime.today().day)+'.yaml'
-            try:
-                resp = requests.get(url_raw, timeout=2)
-                resp_content = resp.content.decode('utf-8')
-                resp_content = resp_content.split('\n')
-                url_update_array = []
-                for line in resp_content:
-                    if '- ' in line:
-                        line = line.replace("- ", "")
-                        url_update_array.append(line)
-                url_update = '|'.join(url_update_array)
-                return [75, url_update]
-            except Exception as err:
-                print(err)
+            if check_url(url_raw):
+                try:
+                    resp = requests.get(url_raw, timeout=2)
+                    resp_content = resp.content.decode('utf-8')
+                    resp_content = resp_content.split('\n')
+                    url_update_array = []
+                    for line in resp_content:
+                        if '- ' in line:
+                            line = line.replace("- ", "")
+                            url_update_array.append(line)
+                    url_update = '|'.join(url_update_array)
+                    return [75, url_update]
+                except Exception as err:
+                    print(err)
+                    return [75, 404]
+            else:
                 return [75, 404]
 
 if __name__ == '__main__':
