@@ -398,7 +398,7 @@ class sub_convert():
                             else:
                                 yaml_url.setdefault('tls', 'false')
                             # yaml_url.setdefault('skip-cert-verify', 'true')
-                            if vmess_config['path'] == '':
+                            if vmess_config['path'] == '' or '{' in vmess_config['path']:
                                 yaml_url.setdefault('ws-opts', {'path': '/'})
                             else:
                                 yaml_url.setdefault('ws-opts', {}).setdefault('path', vmess_config['path'])
