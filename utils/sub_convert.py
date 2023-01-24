@@ -615,7 +615,7 @@ class sub_convert():
                                 yaml_url.setdefault('udp', 'true')
                                 if yaml_url['network'] == 'ws':
                                     if 'path=' in config:
-                                        yaml_url.setdefault('ws-opts', {}).setdefault('path', config[5:].split('?')[0])
+                                        yaml_url.setdefault('ws-opts', {}).setdefault('path', urllib.parse.unquote(config[5:].split('?')[0]))
                                     elif 'host=' in config:
                                         yaml_url.setdefault('ws-opts', {}).setdefault('headers', {}).setdefault('host', config[5:])
                                 elif yaml_url['network'] == 'grpc':
