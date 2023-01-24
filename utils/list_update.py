@@ -33,7 +33,7 @@ def check_url(url):  # 判断远程远程链接是否已经更新
 
 class update_url():
 
-    def update_main(update_enable_list=[0, 25, 35, 43, 54, 57, 67, 75]):
+    def update_main(update_enable_list=[0, 11, 25, 35, 43, 54, 57, 67, 75]):
         if len(update_enable_list) > 0:
             for id in update_enable_list:
                 status = update_url.update(id)
@@ -67,20 +67,17 @@ class update_url():
             # 修改字符串中的某一位字符 https://www.zhihu.com/question/31800070/answer/53345749
             url_update = front_url + yesterday + end_url
             return [0, url_update]
-        # elif id == 21:
-        #     # remarks: v2raydy/v2ray, 将原链接更新至 https://https://raw.githubusercontent.com/v2raydy/v2ray/main/%MM-%(DD - 1)%str%1.txt
-        #     # 得到当前日期前一天 https://blog.csdn.net/wanghuafengc/article/details/42458721
-        #     today = datetime.today().strftime('%m-%d')
 
-        #     front_url = 'https://raw.githubusercontent.com/v2raydy/v2ray/main/'
-        #     end_url = '1.txt'
-        #     for ch in 'abcdefghijklmnopqrstuvwxy':
-        #         # 修改字符串中的某一位字符 https://www.zhihu.com/question/31800070/answer/53345749
-        #         url_update = front_url + today + ch + end_url
-        #         if check_url(url_update):
-        #             return [21, url_update]
-        #         else:
-        #             return [21, 404]
+        elif id == 11:
+            today = datetime.today()
+            front_url = 'https://raw.githubusercontent.com/halfaaa/Free/main/'
+            end_url = '.txt'
+            url_update = front_url + str(today.month) + "." + str(today.day) + "." + str(today.year) + end_url
+            if check_url(url_update):
+                return [21, url_update]
+            else:
+                return [21, 404]
+
         elif id == 43:
             # remarks: v2raydy/v2ray, 将原链接更新至 https://https://raw.githubusercontent.com/v2raydy/v2ray/main/%MM-%(DD - 1)%str%1.txt
             # 得到当前日期前一天 https://blog.csdn.net/wanghuafengc/article/details/42458721
