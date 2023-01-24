@@ -72,7 +72,9 @@ class update_url():
             today = datetime.today()
             front_url = 'https://raw.githubusercontent.com/halfaaa/Free/main/'
             end_url = '.txt'
-            url_update = front_url + str(today.month) + "." + str(today.day) + "." + str(today.year) + end_url
+            url_update = front_url + \
+                str(today.month) + "." + str(today.day) + \
+                "." + str(today.year) + end_url
             if check_url(url_update):
                 return [21, url_update]
             else:
@@ -82,7 +84,7 @@ class update_url():
             # remarks: v2raydy/v2ray, 将原链接更新至 https://https://raw.githubusercontent.com/v2raydy/v2ray/main/%MM-%(DD - 1)%str%1.txt
             # 得到当前日期前一天 https://blog.csdn.net/wanghuafengc/article/details/42458721
             today = datetime.today().strftime('%Y%m%d')
-            month = datetime.today().strftime('%Y%m') +'/'
+            month = datetime.today().strftime('%Y%m') + '/'
             front_url = 'https://nodefree.org/dy/'
             end_url = '.txt'
             url_update = front_url + month + today + end_url
@@ -90,11 +92,11 @@ class update_url():
                 return [43, url_update]
             else:
                 return [43, 404]
-        
+
         elif id == 25:
             today = datetime.today().strftime('%Y%m%d')
-            month = datetime.today().strftime('%m') +'/'
-            year = datetime.today().strftime('%Y') +'/'
+            month = datetime.today().strftime('%m') + '/'
+            year = datetime.today().strftime('%Y') + '/'
             front_url = 'https://v2rayshare.com/wp-content/uploads/'
             end_url = '.txt'
             url_update = front_url + year + month + today + end_url
@@ -102,7 +104,7 @@ class update_url():
                 return [25, url_update]
             else:
                 return [25, 404]
-        
+
         elif id == 35:
             url_raw = 'https://raw.githubusercontent.com/arielherself/autosub/main/subs.txt'
             url_update_array = []
@@ -121,19 +123,23 @@ class update_url():
             except Exception as err:
                 print(err)
                 return [37, 404]
-        
+
         elif id == 54:
-            url_raw = 'https://raw.githubusercontent.com/RenaLio/Mux2sub/main/urllist'
+            url_raw = [
+                "https://raw.githubusercontent.com/RenaLio/Mux2sub/main/urllist",
+                "https://github.com/RenaLio/Mux2sub/blob/main/sub_list"
+            ]
             url_update_array = []
             try:
-                resp = requests.get(url_raw, timeout=2)
-                resp_content = resp.content.decode('utf-8')
-                resp_content = resp_content.split('\n')
-                for line in resp_content:
-                    if 'http' in line:
-                        url_update_array.append(line)
-                    else:
-                        continue
+                for url in url_raw:
+                    resp = requests.get(url, timeout=3)
+                    resp_content = resp.content.decode('utf-8')
+                    resp_content = resp_content.split('\n')
+                    for line in resp_content:
+                        if 'http' in line:
+                            url_update_array.append(line)
+                        else:
+                            continue
                 url_update = '|'.join(url_update_array)
                 return [54, url_update]
             except Exception as err:
@@ -142,8 +148,8 @@ class update_url():
 
         elif id == 57:
             today = datetime.today().strftime('%Y%m%d')
-            month = datetime.today().strftime('%m') +'/'
-            year = datetime.today().strftime('%Y') +'/'
+            month = datetime.today().strftime('%m') + '/'
+            year = datetime.today().strftime('%Y') + '/'
             front_url = 'https://clashnode.com/wp-content/uploads/'
             end_url = '.txt'
             url_update = front_url + year + month + today + end_url
@@ -151,7 +157,7 @@ class update_url():
                 return [57, url_update]
             else:
                 return [57, 404]
-        
+
         elif id == 67:
             today = datetime.today().strftime('%m%d')
             front_url = 'https://raw.githubusercontent.com/Strongmiao168/v2ray/main/'
@@ -162,7 +168,10 @@ class update_url():
                 return [57, 404]
 
         elif id == 75:
-            url_raw = 'https://raw.githubusercontent.com/RiverFlowsInUUU/collectSub/main/sub/' + str(datetime.today().year) +'/'+ str(datetime.today().month) + '/' + str(datetime.today().month)+'-'+str(datetime.today().day)+'.yaml'
+            url_raw = 'https://raw.githubusercontent.com/RiverFlowsInUUU/collectSub/main/sub/' + \
+                str(datetime.today().year) + '/' + str(datetime.today().month) + '/' + \
+                str(datetime.today().month)+'-' + \
+                str(datetime.today().day)+'.yaml'
             if check_url(url_raw):
                 try:
                     resp = requests.get(url_raw, timeout=2)
@@ -180,6 +189,7 @@ class update_url():
                     return [75, 404]
             else:
                 return [75, 404]
+
 
 if __name__ == '__main__':
     update_url.update_main()
