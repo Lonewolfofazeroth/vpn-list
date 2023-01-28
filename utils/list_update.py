@@ -127,7 +127,7 @@ class update_url():
         elif id == 54:
             url_raw = [
                 "https://raw.githubusercontent.com/RenaLio/Mux2sub/main/urllist",
-                "https://github.com/RenaLio/Mux2sub/blob/main/sub_list"
+                "https://raw.githubusercontent.com/RenaLio/Mux2sub/main/sub_list"
             ]
             url_update_array = []
             try:
