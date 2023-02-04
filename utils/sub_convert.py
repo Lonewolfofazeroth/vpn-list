@@ -499,10 +499,10 @@ class sub_convert():
                             if 'plugin-opts' not in yaml_url.keys():
                                 yaml_url.setdefault('plugin-opts', {})
                             if 'obfs' in yaml_url['plugin']:
-                                if 'mode' not in yaml_url['plugin-opts'].keys():
+                                if 'mode' not in yaml_url['plugin-opts'].keys() or not yaml_url['plugin-opts']['mode']:
                                     yaml_url.setdefault('plugin-opts', {}).setdefault('mode', 'tls')
                             if 'v2ray-plugin' in yaml_url['plugin']:
-                                if 'mode' not in yaml_url['plugin-opts'].keys():
+                                if 'mode' not in yaml_url['plugin-opts'].keys() or not yaml_url['plugin-opts']['mode']:
                                     yaml_url.setdefault('plugin-opts', {}).setdefault('mode', 'websocket')
                 except Exception as err:
                     print(f'yaml_encode 解析 ss 节点发生错误: {err}')
