@@ -608,7 +608,7 @@ class sub_convert():
                     if len(part_list) == 4:
                         for config in part_list[2].split('&'):
                             if 'sni=' in config:
-                                yaml_url.setdefault('sni', config[4:])
+                                yaml_url.setdefault('sni', urllib.parse.unquote(config[4:]))
                             elif 'type=' in config:
                                 yaml_url.setdefault('network', config[5:])
                             if 'network' in yaml_url.keys():
