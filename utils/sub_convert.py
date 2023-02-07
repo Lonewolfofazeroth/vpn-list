@@ -450,10 +450,12 @@ class sub_convert():
                     else:
                         continue
                     server_password = config_first_decode_list[1].replace('!str', '').replace('!<str>', '').replace('!<str', '').replace(' ', '')
-                    if server_password.isdigit() or server_password.replace('.', '').isdigit():
-                        yaml_url.setdefault('password', '!<str> ' + server_password)
-                    elif (server_password == ''):
+                    if (server_password == ''):
                         continue
+                    elif server_password.isdigit() or server_password.replace('.', '').isdigit():
+                        yaml_url.setdefault('password', '!<str> ' + server_password)
+                    elif server_password.isalnum():
+                        yaml_url.setdefault('password', server_password)
                     else:
                         yaml_url.setdefault('password', '"' + server_password + '"')
                     if len(ss_content_array) >= 4:
