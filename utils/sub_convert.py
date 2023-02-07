@@ -50,7 +50,6 @@ class sub_convert():
 
     def format(node_list):
         # 重命名
-        password_split_points = ["("]
         node_list_formated_array = []
         # 替换://://字符串，以修复后期toclash转换错误
         node_list = node_list.replace('://://', '://')
@@ -102,12 +101,6 @@ class sub_convert():
                     server_head = sub_convert.find_country(
                         node_part_head[0])
                     password = sub_convert.base64_decode(node_part_head[5])
-                    for split_point in password_split_points:
-                        if split_point in password:
-                            password = password.split(split_point)[0]
-                            break
-                        else:
-                            continue
                     name_renamed = server_head + node_part_head[0] + ':' + node_part_head[1] + '(' + password + ')'
                     node_part_foot = node_part[-1].split('&')
                     for i in range(len(node_part_foot)):
@@ -353,7 +346,6 @@ class sub_convert():
 
     def yaml_encode(lines):  # 将 URL 内容转换为 YAML (输出默认 YAML 格式)
         url_list = []
-        password_split_points = ["("]
         for line in lines:
             yaml_url = {}
             if 'vmess://' in line:
@@ -544,16 +536,12 @@ class sub_convert():
                     else:
                         continue
                     server_password = sub_convert.base64_decode(server_part_list[5])
-                    for split_point in password_split_points:
-                        if split_point in server_password:
-                            server_password = server_password.split(split_point)[0]
-                            break
-                        else:
-                            continue
                     if server_password.isdigit() or server_password.replace('.', '').isdigit():
-                        yaml_url.setdefault('password', '!<str> ' + sub_convert.base64_decode(server_part_list[5]))
+                        yaml_url.setdefault('password', '!<str> ' + server_password)
+                    elif server_password.isalnum():
+                        yaml_url.setdefault('password', server_password)
                     else:
-                        yaml_url.setdefault('password', sub_convert.base64_decode(server_part_list[5]))
+                        yaml_url.setdefault('password', '"' + server_password + '"')
                     ssr_protocol = ["origin", "auth_sha1_v4", "auth_aes128_md5", "auth_aes128_sha1", "auth_chain_a", "auth_chain_b"]
                     if server_part_list[2] in ssr_protocol:
                         yaml_url.setdefault('protocol', server_part_list[2])
