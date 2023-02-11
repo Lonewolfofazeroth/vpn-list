@@ -78,7 +78,6 @@ proxy-groups:
       # - 17.c
       # - 18.c
 
-
 ####################################################################################################
 proxy-providers:
   0.c:
@@ -274,6 +273,9 @@ proxy-providers:
 ####################################################################################################
 rules:
   - GEOIP,LAN,DIRECT
+
   - DOMAIN-SUFFIX,bing.com,GLOBAL
+  - DOMAIN-SUFFIX,msn.cn,GLOBAL
+
   - GEOIP,CN,DIRECT
   - MATCH,GLOBAL
