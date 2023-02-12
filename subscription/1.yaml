@@ -1,5 +1,4 @@
 proxies:
-  - {name: "[🇨🇳]118.212.143.56:35477(e8c7b4f7-dd99-458a-a5c5-d40edcbf662e)", server: 118.212.143.56, port: 35477, type: trojan, password: "e8c7b4f7-dd99-458a-a5c5-d40edcbf662e", sni: mg2.skyrocketapi.xyz, network: tcp, udp: true}
   - {name: "[🇺🇸]vus3.0bad.com:443(927094d3-d678-4763-8591-e240d0bcae87)", server: vus3.0bad.com, port: 443, type: vmess, uuid: 927094d3-d678-4763-8591-e240d0bcae87, alterId: 0, cipher: auto, network: ws, tls: true, ws-opts: {path: vus3.0bad.com}}
   - {name: "[🇬🇧]212.102.53.198:443(shadowsocks)", server: 212.102.53.198, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks}
   - {name: "[🇬🇧]212.102.53.79:443(shadowsocks)", server: 212.102.53.79, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks}
@@ -136,7 +135,6 @@ proxies:
   - {name: "[🇬🇧]51.38.71.175:80(211f5876-8c89-4d97-9004-ff16acddd506)", server: 51.38.71.175, port: 80, type: trojan, password: "211f5876-8c89-4d97-9004-ff16acddd506", sni: uk1.trojanvh.xyz, network: tcp, udp: true}
   - {name: "[🇩🇪]188.40.251.19:443(origin)", server: 188.40.251.19, port: 443, type: trojan, password: origin, network: tcp, udp: true}
   - {name: "[🇩🇪]trfg.ballistics.top:443(0c355515-b1e5-4c0a-b843-e1defbe7c0fa)", server: trfg.ballistics.top, port: 443, type: trojan, password: "0c355515-b1e5-4c0a-b843-e1defbe7c0fa", network: tcp, udp: true}
-  - {name: "[🇺🇸]hohm.microsoft.com:443(17b2a313-37a0-4945-a8e4-e63375506b4a)", server: hohm.microsoft.com, port: 443, type: vmess, uuid: 17b2a313-37a0-4945-a8e4-e63375506b4a, alterId: 0, cipher: auto, network: ws, tls: true, ws-opts: {path: /A2DJOPFT, headers: {host: lg10.cfcdn1.xyz}}}
   - {name: "[🇦🇺]20.211.38.190:443(d91ed572)", server: 20.211.38.190, port: 443, type: trojan, password: d91ed572, network: tcp, udp: true}
   - {name: "[🇯🇵]138.2.45.89:44301(6d64570c-81d4-30fa-b2e2-dce73e1a2702)", server: 138.2.45.89, port: 44301, type: trojan, password: "6d64570c-81d4-30fa-b2e2-dce73e1a2702", sni: osav101.jd0001.top, network: tcp, udp: true}
   - {name: "[🇺🇸]trny.ballistics.top:443(0c355515-b1e5-4c0a-b843-e1defbe7c0fa)", server: trny.ballistics.top, port: 443, type: trojan, password: "0c355515-b1e5-4c0a-b843-e1defbe7c0fa", network: tcp, udp: true}
@@ -152,6 +150,7 @@ proxies:
   - {name: "[🇺🇸]phxv001.jd0001.top:44302(4d111af8-5078-37e0-a583-34155f60b32c)", server: phxv001.jd0001.top, port: 44302, type: trojan, password: "4d111af8-5078-37e0-a583-34155f60b32c", network: tcp, udp: true}
   - {name: "[🇨🇦]23.227.38.38:443(40d496a6-ceeb-4096-baeb-4cc52b205621)", server: 23.227.38.38, port: 443, type: vmess, uuid: 40d496a6-ceeb-4096-baeb-4cc52b205621, alterId: 0, cipher: auto, network: ws, tls: true, ws-opts: {path: /ECTCJ0DF, headers: {host: lg1.trump2023.us}}}
   - {name: "[🇺🇸]172.67.199.34:443(17b2a313-37a0-4945-a8e4-e63375506b4a)", server: 172.67.199.34, port: 443, type: vmess, uuid: 17b2a313-37a0-4945-a8e4-e63375506b4a, alterId: 0, cipher: auto, network: ws, tls: true, ws-opts: {path: /A2DJOPFT, headers: {host: lg10.cfcdn1.xyz}}}
+  - {name: "[🇯🇵]138.2.39.67:80(ab335c88-d14a-4e67-b52c-54ed8be80c49)", server: 138.2.39.67, port: 80, type: vmess, uuid: ab335c88-d14a-4e67-b52c-54ed8be80c49, alterId: 0, cipher: auto, network: ws, tls: false, ws-opts: {path: /}}
   - {name: "[🇸🇬]103.172.116.195:3389(0c6a3341e8d5ab17)", server: 103.172.116.195, port: 3389, type: trojan, password: 0c6a3341e8d5ab17, network: tcp, udp: true}
   - {name: "[🇨🇳]xmct.xn--dlq110j6ul.cc:40423(b5a503a9-a3ad-42d9-af00-86f959d3454b)", server: xmct.xn--dlq110j6ul.cc, port: 40423, type: ss, cipher: chacha20-ietf-poly1305, password: "b5a503a9-a3ad-42d9-af00-86f959d3454b"}
   - {name: "[🇨🇳]500.sayitfree.website:61003(3307ba30-a638-490a-9910-672c4049a722)", server: 500.sayitfree.website, port: 61003, type: ss, cipher: chacha20-ietf-poly1305, password: "3307ba30-a638-490a-9910-672c4049a722"}
@@ -167,6 +166,7 @@ proxies:
   - {name: "[🇺🇸]38.91.107.72:5003(g5MeD6Ft3CWlJId)", server: 38.91.107.72, port: 5003, type: ss, cipher: aes-256-gcm, password: g5MeD6Ft3CWlJId}
   - {name: "[🇺🇸]38.91.107.72:5500(KixLvKzwjekG00rm)", server: 38.91.107.72, port: 5500, type: ss, cipher: aes-256-gcm, password: KixLvKzwjekG00rm}
   - {name: "[🇸🇦]51.15.0.113:989(f8f7aCzcPKbsF8p3)", server: 51.15.0.113, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3}
+  - {name: "[🇰🇷]43.201.48.212:443(amazonskr05)", server: 43.201.48.212, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05}
   - {name: "[🇺🇸]156.146.38.163:443(shadowsocks)", server: 156.146.38.163, port: 443, type: ss, cipher: aes-128-cfb, password: shadowsocks}
   - {name: "[🇳🇱]109.201.152.181:443(shadowsocks)", server: 109.201.152.181, port: 443, type: ss, cipher: aes-128-cfb, password: shadowsocks}
   - {name: "[🇯🇵]43.207.82.53:443(amazonskr05)", server: 43.207.82.53, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05}
@@ -2867,4 +2867,3 @@ proxies:
   - {name: "[🇮🇳]103.156.50.119:40093(x23Z4LGkGDkThZ9Kaz4DURQp)", server: 103.156.50.119, port: 40093, type: ss, cipher: aes-256-gcm, password: x23Z4LGkGDkThZ9Kaz4DURQp}
   - {name: "[🇮🇳]103.156.50.89:40093(x23Z4LGkGDkThZ9Kaz4DURQp)", server: 103.156.50.89, port: 40093, type: ss, cipher: aes-256-gcm, password: x23Z4LGkGDkThZ9Kaz4DURQp}
   - {name: "[🇮🇳]103.156.50.111:40093(x23Z4LGkGDkThZ9Kaz4DURQp)", server: 103.156.50.111, port: 40093, type: ss, cipher: aes-256-gcm, password: x23Z4LGkGDkThZ9Kaz4DURQp}
-  - {name: "[🇮🇳]103.156.50.117:40093(x23Z4LGkGDkThZ9Kaz4DURQp)", server: 103.156.50.117, port: 40093, type: ss, cipher: aes-256-gcm, password: x23Z4LGkGDkThZ9Kaz4DURQp}
