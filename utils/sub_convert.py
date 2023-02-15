@@ -395,10 +395,8 @@ class sub_convert():
                             else:
                                 yaml_url.setdefault('ws-opts', {}).setdefault('path', vmess_config['path'])
                             if vmess_config['host'] != '':
-                                if '%' in vmess_config['host'] or '[' in vmess_config['host']:
-                                    yaml_url.setdefault('ws-opts', {}).setdefault('headers', {'host': '"' + vmess_config['host'] + '"'})
-                                else:
-                                    yaml_url.setdefault('ws-opts', {}).setdefault('headers', {'host': vmess_config['host']})
+                                vmess_config['host'] = re.sub('\[|\]|{|}|','',urllib.unquote(vmess_config['host']))
+                                yaml_url.setdefault('ws-opts', {}).setdefault('headers', {'host': vmess_config['host']})
                         elif vmess_config['net'] == 'h2':
                             yaml_url.setdefault('tls', 'true')
                             yaml_url.setdefault('h2-opts', {}).setdefault('host', '[' + vmess_config['host'] + ']')
@@ -431,8 +429,7 @@ class sub_convert():
                 try:
                     ss_content = re.sub('ss://|/}', '', line)
                     ss_content_array = re.split('@|\?|#', ss_content)
-                    yaml_url.setdefault(
-                        'name', '"' + urllib.parse.unquote(ss_content_array[-1]) + '"')
+                    yaml_url.setdefault('name', '"' + urllib.parse.unquote(ss_content_array[-1]) + '"')
                     # include cipher password
                     config_first_decode_list = sub_convert.base64_decode(ss_content_array[0]).split(':')
                     # include server port
@@ -449,15 +446,13 @@ class sub_convert():
                         yaml_url.setdefault('cipher', config_first_decode_list[0])
                     else:
                         continue
-                    server_password = re.sub('!str|!<str>|!<str| ','',config_first_decode_list[1])
+                    server_password = re.sub('!str|!<str>|!<str| |\[|\]|{|}','',config_first_decode_list[1])
                     if (server_password == ''):
                         continue
                     elif server_password.isdigit() or server_password.replace('.', '').isdigit():
                         yaml_url.setdefault('password', '!<str> ' + server_password)
-                    elif server_password.isalnum():
-                        yaml_url.setdefault('password', server_password)
                     else:
-                        yaml_url.setdefault('password', '"' + server_password + '"')
+                        yaml_url.setdefault('password', server_password)
                     if len(ss_content_array) >= 4:
                         # include more server config
                         parameters_raw = urllib.parse.unquote(ss_content_array[2])
@@ -474,7 +469,8 @@ class sub_convert():
                                     if 'obfs=' in parameter:
                                         yaml_url.setdefault('plugin-opts', {}).setdefault('mode', parameter.split('=')[-1])
                                     elif 'obfs-host=' in parameter:
-                                        yaml_url.setdefault('plugin-opts', {}).setdefault('host', '"' + parameter.split('=')[-1] + '"')
+
+                                        yaml_url.setdefault('plugin-opts', {}).setdefault('host', re.sub('\[|\]|{|}','',parameter.split('=')[-1]))
                                 elif 'v2ray-plugin' in yaml_url['plugin']:
                                     if 'mode=' in parameter:
                                         yaml_url.setdefault('plugin-opts', {}).setdefault('mode', parameter.split('=')[-1])
@@ -538,12 +534,11 @@ class sub_convert():
                     else:
                         continue
                     server_password = sub_convert.base64_decode(server_part_list[5])
+                    server_password = re.sub('!str|!<str>|!<str| |\[|\]|{|}','', server_password)
                     if server_password.isdigit() or server_password.replace('.', '').isdigit():
                         yaml_url.setdefault('password', '!<str> ' + server_password)
-                    elif server_password.isalnum():
-                        yaml_url.setdefault('password', server_password)
                     else:
-                        yaml_url.setdefault('password', '"' + server_password + '"')
+                        yaml_url.setdefault('password', server_password)
                     ssr_protocol = ["origin", "auth_sha1_v4", "auth_aes128_md5", "auth_aes128_sha1", "auth_chain_a", "auth_chain_b"]
                     if server_part_list[2] in ssr_protocol:
                         yaml_url.setdefault('protocol', server_part_list[2])
@@ -585,15 +580,13 @@ class sub_convert():
                     yaml_url.setdefault('server', part_list[1].split(':')[0])
                     yaml_url.setdefault('port', part_list[1].split(':')[1])
                     yaml_url.setdefault('type', 'trojan')
-                    server_password = urllib.parse.unquote(re.sub('trojan://|!str|!<str>| ','',part_list[0]))
+                    server_password = urllib.parse.unquote(re.sub('trojan://|!str|!<str>| |\[|\]|{|}','',part_list[0]))
                     if not server_password:
                         continue
                     elif server_password.isdigit() or server_password.replace('.', '').isdigit():
                         yaml_url.setdefault('password', '!<str> ' + server_password)
-                    elif server_password.isalnum():
-                        yaml_url.setdefault('password', server_password)
                     else:
-                        yaml_url.setdefault('password', '"' + server_password + '"')
+                        yaml_url.setdefault('password', server_password)
                     if len(part_list) == 4:
                         for config in part_list[2].split('&'):
                             if 'sni=' in config:
