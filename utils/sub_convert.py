@@ -335,8 +335,7 @@ class sub_convert():
             # 不是4的倍数后加= https://www.cnblogs.com/wswang/p/7717997.html
             url_content += '='*(4 - missing_padding)
         try:
-            base64_content = base64.b64decode(url_content.encode(
-                'utf-8')).decode('utf-8', 'ignore')  # https://www.codenong.com/42339876/
+            base64_content = base64.b64decode(url_content.encode('utf-8')).decode('utf-8', 'ignore')  # https://www.codenong.com/42339876/
             base64_content_format = base64_content
             return base64_content_format
         except UnicodeDecodeError:
