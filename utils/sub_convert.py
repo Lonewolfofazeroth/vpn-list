@@ -427,7 +427,7 @@ class sub_convert():
 
             if 'ss://' in line and 'vless://' not in line and 'vmess://' not in line:
                 try:
-                    ss_content = re.sub('ss://|\\', '', line)
+                    ss_content = re.sub('ss://|\/', '', line)
                     ss_content_array = re.split('@|\?|#', ss_content)
                     yaml_url.setdefault('name', '"' + urllib.parse.unquote(ss_content_array[-1]) + '"')
                     # include cipher password
