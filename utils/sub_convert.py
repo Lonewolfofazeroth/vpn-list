@@ -445,7 +445,7 @@ class sub_convert():
                         yaml_url.setdefault('cipher', config_first_decode_list[0])
                     else:
                         continue
-                    server_password = re.sub('!str|!<str>|!<str| |\[|\]|{|}','',config_first_decode_list[1])
+                    server_password = re.sub('!str|!<str>|!<str| |\[|\]|{|}|\?','',config_first_decode_list[1])
                     if (server_password == ''):
                         continue
                     elif re.compile(r'^[-+]?[-0-9]\d*\.\d*|[-+]?\.?[0-9]\d*$').match(server_password):
