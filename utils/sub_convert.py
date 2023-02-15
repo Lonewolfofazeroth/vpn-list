@@ -395,7 +395,7 @@ class sub_convert():
                             else:
                                 yaml_url.setdefault('ws-opts', {}).setdefault('path', vmess_config['path'])
                             if vmess_config['host'] != '':
-                                vmess_config['host'] = re.sub('\[|\]|{|}|','',urllib.unquote(vmess_config['host']))
+                                vmess_config['host'] = re.sub('\[|\]|{|}','',urllib.unquote(vmess_config['host']))
                                 yaml_url.setdefault('ws-opts', {}).setdefault('headers', {'host': vmess_config['host']})
                         elif vmess_config['net'] == 'h2':
                             yaml_url.setdefault('tls', 'true')
