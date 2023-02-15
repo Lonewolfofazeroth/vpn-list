@@ -427,7 +427,7 @@ class sub_convert():
 
             if 'ss://' in line and 'vless://' not in line and 'vmess://' not in line:
                 try:
-                    ss_content = re.sub('ss://|/}', '', line)
+                    ss_content = re.sub('ss://|\\', '', line)
                     ss_content_array = re.split('@|\?|#', ss_content)
                     yaml_url.setdefault('name', '"' + urllib.parse.unquote(ss_content_array[-1]) + '"')
                     # include cipher password
@@ -449,7 +449,7 @@ class sub_convert():
                     server_password = re.sub('!str|!<str>|!<str| |\[|\]|{|}','',config_first_decode_list[1])
                     if (server_password == ''):
                         continue
-                    elif server_password.isdigit() or server_password.replace('.', '').isdigit():
+                    elif re.compile(r'^[-+]?[-0-9]\d*\.\d*|[-+]?\.?[0-9]\d*$').match(server_password):
                         yaml_url.setdefault('password', '!<str> ' + server_password)
                     else:
                         yaml_url.setdefault('password', server_password)
@@ -535,7 +535,7 @@ class sub_convert():
                         continue
                     server_password = sub_convert.base64_decode(server_part_list[5])
                     server_password = re.sub('!str|!<str>|!<str| |\[|\]|{|}','', server_password)
-                    if server_password.isdigit() or server_password.replace('.', '').isdigit():
+                    if re.compile(r'^[-+]?[-0-9]\d*\.\d*|[-+]?\.?[0-9]\d*$').match(server_password):
                         yaml_url.setdefault('password', '!<str> ' + server_password)
                     else:
                         yaml_url.setdefault('password', server_password)
@@ -583,7 +583,7 @@ class sub_convert():
                     server_password = urllib.parse.unquote(re.sub('trojan://|!str|!<str>| |\[|\]|{|}','',part_list[0]))
                     if not server_password:
                         continue
-                    elif server_password.isdigit() or server_password.replace('.', '').isdigit():
+                    elif re.compile(r'^[-+]?[-0-9]\d*\.\d*|[-+]?\.?[0-9]\d*$').match(server_password):
                         yaml_url.setdefault('password', '!<str> ' + server_password)
                     else:
                         yaml_url.setdefault('password', server_password)
