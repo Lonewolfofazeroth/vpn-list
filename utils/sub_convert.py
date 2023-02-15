@@ -481,7 +481,7 @@ class sub_convert():
                                         yaml_url.setdefault('plugin-opts', {}).setdefault('host', parameter.split('=')[-1])
                                     elif 'path=' in parameter:
                                         if parameter.split('=')[-1] == '':
-                                            yaml_url.setdefault('plugin-opts', {}).setdefault('path', '"/"')
+                                            yaml_url.setdefault('plugin-opts', {}).setdefault('path', '/')
                                         else:
                                             yaml_url.setdefault('plugin-opts', {}).setdefault('path', parameter.split('=')[-1])
                         if 'plugin' in yaml_url.keys():
