@@ -469,7 +469,6 @@ class sub_convert():
                                     if 'obfs=' in parameter:
                                         yaml_url.setdefault('plugin-opts', {}).setdefault('mode', parameter.split('=')[-1])
                                     elif 'obfs-host=' in parameter:
-
                                         yaml_url.setdefault('plugin-opts', {}).setdefault('host', re.sub('\[|\]|{|}','',parameter.split('=')[-1]))
                                 elif 'v2ray-plugin' in yaml_url['plugin']:
                                     if 'mode=' in parameter:
