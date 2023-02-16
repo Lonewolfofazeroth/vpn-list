@@ -90,7 +90,7 @@ class sub_convert():
                         node = 'ss://' + node_raw
                     node_list_formated_array.append(node)
                 except Exception as err:
-                    print(f'改名 ss 节点发生错误: {err}')
+                    print(f'改名 ss 节点: {node}\n发生错误: {err}')
                     continue
             elif 'ssr://' in node:
                 try:
@@ -113,7 +113,7 @@ class sub_convert():
                     node = 'ssr://' + node_raw
                     node_list_formated_array.append(node)
                 except Exception as err:
-                    print(f'改名 ssr 节点发生错误: {err}')
+                    print(f'改名 ssr 节点: {node}\n发生错误: {err}')
                     continue
             elif 'vmess://' in node:
                 try:
@@ -130,7 +130,7 @@ class sub_convert():
                     node = 'vmess://' + node_raw
                     node_list_formated_array.append(node)
                 except Exception as err:
-                    print(f'改名 vmess 节点发生错误: {err}')
+                    print(f'改名 vmess 节点: {node}\n发生错误: {err}')
                     continue
             elif 'trojan://' in node:
                 try:
@@ -148,7 +148,7 @@ class sub_convert():
                     else:
                         continue
                 except Exception as err:
-                    print(f'改名 trojan 节点发生错误: {err}')
+                    print(f'改名 trojan 节点: {node}\n发生错误: {err}')
                     continue
         node_list_formated = '\n'.join(node_list_formated_array)
         if node_list_formated == '':
