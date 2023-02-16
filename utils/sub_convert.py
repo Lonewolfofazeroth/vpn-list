@@ -137,7 +137,7 @@ class sub_convert():
                         server_head = sub_convert.find_country(node_part[1].split(':')[0])
                     else:
                         continue
-                    password = node_part[0]
+                    password = urllib.parse.unquote(re.sub('trojan://|!str|!<str>| |\[|\]|{|}','',node_part[0]))
                     name_renamed = server_head + node_part[1].split('?')[0] + '(' + password + ')'
                     node_raw = node_part[0] + '@' + \
                         node_part[1] + '#' + urllib.parse.quote(name_renamed)
