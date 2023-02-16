@@ -421,7 +421,7 @@ class sub_convert():
                             else:
                                 yaml_url.setdefault('http-opts', {}).setdefault('path', '[' + vmess_config['path'] + ']')
                 except Exception as err:
-                    print(f'yaml_encode 解析 vmess 节点发生错误: {err}')
+                    print(f'yaml_encode 解析 vmess 节点: {line}\n发生错误: {err}')
                     continue
 
             if 'ss://' in line and 'vless://' not in line and 'vmess://' not in line:
@@ -493,7 +493,7 @@ class sub_convert():
                                 if 'mode' not in yaml_url['plugin-opts'].keys() or not yaml_url['plugin-opts']['mode']:
                                     yaml_url.setdefault('plugin-opts', {}).setdefault('mode', 'websocket')
                 except Exception as err:
-                    print(f'yaml_encode 解析 ss 节点发生错误: {err}')
+                    print(f'yaml_encode 解析 ss: {line}\n节点发生错误: {err}')
                     continue
 
             if 'ssr://' in line:
@@ -567,7 +567,7 @@ class sub_convert():
                     if 'protocol-param' not in yaml_url.keys():
                         yaml_url.setdefault('protocol-param', '""')
                 except Exception as err:
-                    print(f'yaml_encode 解析 ssr 节点发生错误: {err}')
+                    print(f'yaml_encode 解析 ssr 节点: {line}\n发生错误: {err}')
                     continue
 
             if 'trojan://' in line:
@@ -616,7 +616,7 @@ class sub_convert():
                                 if 'grpc-service-name' not in yaml_url['grpc-opts'].keys():
                                     yaml_url.setdefault('grpc-opts', {}).setdefault('grpc-service-name', '""')
                 except Exception as err:
-                    print(f'yaml_encode 解析 trojan 节点发生错误: {err}')
+                    print(f'yaml_encode 解析 trojan 节点: {line}\n发生错误: {err}')
                     continue
             if yaml_url['server'] == '' or yaml_url['port'] == 0:
                 continue
