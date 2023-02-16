@@ -390,14 +390,15 @@ class sub_convert():
                             continue                            
                         if vmess_config['net'] != '':
                             yaml_url.setdefault('network', vmess_config['net'])
-                        vmess_config['path'] = urllib.parse.unquote(vmess_config['path']).split('?')[0]
+                        if vmess_config['path'] is not None:
+                            vmess_config['path'] = re.sub(' |\[|\]|{|}|\?','',urllib.parse.unquote(vmess_config['path']))
                         if vmess_config['net'] == 'ws':
                             if vmess_config['tls'] == 'tls':
                                 yaml_url.setdefault('tls', 'true')
                             else:
                                 yaml_url.setdefault('tls', 'false')
                             # yaml_url.setdefault('skip-cert-verify', 'true')
-                            if vmess_config['path'] == '' or '{' in vmess_config['path']:
+                            if vmess_config['path'] == '' or vmess_config['path'] is None:
                                 yaml_url.setdefault('ws-opts', {'path': '/'})
                             else:
                                 yaml_url.setdefault('ws-opts', {}).setdefault('path', vmess_config['path'])
@@ -407,7 +408,7 @@ class sub_convert():
                         elif vmess_config['net'] == 'h2':
                             yaml_url.setdefault('tls', 'true')
                             yaml_url.setdefault('h2-opts', {}).setdefault('host', '[' + vmess_config['host'] + ']')
-                            if vmess_config['path'] == '':
+                            if vmess_config['path'] == '' or vmess_config['path'] is None:
                                 yaml_url.setdefault('h2-opts', {}).setdefault('path', '/')
                             else:
                                 yaml_url.setdefault('h2-opts', {}).setdefault('path', vmess_config['path'])
@@ -418,13 +419,13 @@ class sub_convert():
                                 yaml_url.setdefault('servername', '""')
                             else:
                                 yaml_url.setdefault('servername', vmess_config['host'])
-                            if vmess_config['path'] == '':
+                            if vmess_config['path'] == '' or vmess_config['path'] is None:
                                 yaml_url.setdefault('grpc-opts', {'grpc-service-name': '/'})
                             else:
                                 yaml_url.setdefault('grpc-opts', {'grpc-service-name': vmess_config['path']})
                         elif vmess_config['net'] == 'http':
                             yaml_url.setdefault('http-opts', {}).setdefault('method', "GET")
-                            if vmess_config['path'] == '':
+                            if vmess_config['path'] == '' or vmess_config['path'] is None:
                                 yaml_url.setdefault('http-opts', {}).setdefault('path', '[/]')
                             else:
                                 yaml_url.setdefault('http-opts', {}).setdefault('path', '[' + vmess_config['path'] + ']')
@@ -432,7 +433,7 @@ class sub_convert():
                     print(f'yaml_encode 解析 vmess 节点: {line}\n发生错误: {err}')
                     continue
 
-            if 'ss://' in line and 'vless://' not in line and 'vmess://' not in line:
+            elif 'ss://' in line and 'vless://' not in line and 'vmess://' not in line:
                 try:
                     ss_content = re.sub('ss://|\/', '', line)
                     ss_content_array = re.split('@|\?|#', ss_content)
@@ -503,7 +504,7 @@ class sub_convert():
                     print(f'yaml_encode 解析 ss: {line}\n节点发生错误: {err}')
                     continue
 
-            if 'ssr://' in line:
+            elif 'ssr://' in line:
                 try:
                     ssr_content = sub_convert.base64_decode(line.replace('ssr://', ''))
                     part_list = ssr_content.split('/?')
@@ -573,7 +574,7 @@ class sub_convert():
                     print(f'yaml_encode 解析 ssr 节点: {line}\n发生错误: {err}')
                     continue
 
-            if 'trojan://' in line:
+            elif 'trojan://' in line:
                 try:
                     url_content = line.replace('trojan://', '')
 
@@ -624,8 +625,6 @@ class sub_convert():
                     continue
             if yaml_url['server'] == '' or yaml_url['port'] == 0:
                 continue
-            # if not ping(yaml_url['server'],1):
-            #     continue
             yaml_node_raw = str(yaml_url)
             yaml_node_body = yaml_node_raw.replace('\'', '')
             yaml_node_head = '  - '
@@ -635,6 +634,6 @@ class sub_convert():
         yaml_content = yaml_head + '\n'.join(url_list)
 
         return yaml_content
-if __name__ == '__main__':
+# if __name__ == '__main__':
     # sub_convert.format("trojan://lionssh@%5B%E5%8F%B0%E6%B9%BETROJAN%2A%2A%2A%2A%5DQAAVL-4-TR-1.HKG-01.O-TWO.XYZ%3A889#%5B%F0%9F%87%A6%F0%9F%87%B6%5D%255B%25E5%258F%25B0%25E6%25B9%25BETROJAN%252A%252A%252A%252A%255DQAAVL-4-TR-1.HKG-01.O-TWO.XYZ%253A889%28lionssh%29")
-    sub_convert.yaml_encode(["trojan://lionssh@%5B%E5%8F%B0%E6%B9%BETROJAN%2A%2A%2A%2A%5DQAAVL-4-TR-1.HKG-01.O-TWO.XYZ%3A889#%5B%F0%9F%87%A6%F0%9F%87%B6%5D%5B%E5%8F%B0%E6%B9%BETROJAN%2A%2A%2A%2A%5DQAAVL-4-TR-1.HKG-01.O-TWO.XYZ%3A889%28lionssh%29"])
+    # sub_convert.yaml_encode(["vmess://eyJ2IjogIjIiLCAicHMiOiAiW1x1ZDgzY1x1ZGRlNlx1ZDgzY1x1ZGRmNl0wMWhnLm1lYWxzdHJlYW0ueHl6OjE1MjAxKDg1NzhkYzkyLTMwOTctNGRkNS05NDFhLTVlNmViZWFhOTFiYSkiLCAiYWRkIjogIjAxaGcubWVhbHN0cmVhbS54eXoiLCAicG9ydCI6ICIxNTIwMSIsICJpZCI6ICI4NTc4ZGM5Mi0zMDk3LTRkZDUtOTQxYS01ZTZlYmVhYTkxYmEiLCAiYWlkIjogIjAiLCAibmV0IjogInRjcCIsICJ0eXBlIjogInZtZXNzIiwgImhvc3QiOiAiIiwgInBhdGgiOiBudWxsLCAidGxzIjogInRscyJ9"])
