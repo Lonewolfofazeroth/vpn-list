@@ -91,6 +91,7 @@ class sub_convert():
                     node_list_formated_array.append(node)
                 except Exception as err:
                     print(f'改名 ss 节点发生错误: {err}')
+                    continue
             elif 'ssr://' in node:
                 try:
                     node_del_head = node.replace('ssr://', '')
@@ -113,6 +114,7 @@ class sub_convert():
                     node_list_formated_array.append(node)
                 except Exception as err:
                     print(f'改名 ssr 节点发生错误: {err}')
+                    continue
             elif 'vmess://' in node:
                 try:
                     node_del_head = node.replace('vmess://', '')
@@ -129,6 +131,7 @@ class sub_convert():
                     node_list_formated_array.append(node)
                 except Exception as err:
                     print(f'改名 vmess 节点发生错误: {err}')
+                    continue
             elif 'trojan://' in node:
                 try:
                     node_del_head = node.replace('trojan://', '')
@@ -146,6 +149,7 @@ class sub_convert():
                         continue
                 except Exception as err:
                     print(f'改名 trojan 节点发生错误: {err}')
+                    continue
         node_list_formated = '\n'.join(node_list_formated_array)
         if node_list_formated == '':
             return node_list_formated
@@ -634,5 +638,5 @@ class sub_convert():
 
         return yaml_content
 if __name__ == '__main__':
-    sub_convert.format("trojan://lionssh#%5B%F0%9F%87%A6%F0%9F%87%B6%5D%5B%E5%8F%B0%E6%B9%BETROJAN%2A%2A%2A%2A%5DQAAVL-4-TR-1.HKG-01.O-TWO.XYZ%3A889%28lionssh%29")
-    # sub_convert.yaml_encode(["trojan://lionssh#%5B%F0%9F%87%A6%F0%9F%87%B6%5D%5B%E5%8F%B0%E6%B9%BETROJAN%2A%2A%2A%2A%5DQAAVL-4-TR-1.HKG-01.O-TWO.XYZ%3A889%28lionssh%29"])
+    sub_convert.format("trojan://!str18844@zxcvbn@os-tr-2.cats22.net:443?allowInsecure=0#%5B%F0%9F%87%A6%F0%9F%87%B6%5Dzxcvbn%2818844%29")
+    # sub_convert.yaml_encode(["trojan://!str18844@zxcvbn@os-tr-2.cats22.net:443?allowInsecure=0#%5B%F0%9F%87%A6%F0%9F%87%B6%5Dzxcvbn%2818844%29"])
