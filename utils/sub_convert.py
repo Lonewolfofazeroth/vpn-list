@@ -135,15 +135,15 @@ class sub_convert():
                     node_part = re.split('@|\?|#', node_del_head)
                     node_server_and_port = urllib.parse.unquote(node_part[1])
                     node_server_and_port_part = node_server_and_port.split(':')
-                    if node_server_and_port_part[0]:
+                    if node_server_and_port_part[1].isdigit() and node_server_and_port_part[0]:
                         server_head = sub_convert.find_country(node_server_and_port_part[0])
+                        password = re.sub('trojan://|!str|!<str>| |\[|\]|{|}','',urllib.parse.unquote(node_part[0]))
+                        name_renamed = server_head + node_server_and_port + '(' + password + ')'
+                        node_raw = node_del_head.split('#')[0] + '#' + urllib.parse.quote(name_renamed)
+                        node = 'trojan://' + node_raw
+                        node_list_formated_array.append(node)
                     else:
                         continue
-                    password = re.sub('trojan://|!str|!<str>| |\[|\]|{|}','',urllib.parse.unquote(node_part[0]))
-                    name_renamed = server_head + node_server_and_port + '(' + password + ')'
-                    node_raw = node_del_head.split('#')[0] + '#' + urllib.parse.quote(name_renamed)
-                    node = 'trojan://' + node_raw
-                    node_list_formated_array.append(node)
                 except Exception as err:
                     print(f'改名 trojan 节点发生错误: {err}')
         node_list_formated = '\n'.join(node_list_formated_array)
@@ -633,6 +633,6 @@ class sub_convert():
         yaml_content = yaml_head + '\n'.join(url_list)
 
         return yaml_content
-# if __name__ == '__main__':
-    # sub_convert.format("trojan://lionssh@%5B%E5%8F%B0%E6%B9%BETROJAN%2A%2A%2A%2A%5DQAAVL-4-TR-1.HKG-01.O-TWO.XYZ%3A889#%5B%F0%9F%87%A6%F0%9F%87%B6%5D%255B%25E5%258F%25B0%25E6%25B9%25BETROJAN%252A%252A%252A%252A%255DQAAVL-4-TR-1.HKG-01.O-TWO.XYZ%253A889%28lionssh%29")
-    # sub_convert.yaml_encode(["vmess://eyJ2IjogIjIiLCAicHMiOiAiW1x1ZDgzY1x1ZGRlNlx1ZDgzY1x1ZGRmNl0wMWhnLm1lYWxzdHJlYW0ueHl6OjE1MjAxKDg1NzhkYzkyLTMwOTctNGRkNS05NDFhLTVlNmViZWFhOTFiYSkiLCAiYWRkIjogIjAxaGcubWVhbHN0cmVhbS54eXoiLCAicG9ydCI6ICIxNTIwMSIsICJpZCI6ICI4NTc4ZGM5Mi0zMDk3LTRkZDUtOTQxYS01ZTZlYmVhYTkxYmEiLCAiYWlkIjogIjAiLCAibmV0IjogInRjcCIsICJ0eXBlIjogInZtZXNzIiwgImhvc3QiOiAiIiwgInBhdGgiOiBudWxsLCAidGxzIjogInRscyJ9"])
+if __name__ == '__main__':
+    sub_convert.format("trojan://lionssh#%5B%F0%9F%87%A6%F0%9F%87%B6%5D%5B%E5%8F%B0%E6%B9%BETROJAN%2A%2A%2A%2A%5DQAAVL-4-TR-1.HKG-01.O-TWO.XYZ%3A889%28lionssh%29")
+    # sub_convert.yaml_encode(["trojan://lionssh#%5B%F0%9F%87%A6%F0%9F%87%B6%5D%5B%E5%8F%B0%E6%B9%BETROJAN%2A%2A%2A%2A%5DQAAVL-4-TR-1.HKG-01.O-TWO.XYZ%3A889%28lionssh%29"])
