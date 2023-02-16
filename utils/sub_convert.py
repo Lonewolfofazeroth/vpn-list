@@ -133,12 +133,14 @@ class sub_convert():
                 try:
                     node_del_head = node.replace('trojan://', '')
                     node_part = re.split('@|#', node_del_head, maxsplit=2)
-                    if node_part[1].split(':')[0]:
-                        server_head = sub_convert.find_country(node_part[1].split(':')[0])
+                    node_server_and_port = urllib.parse.unquote(node_part[1])
+                    node_server_and_port_part = node_server_and_port.split(':')
+                    if node_server_and_port_part[0]:
+                        server_head = sub_convert.find_country(node_server_and_port_part[0])
                     else:
                         continue
-                    password = urllib.parse.unquote(re.sub('trojan://|!str|!<str>| |\[|\]|{|}','',node_part[0]))
-                    name_renamed = server_head + node_part[1].split('?')[0] + '(' + password + ')'
+                    password = re.sub('trojan://|!str|!<str>| |\[|\]|{|}','',urllib.parse.unquote(node_part[0]))
+                    name_renamed = server_head + node_server_and_port + '(' + password + ')'
                     node_raw = node_part[0] + '@' + \
                         node_part[1] + '#' + urllib.parse.quote(name_renamed)
                     node = 'trojan://' + node_raw
@@ -574,12 +576,13 @@ class sub_convert():
             if 'trojan://' in line:
                 try:
                     url_content = line.replace('trojan://', '')
+
                     part_list = re.split('@|\?|#', url_content)
                     yaml_url.setdefault('name', '"' + urllib.parse.unquote(part_list[-1]) + '"')
-                    yaml_url.setdefault('server', part_list[1].split(':')[0])
-                    yaml_url.setdefault('port', part_list[1].split(':')[1])
+                    yaml_url.setdefault('server', urllib.parse.unquote(part_list[1]).split(':')[0])
+                    yaml_url.setdefault('port', urllib.parse.unquote(part_list[1]).split(':')[1])
                     yaml_url.setdefault('type', 'trojan')
-                    server_password = urllib.parse.unquote(re.sub('trojan://|!str|!<str>| |\[|\]|{|}','',part_list[0]))
+                    server_password = re.sub('trojan://|!str|!<str>| |\[|\]|{|}','',urllib.parse.unquote(part_list[0]))
                     if not server_password:
                         continue
                     elif re.compile(r'^[-+]?[-0-9]\d*\.\d*|[-+]?\.?[0-9]\d*$').match(server_password):
@@ -633,5 +636,5 @@ class sub_convert():
 
         return yaml_content
 if __name__ == '__main__':
-    sub_convert.yaml_encode(["ssr://M2xheWVyMDMuaW5pdGNsb3VkLnBybzo1NjA6YXV0aF9hZXMxMjhfbWQ1OmNoYWNoYTIwLWlldGY6cGxhaW46YldKc1lXNXJNWEJ2Y25RP29iZnNwYXJhbT1Nak5tWm1RM01URXViV2xqY205emIyWjBMbU52YlEmcHJvdG9wYXJhbT1OVEUzTXpNNlUxWkpVRlJKV2pnJmdyb3VwPVNtOTUmcmVtYXJrcz1XLVM0cmVXYnZWTlRVbDB6VEVGWlJWSXdNeTVKVGtsVVEweFBWVVF1VUZKUE9qVTJNQT09Lz8zbGF5ZXIwMy5pbml0Y2xvdWQucHJvOjU2MDphdXRoX2FlczEyOF9tZDU6Y2hhY2hhMjAtaWV0ZjpwbGFpbjpiV0pzWVc1ck1YQnZjblE/b2Jmc3BhcmFtPU1qTm1abVEzTVRFdWJXbGpjbTl6YjJaMExtTnZiUSZwcm90b3BhcmFtPU5URTNNek02VTFaSlVGUkpXamcmZ3JvdXA9U205NSZyZW1hcmtzPVcvQ2ZoNmp3bjRlelhUTnNZWGxsY2pBekxtbHVhWFJqYkc5MVpDNXdjbTg2TlRZd0tHMWliR0Z1YXpGd2IzSjBLUT09"])
-    # sub_convert.format("ssr://M2xheWVyMDMuaW5pdGNsb3VkLnBybzo1NjA6YXV0aF9hZXMxMjhfbWQ1OmNoYWNoYTIwLWlldGY6cGxhaW46YldKc1lXNXJNWEJ2Y25RP29iZnNwYXJhbT1Nak5tWm1RM01URXViV2xqY205emIyWjBMbU52YlEmcHJvdG9wYXJhbT1OVEUzTXpNNlUxWkpVRlJKV2pnJmdyb3VwPVNtOTUmcmVtYXJrcz1XLVM0cmVXYnZWTlRVbDB6VEVGWlJWSXdNeTVKVGtsVVEweFBWVVF1VUZKUE9qVTJNQT09Lz8zbGF5ZXIwMy5pbml0Y2xvdWQucHJvOjU2MDphdXRoX2FlczEyOF9tZDU6Y2hhY2hhMjAtaWV0ZjpwbGFpbjpiV0pzWVc1ck1YQnZjblE/b2Jmc3BhcmFtPU1qTm1abVEzTVRFdWJXbGpjbTl6YjJaMExtTnZiUSZwcm90b3BhcmFtPU5URTNNek02VTFaSlVGUkpXamcmZ3JvdXA9U205NSZyZW1hcmtzPVcvQ2ZoNmp3bjRlelhUTnNZWGxsY2pBekxtbHVhWFJqYkc5MVpDNXdjbTg2TlRZd0tHMWliR0Z1YXpGd2IzSjBLRzBwYWpJelptWmtOekV4TG0xcFkzSnZjMjltZEM1amIyMEtheWxxTlRFM016TTZVMVpKVUZSSldqZ2dTbTk1NlpxdVN5az0=")
+    # sub_convert.format("trojan://lionssh@%5B%E5%8F%B0%E6%B9%BETROJAN%2A%2A%2A%2A%5DQAAVL-4-TR-1.HKG-01.O-TWO.XYZ%3A889#%5B%F0%9F%87%A6%F0%9F%87%B6%5D%255B%25E5%258F%25B0%25E6%25B9%25BETROJAN%252A%252A%252A%252A%255DQAAVL-4-TR-1.HKG-01.O-TWO.XYZ%253A889%28lionssh%29")
+    sub_convert.yaml_encode(["trojan://lionssh@%5B%E5%8F%B0%E6%B9%BETROJAN%2A%2A%2A%2A%5DQAAVL-4-TR-1.HKG-01.O-TWO.XYZ%3A889#%5B%F0%9F%87%A6%F0%9F%87%B6%5D%5B%E5%8F%B0%E6%B9%BETROJAN%2A%2A%2A%2A%5DQAAVL-4-TR-1.HKG-01.O-TWO.XYZ%3A889%28lionssh%29"])
