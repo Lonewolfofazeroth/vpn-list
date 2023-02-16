@@ -346,6 +346,12 @@ class sub_convert():
 
     def yaml_encode(lines):  # 将 URL 内容转换为 YAML (输出默认 YAML 格式)
         url_list = []
+        ss_cipher = ["aes-128-gcm", "aes-192-gcm", "aes-256-gcm", "aes-128-cfb", "aes-192-cfb", "aes-256-cfb", "aes-128-ctr", "aes-192-ctr", "aes-256-ctr", "rc4-md5", "chacha20-ietf", "xchacha20", "chacha20-ietf-poly1305", "xchacha20-ietf-poly1305"]
+        ssr_cipher = ss_cipher
+        ssr_protocol = ["origin", "auth_sha1_v4", "auth_aes128_md5", "auth_aes128_sha1", "auth_chain_a", "auth_chain_b"]
+        ssr_obfs = ["plain", "http_simple", "http_post", "random_head", "tls1.2_ticket_auth", "tls1.2_ticket_fastauth"]
+        vmess_cipher = ["auto", "aes-128-gcm", "chacha20-poly1305", "none"]
+
         for line in lines:
             yaml_url = {}
             if 'vmess://' in line:
@@ -376,7 +382,6 @@ class sub_convert():
                         else:
                             yaml_url.setdefault('uuid', vmess_config['id'])
                         yaml_url.setdefault('alterId', int(vmess_config['aid']))
-                        vmess_cipher = ["auto", "aes-128-gcm", "chacha20-poly1305", "none"]
                         if vmess_config['scy'] in vmess_cipher:
                             yaml_url.setdefault('cipher', vmess_config['scy'])
                         else:
@@ -441,7 +446,6 @@ class sub_convert():
                         yaml_url.setdefault('server', server_address)
                     yaml_url.setdefault('port', config_second_list[-1])
                     yaml_url.setdefault('type', 'ss')
-                    ss_cipher = ["aes-128-gcm", "aes-192-gcm", "aes-256-gcm", "aes-128-cfb", "aes-192-cfb", "aes-256-cfb", "aes-128-ctr", "aes-192-ctr", "aes-256-ctr", "rc4-md5", "chacha20-ietf", "xchacha20", "chacha20-ietf-poly1305", "xchacha20-ietf-poly1305"]
                     if config_first_decode_list[0] in ss_cipher:
                         yaml_url.setdefault('cipher', config_first_decode_list[0])
                     else:
@@ -500,7 +504,6 @@ class sub_convert():
             if 'ssr://' in line:
                 try:
                     ssr_content = sub_convert.base64_decode(line.replace('ssr://', ''))
-
                     part_list = ssr_content.split('/?')
                     if '&' in part_list[1]:
                         # 将 SSR content /？后部分参数分割
@@ -527,7 +530,6 @@ class sub_convert():
                         yaml_url.setdefault('server', server_part_list[0])
                     yaml_url.setdefault('port', server_part_list[1])
                     yaml_url.setdefault('type', 'ssr')
-                    ssr_cipher = ["aes-128-gcm", "aes-192-gcm", "aes-256-gcm", "aes-128-cfb", "aes-192-cfb", "aes-256-cfb", "aes-128-ctr", "aes-192-ctr", "aes-256-ctr", "rc4-md5", "chacha20-ietf", "xchacha20", "chacha20-ietf-poly1305", "xchacha20-ietf-poly1305"]
                     if server_part_list[3] in ssr_cipher:
                         yaml_url.setdefault('cipher', server_part_list[3])
                     else:
@@ -538,12 +540,10 @@ class sub_convert():
                         yaml_url.setdefault('password', '!<str> ' + server_password)
                     else:
                         yaml_url.setdefault('password', server_password)
-                    ssr_protocol = ["origin", "auth_sha1_v4", "auth_aes128_md5", "auth_aes128_sha1", "auth_chain_a", "auth_chain_b"]
                     if server_part_list[2] in ssr_protocol:
                         yaml_url.setdefault('protocol', server_part_list[2])
                     else:
                         continue
-                    ssr_obfs = ["plain", "http_simple", "http_post", "random_head", "tls1.2_ticket_auth", "tls1.2_ticket_fastauth"]
                     if server_part_list[4] in ssr_obfs:
                         yaml_url.setdefault('obfs', server_part_list[4])
                     else:
