@@ -58,12 +58,12 @@ class sub_convert():
             # ss有多种格式，需要分别处理
             if 'ss://' in node and 'vless://' not in node and 'vmess://' not in node:
                 try:
-                    node_del_head = node.replace('ss://', '')
+                    node_del_head = re.sub('ss://|\/', '', node)
                     if '@' in node_del_head:
                         node_part = re.split('@|#', node_del_head, maxsplit=2)
                         server_head = sub_convert.find_country(
                             node_part[1].split(':')[0])
-                        server_body = node_part[1].split('/?')[0]
+                        server_body = node_part[1].split('?')[0]
                         password = sub_convert.base64_decode(
                             node_part[0]).split(':')[-1]
                         name_renamed = server_head + server_body + '(' + password + ')'
@@ -78,7 +78,7 @@ class sub_convert():
                             node_part[0])
                         node_part_head = re.split(
                             '@|:', node_part_head_decoded, maxsplit=0)
-                        server_port = node_part_head[-1].split('/?')[0]
+                        server_port = node_part_head[-1].split('?')[0]
                         server = node_part_head[-2]
                         server_head = sub_convert.find_country(
                             server)
@@ -98,8 +98,7 @@ class sub_convert():
                         node_del_head).split('/?')
                     # example : 194.50.171.214:9566:origin:rc4:plain:bG5jbi5vcmcgOGw/?obfsparam=&remarks=5L-E572X5pavTQ&group=TG5jbi5vcmc
                     node_part_head = node_part[0].split(':')
-                    server_head = sub_convert.find_country(
-                        node_part_head[0])
+                    server_head = sub_convert.find_country(node_part_head[0])
                     password = sub_convert.base64_decode(node_part_head[5])
                     name_renamed = server_head + node_part_head[0] + ':' + node_part_head[1] + '(' + password + ')'
                     node_part_foot = node_part[-1].split('&')
