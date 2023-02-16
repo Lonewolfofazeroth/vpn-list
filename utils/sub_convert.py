@@ -97,15 +97,14 @@ class sub_convert():
                     node_part = sub_convert.base64_decode(
                         node_del_head).split('/?')
                     # example : 194.50.171.214:9566:origin:rc4:plain:bG5jbi5vcmcgOGw/?obfsparam=&remarks=5L-E572X5pavTQ&group=TG5jbi5vcmc
-                    node_part_head = node_part[0].split(':')
+                    node_part_head = re.split(':|\?',node_part[0])
                     server_head = sub_convert.find_country(node_part_head[0])
                     password = sub_convert.base64_decode(node_part_head[5])
                     name_renamed = server_head + node_part_head[0] + ':' + node_part_head[1] + '(' + password + ')'
                     node_part_foot = node_part[-1].split('&')
                     for i in range(len(node_part_foot)):
                         if 'remarks' in node_part_foot[i]:
-                            node_part_foot[i] = 'remarks=' + \
-                                sub_convert.base64_encode(name_renamed)
+                            node_part_foot[i] = 'remarks=' + sub_convert.base64_encode(name_renamed)
                             break
                     node_part_foot_str = '&'.join(node_part_foot)
                     node_raw = sub_convert.base64_encode(
@@ -507,7 +506,7 @@ class sub_convert():
                     part_list = ssr_content.split('/?')
                     if '&' in part_list[1]:
                         # 将 SSR content /？后部分参数分割
-                        ssr_part = part_list[1].split('&')
+                        ssr_part = re.split('\?|&',part_list[1])
                         for item in ssr_part:
                             if 'remarks=' in item:
                                 remarks_part = item.replace('remarks=', '')
@@ -523,7 +522,7 @@ class sub_convert():
                             remarks = 'ssr'
                             print(f'SSR format error, content:{remarks_part}')
                     yaml_url.setdefault('name', '"' + urllib.parse.unquote(remarks) + '"')
-                    server_part_list = re.split(':', part_list[0])
+                    server_part_list = re.split(':|\?|&', part_list[0])
                     if "NULL" in server_part_list[0]:
                         continue
                     else:
@@ -632,3 +631,6 @@ class sub_convert():
         yaml_content = yaml_head + '\n'.join(url_list)
 
         return yaml_content
+if __name__ == '__main__':
+    sub_convert.yaml_encode(["ssr://M2xheWVyMDMuaW5pdGNsb3VkLnBybzo1NjA6YXV0aF9hZXMxMjhfbWQ1OmNoYWNoYTIwLWlldGY6cGxhaW46YldKc1lXNXJNWEJ2Y25RP29iZnNwYXJhbT1Nak5tWm1RM01URXViV2xqY205emIyWjBMbU52YlEmcHJvdG9wYXJhbT1OVEUzTXpNNlUxWkpVRlJKV2pnJmdyb3VwPVNtOTUmcmVtYXJrcz1XLVM0cmVXYnZWTlRVbDB6VEVGWlJWSXdNeTVKVGtsVVEweFBWVVF1VUZKUE9qVTJNQT09Lz8zbGF5ZXIwMy5pbml0Y2xvdWQucHJvOjU2MDphdXRoX2FlczEyOF9tZDU6Y2hhY2hhMjAtaWV0ZjpwbGFpbjpiV0pzWVc1ck1YQnZjblE/b2Jmc3BhcmFtPU1qTm1abVEzTVRFdWJXbGpjbTl6YjJaMExtTnZiUSZwcm90b3BhcmFtPU5URTNNek02VTFaSlVGUkpXamcmZ3JvdXA9U205NSZyZW1hcmtzPVcvQ2ZoNmp3bjRlelhUTnNZWGxsY2pBekxtbHVhWFJqYkc5MVpDNXdjbTg2TlRZd0tHMWliR0Z1YXpGd2IzSjBLUT09"])
+    # sub_convert.format("ssr://M2xheWVyMDMuaW5pdGNsb3VkLnBybzo1NjA6YXV0aF9hZXMxMjhfbWQ1OmNoYWNoYTIwLWlldGY6cGxhaW46YldKc1lXNXJNWEJ2Y25RP29iZnNwYXJhbT1Nak5tWm1RM01URXViV2xqY205emIyWjBMbU52YlEmcHJvdG9wYXJhbT1OVEUzTXpNNlUxWkpVRlJKV2pnJmdyb3VwPVNtOTUmcmVtYXJrcz1XLVM0cmVXYnZWTlRVbDB6VEVGWlJWSXdNeTVKVGtsVVEweFBWVVF1VUZKUE9qVTJNQT09Lz8zbGF5ZXIwMy5pbml0Y2xvdWQucHJvOjU2MDphdXRoX2FlczEyOF9tZDU6Y2hhY2hhMjAtaWV0ZjpwbGFpbjpiV0pzWVc1ck1YQnZjblE/b2Jmc3BhcmFtPU1qTm1abVEzTVRFdWJXbGpjbTl6YjJaMExtTnZiUSZwcm90b3BhcmFtPU5URTNNek02VTFaSlVGUkpXamcmZ3JvdXA9U205NSZyZW1hcmtzPVcvQ2ZoNmp3bjRlelhUTnNZWGxsY2pBekxtbHVhWFJqYkc5MVpDNXdjbTg2TlRZd0tHMWliR0Z1YXpGd2IzSjBLRzBwYWpJelptWmtOekV4TG0xcFkzSnZjMjltZEM1amIyMEtheWxxTlRFM016TTZVMVpKVUZSSldqZ2dTbTk1NlpxdVN5az0=")
