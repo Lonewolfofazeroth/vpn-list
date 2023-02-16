@@ -132,7 +132,7 @@ class sub_convert():
             elif 'trojan://' in node:
                 try:
                     node_del_head = node.replace('trojan://', '')
-                    node_part = re.split('@|#', node_del_head, maxsplit=2)
+                    node_part = re.split('@|\?|#', node_del_head)
                     node_server_and_port = urllib.parse.unquote(node_part[1])
                     node_server_and_port_part = node_server_and_port.split(':')
                     if node_server_and_port_part[0]:
@@ -141,8 +141,7 @@ class sub_convert():
                         continue
                     password = re.sub('trojan://|!str|!<str>| |\[|\]|{|}','',urllib.parse.unquote(node_part[0]))
                     name_renamed = server_head + node_server_and_port + '(' + password + ')'
-                    node_raw = node_part[0] + '@' + \
-                        node_part[1] + '#' + urllib.parse.quote(name_renamed)
+                    node_raw = node_del_head.split('#')[0] + '#' + urllib.parse.quote(name_renamed)
                     node = 'trojan://' + node_raw
                     node_list_formated_array.append(node)
                 except Exception as err:
@@ -580,7 +579,7 @@ class sub_convert():
 
                     part_list = re.split('@|\?|#', url_content)
                     yaml_url.setdefault('name', '"' + urllib.parse.unquote(part_list[-1]) + '"')
-                    yaml_url.setdefault('server', urllib.parse.unquote(part_list[1]).split(':')[0])
+                    yaml_url.setdefault('server', re.sub(' |\[|\]|{|}|\?','',urllib.parse.unquote(part_list[1]).split(':')[0]))
                     yaml_url.setdefault('port', urllib.parse.unquote(part_list[1]).split(':')[1])
                     yaml_url.setdefault('type', 'trojan')
                     server_password = re.sub('trojan://|!str|!<str>| |\[|\]|{|}','',urllib.parse.unquote(part_list[0]))
