@@ -134,8 +134,10 @@ class sub_convert():
                 try:
                     node_del_head = node.replace('trojan://', '')
                     node_part = re.split('@|#', node_del_head, maxsplit=2)
-                    server_head = sub_convert.find_country(
-                        node_part[1].split(':')[0])
+                    if node_part[1].split(':')[0]:
+                        server_head = sub_convert.find_country(node_part[1].split(':')[0])
+                    else:
+                        continue
                     password = node_part[0]
                     name_renamed = server_head + node_part[1].split('?')[0] + '(' + password + ')'
                     node_raw = node_part[0] + '@' + \
