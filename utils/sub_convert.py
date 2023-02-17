@@ -637,6 +637,6 @@ class sub_convert():
         yaml_content = yaml_head + '\n'.join(url_list)
 
         return yaml_content
-if __name__ == '__main__':
-    # sub_convert.format("trojan://18844@zxcvbn@os-tr-3.cats22.net:443?allowInsecure=1#_JP_%E6%97%A5%E6%9C%AC")
-    sub_convert.yaml_encode(["trojan://18844@zxcvbn@os-tr-3.cats22.net:443?allowInsecure=1#_JP_%E6%97%A5%E6%9C%AC"])
+# if __name__ == '__main__':
+    # sub_convert.format("trojan://lionssh#%5B%F0%9F%87%A6%F0%9F%87%B6%5D%5B%E5%8F%B0%E6%B9%BETROJAN%2A%2A%2A%2A%5DQAAVL-4-TR-1.HKG-01.O-TWO.XYZ%3A889%28lionssh%29")
+    # sub_convert.yaml_encode(["trojan://lionssh#%5B%F0%9F%87%A6%F0%9F%87%B6%5D%5B%E5%8F%B0%E6%B9%BETROJAN%2A%2A%2A%2A%5DQAAVL-4-TR-1.HKG-01.O-TWO.XYZ%3A889%28lionssh%29"])
