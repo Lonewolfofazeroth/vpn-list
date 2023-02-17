@@ -394,7 +394,7 @@ class sub_convert():
                             yaml_url.setdefault('network', vmess_config['net'])
                         if vmess_config['path'] is not None:
                             vmess_config['path'] = re.sub(' |\[|\]|{|}|\?|"','',urllib.parse.unquote(vmess_config['path'])).split(':')[-1]
-                        if vmess_config['host'] != '' or vmess_config['host'] is not None:
+                        if vmess_config['host'] is not None:
                             vmess_config['host'] = re.sub(' |\[|\]|{|}|\?|"','',urllib.parse.unquote(vmess_config['host'])).split(':')[-1]
                         if vmess_config['net'] == 'ws':
                             if vmess_config['tls'] == 'tls':
@@ -639,5 +639,5 @@ class sub_convert():
 
         return yaml_content
 if __name__ == '__main__':
-    # sub_convert.format("trojan://lionssh#%5B%F0%9F%87%A6%F0%9F%87%B6%5D%5B%E5%8F%B0%E6%B9%BETROJAN%2A%2A%2A%2A%5DQAAVL-4-TR-1.HKG-01.O-TWO.XYZ%3A889%28lionssh%29")
-    sub_convert.yaml_encode(["ssr://ZnJlZS5saW5zaGlkaXpoaS50azoyMjIyMjphdXRoX2NoYWluX2E6cmM0LW1kNTpwbGFpbjpSV05yY25vM2QwazRVVEpMTURaYVNRPT0vP29iZnNwYXJhbT0mcmVtYXJrcz1XL0NmaDdqd240ZXNYV1p5WldVdWJHbHVjMmhwWkdsNmFHa3VkR3M2TWpJeU1qSW9SV05yY25vM2QwazRVVEpMTURaYVNTaz0mcHJvdG9wYXJhbT1OVEk0T0RwUFZqRjJTMFElM0Q="])
+    # sub_convert.format("vmess://eyJhZGQiOiAiYS1jdDEuanNtbW0uY3lvdSIsICJhaWQiOiAwLCAiaWQiOiAiYTI3YjVmMGMtMDEyNi0zN2E5LTllY2UtMWYxMGFlNjNhMjZkIiwgIm5ldCI6ICJ0Y3AiLCAicG9ydCI6IDM5MjIxLCAicHMiOiAiW1x1ZDgzY1x1ZGRlOFx1ZDgzY1x1ZGRmM11hLWN0MS5qc21tbS5jeW91OjM5MjIxKGEyN2I1ZjBjLTAxMjYtMzdhOS05ZWNlLTFmMTBhZTYzYTI2ZCkiLCAic2N5IjogImF1dG8iLCAidGxzIjogIm5vbmUiLCAidHlwZSI6ICJ2bWVzcyIsICJ2IjogMiwgInBhdGgiOiBudWxsLCAiaG9zdCI6IG51bGx9")
+    sub_convert.yaml_encode(["vmess://eyJhZGQiOiAiYS1jdDEuanNtbW0uY3lvdSIsICJhaWQiOiAwLCAiaWQiOiAiYTI3YjVmMGMtMDEyNi0zN2E5LTllY2UtMWYxMGFlNjNhMjZkIiwgIm5ldCI6ICJ0Y3AiLCAicG9ydCI6IDM5MjIxLCAicHMiOiAiW1x1ZDgzY1x1ZGRlOFx1ZDgzY1x1ZGRmM11hLWN0MS5qc21tbS5jeW91OjM5MjIxKGEyN2I1ZjBjLTAxMjYtMzdhOS05ZWNlLTFmMTBhZTYzYTI2ZCkiLCAic2N5IjogImF1dG8iLCAidGxzIjogIm5vbmUiLCAidHlwZSI6ICJ2bWVzcyIsICJ2IjogMiwgInBhdGgiOiBudWxsLCAiaG9zdCI6IG51bGx9"])
