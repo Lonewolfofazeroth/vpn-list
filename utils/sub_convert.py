@@ -562,7 +562,7 @@ class sub_convert():
                             else:
                                 yaml_url.setdefault('obfs-param', '""')
                         elif 'protoparam=' in item:
-                            protocol_param = sub_convert.base64_decode(item.replace('protoparam=', ''))
+                            protocol_param = sub_convert.base64_decode(urllib.parse.unquote(item.replace('protoparam=', '')))
                             protocol_param = re.sub('\[|\]|{|}', '', protocol_param)
                             if protocol_param != '':
                                 yaml_url.setdefault('protocol-param', protocol_param)
@@ -637,6 +637,6 @@ class sub_convert():
         yaml_content = yaml_head + '\n'.join(url_list)
 
         return yaml_content
-# if __name__ == '__main__':
+if __name__ == '__main__':
     # sub_convert.format("trojan://lionssh#%5B%F0%9F%87%A6%F0%9F%87%B6%5D%5B%E5%8F%B0%E6%B9%BETROJAN%2A%2A%2A%2A%5DQAAVL-4-TR-1.HKG-01.O-TWO.XYZ%3A889%28lionssh%29")
-    # sub_convert.yaml_encode(["trojan://lionssh#%5B%F0%9F%87%A6%F0%9F%87%B6%5D%5B%E5%8F%B0%E6%B9%BETROJAN%2A%2A%2A%2A%5DQAAVL-4-TR-1.HKG-01.O-TWO.XYZ%3A889%28lionssh%29"])
+    sub_convert.yaml_encode(["ssr://ZnJlZS5saW5zaGlkaXpoaS50azoyMjIyMjphdXRoX2NoYWluX2E6cmM0LW1kNTpwbGFpbjpSV05yY25vM2QwazRVVEpMTURaYVNRPT0vP29iZnNwYXJhbT0mcmVtYXJrcz1XL0NmaDdqd240ZXNYV1p5WldVdWJHbHVjMmhwWkdsNmFHa3VkR3M2TWpJeU1qSW9SV05yY25vM2QwazRVVEpMTURaYVNTaz0mcHJvdG9wYXJhbT1OVEk0T0RwUFZqRjJTMFElM0Q="])
