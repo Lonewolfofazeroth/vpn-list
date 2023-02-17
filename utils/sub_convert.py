@@ -382,7 +382,7 @@ class sub_convert():
                             yaml_url.setdefault('server', vmess_config['add'])
                         yaml_url.setdefault('port', int(vmess_config['port']))
                         yaml_url.setdefault('type', 'vmess')
-                        if vmess_config['id'] == '0' or re.findall("[f-z]", vmess_config['id']) or len(vmess_config['id']) != 36:
+                        if vmess_config['id'] == '0' or re.findall("[g-z]", vmess_config['id']) or len(vmess_config['id']) != 36:
                             continue
                         else:
                             yaml_url.setdefault('uuid', vmess_config['id'])
@@ -404,6 +404,7 @@ class sub_convert():
                             if vmess_config['path'] == '' or vmess_config['path'] is None:
                                 yaml_url.setdefault('ws-opts', {'path': '/'})
                             else:
+                                vmess_config['path'] = vmess_config['path']
                                 yaml_url.setdefault('ws-opts', {}).setdefault('path', vmess_config['path'])
                             if vmess_config['host'] != '':
                                 vmess_config['host'] = re.sub('\[|\]|{|}','',urllib.parse.unquote(vmess_config['host']))
@@ -580,7 +581,6 @@ class sub_convert():
             elif 'trojan://' in line:
                 try:
                     url_content = line.replace('trojan://', '')
-
                     part_list = re.split('@|\?|#', url_content)
                     yaml_url.setdefault('name', '"' + urllib.parse.unquote(part_list[-1]) + '"')
                     yaml_url.setdefault('server', re.sub(' |\[|\]|{|}|\?','',urllib.parse.unquote(part_list[1]).split(':')[0]))
