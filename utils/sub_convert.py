@@ -394,6 +394,8 @@ class sub_convert():
                             yaml_url.setdefault('network', vmess_config['net'])
                         if vmess_config['path'] is not None:
                             vmess_config['path'] = re.sub(' |\[|\]|{|}|\?|"','',urllib.parse.unquote(vmess_config['path'])).split(':')[-1]
+                        if vmess_config['host'] != '' or vmess_config['host'] is not None:
+                            vmess_config['host'] = re.sub(' |\[|\]|{|}|\?|"','',urllib.parse.unquote(vmess_config['host'])).split(':')[-1]
                         if vmess_config['net'] == 'ws':
                             if vmess_config['tls'] == 'tls':
                                 yaml_url.setdefault('tls', 'true')
@@ -405,7 +407,6 @@ class sub_convert():
                             else:
                                 yaml_url.setdefault('ws-opts', {}).setdefault('path', vmess_config['path'])
                             if vmess_config['host'] != '':
-                                vmess_config['host'] = re.sub('\[|\]|{|}','',urllib.parse.unquote(vmess_config['host']))
                                 yaml_url.setdefault('ws-opts', {}).setdefault('headers', {'host': vmess_config['host']})
                         elif vmess_config['net'] == 'h2':
                             yaml_url.setdefault('tls', 'true')
