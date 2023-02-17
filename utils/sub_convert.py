@@ -67,26 +67,23 @@ class sub_convert():
                         password = sub_convert.base64_decode(
                             node_part[0]).split(':')[-1]
                         name_renamed = server_head + server_body + '(' + password + ')'
-                        node_part[2] = urllib.parse.quote(
-                            name_renamed, safe='')
-                        node_raw = node_part[0] + '@' + \
-                            node_part[1] + '#' + node_part[2]
+                        node_name = urllib.parse.quote(name_renamed, safe='')
+                        node_raw = node_part[0] + '@' + node_part[1] + '#' + node_name
                         node = 'ss://' + node_raw
                     else:
                         node_part = node_del_head.split('#')
                         node_part_head_decoded = sub_convert.base64_decode(
                             node_part[0])
-                        node_part_head = re.split(
-                            '@|:', node_part_head_decoded, maxsplit=0)
+                        node_part_head = re.split('@|:', node_part_head_decoded, maxsplit=0)
                         server_port = node_part_head[-1].split('?')[0]
                         server = node_part_head[-2]
                         server_head = sub_convert.find_country(
                             server)
                         password = node_part_head[-3]
                         name_renamed = server_head + server +  ':' + server_port + '(' + password + ')'
-                        node_part[1] = urllib.parse.quote(
+                        node_name = urllib.parse.quote(
                             name_renamed, safe='')
-                        node_raw = node_part[0] + '#' + node_part[1]
+                        node_raw = node_part[0] + '#' + node_name
                         node = 'ss://' + node_raw
                     node_list_formated_array.append(node)
                 except Exception as err:
@@ -135,7 +132,9 @@ class sub_convert():
             elif 'trojan://' in node:
                 try:
                     node_del_head = node.replace('trojan://', '')
-                    node_part = re.split('@|\?|#', node_del_head)
+                    node_password = re.split('@',node_del_head,maxsplit=1)[0]
+                    node_list_expassword = re.split('\?|#', re.split('@',node_del_head,maxsplit=1)[1])
+                    node_part = [node_password] + node_list_expassword
                     node_server_and_port = urllib.parse.unquote(node_part[1])
                     node_server_and_port_part = node_server_and_port.split(':')
                     if node_server_and_port_part[1].isdigit() and node_server_and_port_part[0]:
@@ -394,7 +393,7 @@ class sub_convert():
                         if vmess_config['net'] != '':
                             yaml_url.setdefault('network', vmess_config['net'])
                         if vmess_config['path'] is not None:
-                            vmess_config['path'] = re.sub(' |\[|\]|{|}|\?','',urllib.parse.unquote(vmess_config['path']))
+                            vmess_config['path'] = re.sub(' |\[|\]|{|}|\?|"','',urllib.parse.unquote(vmess_config['path'])).split(':')[-1]
                         if vmess_config['net'] == 'ws':
                             if vmess_config['tls'] == 'tls':
                                 yaml_url.setdefault('tls', 'true')
@@ -404,7 +403,6 @@ class sub_convert():
                             if vmess_config['path'] == '' or vmess_config['path'] is None:
                                 yaml_url.setdefault('ws-opts', {'path': '/'})
                             else:
-                                vmess_config['path'] = vmess_config['path']
                                 yaml_url.setdefault('ws-opts', {}).setdefault('path', vmess_config['path'])
                             if vmess_config['host'] != '':
                                 vmess_config['host'] = re.sub('\[|\]|{|}','',urllib.parse.unquote(vmess_config['host']))
@@ -581,7 +579,9 @@ class sub_convert():
             elif 'trojan://' in line:
                 try:
                     url_content = line.replace('trojan://', '')
-                    part_list = re.split('@|\?|#', url_content)
+                    node_password = re.split('@',url_content,maxsplit=1)[0]
+                    node_list_expassword = re.split('\?|#', re.split('@',url_content,maxsplit=1)[1])
+                    part_list = [node_password] + node_list_expassword
                     yaml_url.setdefault('name', '"' + urllib.parse.unquote(part_list[-1]) + '"')
                     yaml_url.setdefault('server', re.sub(' |\[|\]|{|}|\?','',urllib.parse.unquote(part_list[1]).split(':')[0]))
                     yaml_url.setdefault('port', urllib.parse.unquote(part_list[1]).split(':')[1])
@@ -638,5 +638,5 @@ class sub_convert():
 
         return yaml_content
 if __name__ == '__main__':
-    sub_convert.format("trojan://!str18844@zxcvbn@os-tr-2.cats22.net:443?allowInsecure=0#%5B%F0%9F%87%A6%F0%9F%87%B6%5Dzxcvbn%2818844%29")
-    # sub_convert.yaml_encode(["trojan://!str18844@zxcvbn@os-tr-2.cats22.net:443?allowInsecure=0#%5B%F0%9F%87%A6%F0%9F%87%B6%5Dzxcvbn%2818844%29"])
+    # sub_convert.format("trojan://18844@zxcvbn@os-tr-3.cats22.net:443?allowInsecure=1#_JP_%E6%97%A5%E6%9C%AC")
+    sub_convert.yaml_encode(["trojan://18844@zxcvbn@os-tr-3.cats22.net:443?allowInsecure=1#_JP_%E6%97%A5%E6%9C%AC"])
