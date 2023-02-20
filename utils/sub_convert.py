@@ -132,8 +132,8 @@ class sub_convert():
             elif 'trojan://' in node:
                 try:
                     node_del_head = node.replace('trojan://', '')
-                    node_password = re.split('@',node_del_head,maxsplit=1)[0]
-                    node_list_expassword = re.split('\?|#', re.split('@',node_del_head,maxsplit=1)[1])
+                    node_password = node_del_head.rsplit('@',1)[0]
+                    node_list_expassword = re.split('\?|#', node_del_head.rsplit('@',1)[1])
                     node_part = [node_password] + node_list_expassword
                     node_server_and_port = urllib.parse.unquote(node_part[1])
                     node_server_and_port_part = node_server_and_port.split(':')
@@ -202,7 +202,7 @@ class sub_convert():
         elif 'trojan://' in node:
             try:
                 node_del_head = node.replace('trojan://', '')
-                node_part = re.split('@|#', node_del_head, maxsplit=2)
+                node_part = node_del_head.split('#')
                 name = urllib.parse.unquote(node_part[-1])
             except Exception as err:
                 print(f'获取节点名错误: {err}')
@@ -580,8 +580,8 @@ class sub_convert():
             elif 'trojan://' in line:
                 try:
                     url_content = line.replace('trojan://', '')
-                    node_password = re.split('@',url_content,maxsplit=1)[0]
-                    node_list_expassword = re.split('\?|#', re.split('@',url_content,maxsplit=1)[1])
+                    node_password = url_content.rsplit('@',1)[0]
+                    node_list_expassword = re.split('\?|#', url_content.rsplit('@',1)[1])
                     part_list = [node_password] + node_list_expassword
                     yaml_url.setdefault('name', '"' + urllib.parse.unquote(part_list[-1]) + '"')
                     yaml_url.setdefault('server', re.sub(' |\[|\]|{|}|\?','',urllib.parse.unquote(part_list[1]).split(':')[0]))
@@ -639,5 +639,5 @@ class sub_convert():
 
         return yaml_content
 if __name__ == '__main__':
-    # sub_convert.format("vmess://eyJhZGQiOiAiYS1jdDEuanNtbW0uY3lvdSIsICJhaWQiOiAwLCAiaWQiOiAiYTI3YjVmMGMtMDEyNi0zN2E5LTllY2UtMWYxMGFlNjNhMjZkIiwgIm5ldCI6ICJ0Y3AiLCAicG9ydCI6IDM5MjIxLCAicHMiOiAiW1x1ZDgzY1x1ZGRlOFx1ZDgzY1x1ZGRmM11hLWN0MS5qc21tbS5jeW91OjM5MjIxKGEyN2I1ZjBjLTAxMjYtMzdhOS05ZWNlLTFmMTBhZTYzYTI2ZCkiLCAic2N5IjogImF1dG8iLCAidGxzIjogIm5vbmUiLCAidHlwZSI6ICJ2bWVzcyIsICJ2IjogMiwgInBhdGgiOiBudWxsLCAiaG9zdCI6IG51bGx9")
-    sub_convert.yaml_encode(["vmess://eyJhZGQiOiAiYS1jdDEuanNtbW0uY3lvdSIsICJhaWQiOiAwLCAiaWQiOiAiYTI3YjVmMGMtMDEyNi0zN2E5LTllY2UtMWYxMGFlNjNhMjZkIiwgIm5ldCI6ICJ0Y3AiLCAicG9ydCI6IDM5MjIxLCAicHMiOiAiW1x1ZDgzY1x1ZGRlOFx1ZDgzY1x1ZGRmM11hLWN0MS5qc21tbS5jeW91OjM5MjIxKGEyN2I1ZjBjLTAxMjYtMzdhOS05ZWNlLTFmMTBhZTYzYTI2ZCkiLCAic2N5IjogImF1dG8iLCAidGxzIjogIm5vbmUiLCAidHlwZSI6ICJ2bWVzcyIsICJ2IjogMiwgInBhdGgiOiBudWxsLCAiaG9zdCI6IG51bGx9"])
+    # sub_convert.format("trojan://18844@zxcvbn@os-tr-2.cats22.net:443?allowInsecure=1#%5B%F0%9F%87%A6%F0%9F%87%B6%5Dzxcvbn%40os-tr-2.cats22.net%3A443%2818844%29")
+    sub_convert.yaml_encode(["trojan://18844@zxcvbn@os-tr-2.cats22.net:443?allowInsecure=1#%5B%F0%9F%87%A6%F0%9F%87%B6%5Dzxcvbn%40os-tr-2.cats22.net%3A443%2818844%29"])
