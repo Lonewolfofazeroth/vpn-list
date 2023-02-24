@@ -1,4 +1,81 @@
 proxies:
+  - {name: "[🇨🇳]43.198.101.49:80(9ca9e106-76be-488b-8b3e-ccfb80d2228d)", server: 43.198.101.49, port: 80, type: vmess, uuid: 9ca9e106-76be-488b-8b3e-ccfb80d2228d, alterId: 0, cipher: auto, network: tcp}
+  - {name: "[🇰🇷]43.201.72.40:80(9ca9e106-76be-488b-8b3e-ccfb80d2228d)", server: 43.201.72.40, port: 80, type: vmess, uuid: 9ca9e106-76be-488b-8b3e-ccfb80d2228d, alterId: 0, cipher: auto, network: tcp}
+  - {name: "[🇰🇷]13.125.239.212:80(9ca9e106-76be-488b-8b3e-ccfb80d2228d)", server: 13.125.239.212, port: 80, type: vmess, uuid: 9ca9e106-76be-488b-8b3e-ccfb80d2228d, alterId: 0, cipher: auto, network: tcp}
+  - {name: "[🇰🇷]43.201.50.245:80(9ca9e106-76be-488b-8b3e-ccfb80d2228d)", server: 43.201.50.245, port: 80, type: vmess, uuid: 9ca9e106-76be-488b-8b3e-ccfb80d2228d, alterId: 0, cipher: auto, network: tcp}
+  - {name: "[🇯🇵]52.68.55.151:80(9ca9e106-76be-488b-8b3e-ccfb80d2228d)", server: 52.68.55.151, port: 80, type: vmess, uuid: 9ca9e106-76be-488b-8b3e-ccfb80d2228d, alterId: 0, cipher: auto, network: tcp}
+  - {name: "[🇯🇵]43.206.192.252:80(9ca9e106-76be-488b-8b3e-ccfb80d2228d)", server: 43.206.192.252, port: 80, type: vmess, uuid: 9ca9e106-76be-488b-8b3e-ccfb80d2228d, alterId: 0, cipher: auto, network: tcp}
+  - {name: "[🇺🇸]23.224.102.186:80(9ca9e106-76be-488b-8b3e-ccfb80d2228d)", server: 23.224.102.186, port: 80, type: vmess, uuid: 9ca9e106-76be-488b-8b3e-ccfb80d2228d, alterId: 0, cipher: auto, network: tcp}
+  - {name: "[🇮🇳]3.110.223.241:80(9ca9e106-76be-488b-8b3e-ccfb80d2228d)", server: 3.110.223.241, port: 80, type: vmess, uuid: 9ca9e106-76be-488b-8b3e-ccfb80d2228d, alterId: 0, cipher: auto, network: tcp}
+  - {name: "[🇨🇳]00-01-01.123445566.xyz:16928(e4a3a88e-ca1d-4693-bd45-d1d41265176a)", server: 00-01-01.123445566.xyz, port: 16928, type: ss, cipher: chacha20-ietf-poly1305, password: e4a3a88e-ca1d-4693-bd45-d1d41265176a}
+  - {name: "[🇨🇳]shct.xn--dlq110j6ul.cc:18322(e4a3a88e-ca1d-4693-bd45-d1d41265176a)", server: shct.xn--dlq110j6ul.cc, port: 18322, type: ss, cipher: chacha20-ietf-poly1305, password: e4a3a88e-ca1d-4693-bd45-d1d41265176a}
+  - {name: "[🇨🇳]shct.xn--dlq110j6ul.cc:42716(e4a3a88e-ca1d-4693-bd45-d1d41265176a)", server: shct.xn--dlq110j6ul.cc, port: 42716, type: ss, cipher: chacha20-ietf-poly1305, password: e4a3a88e-ca1d-4693-bd45-d1d41265176a}
+  - {name: "[🇭🇰]20.205.110.61:80(6671f9af-54b0-3f89-a532-556156066733)", server: 20.205.110.61, port: 80, type: vmess, uuid: 6671f9af-54b0-3f89-a532-556156066733, alterId: 0, cipher: auto, network: ws, tls: false, ws-opts: {path: /ny}}
+  - {name: "[🇭🇰]20.24.93.78:80(6671f9af-54b0-3f89-a532-556156066733)", server: 20.24.93.78, port: 80, type: vmess, uuid: 6671f9af-54b0-3f89-a532-556156066733, alterId: 0, cipher: auto, network: ws, tls: false, ws-opts: {path: /ny}}
+  - {name: "[🇭🇰]18.163.122.220:80(6671f9af-54b0-3f89-a532-556156066733)", server: 18.163.122.220, port: 80, type: vmess, uuid: 6671f9af-54b0-3f89-a532-556156066733, alterId: 0, cipher: auto, network: ws, tls: false, ws-opts: {path: /ny}}
+  - {name: "[🇭🇰]18.163.215.133:80(6671f9af-54b0-3f89-a532-556156066733)", server: 18.163.215.133, port: 80, type: vmess, uuid: 6671f9af-54b0-3f89-a532-556156066733, alterId: 0, cipher: auto, network: ws, tls: false, ws-opts: {path: /ny}}
+  - {name: "[🇭🇰]20.205.41.152:80(6671f9af-54b0-3f89-a532-556156066733)", server: 20.205.41.152, port: 80, type: vmess, uuid: 6671f9af-54b0-3f89-a532-556156066733, alterId: 0, cipher: auto, network: ws, tls: false, ws-opts: {path: /ny}}
+  - {name: "[🇭🇰]18.163.198.68:80(6671f9af-54b0-3f89-a532-556156066733)", server: 18.163.198.68, port: 80, type: vmess, uuid: 6671f9af-54b0-3f89-a532-556156066733, alterId: 0, cipher: auto, network: ws, tls: false, ws-opts: {path: /ny}}
+  - {name: "[🇭🇰]20.239.174.22:80(6671f9af-54b0-3f89-a532-556156066733)", server: 20.239.174.22, port: 80, type: vmess, uuid: 6671f9af-54b0-3f89-a532-556156066733, alterId: 0, cipher: auto, network: ws, tls: false, ws-opts: {path: /ny}}
+  - {name: "[🇭🇰]20.187.72.209:80(6671f9af-54b0-3f89-a532-556156066733)", server: 20.187.72.209, port: 80, type: vmess, uuid: 6671f9af-54b0-3f89-a532-556156066733, alterId: 0, cipher: auto, network: ws, tls: false, ws-opts: {path: /ny}}
+  - {name: "[🇨🇳]fs-cm.alhttdw.cn:34673(6671f9af-54b0-3f89-a532-556156066733)", server: fs-cm.alhttdw.cn, port: 34673, type: vmess, uuid: 6671f9af-54b0-3f89-a532-556156066733, alterId: 0, cipher: auto, network: ws, tls: false, ws-opts: {path: /ny, headers: {host: fs-cm.alhttdw.cn}}}
+  - {name: "[🇨🇳]fs-cm.alhttdw.cn:47906(6671f9af-54b0-3f89-a532-556156066733)", server: fs-cm.alhttdw.cn, port: 47906, type: vmess, uuid: 6671f9af-54b0-3f89-a532-556156066733, alterId: 0, cipher: auto, network: ws, tls: false, ws-opts: {path: /ny, headers: {host: fs-cm.alhttdw.cn}}}
+  - {name: "[🇨🇳]fs-cm.alhttdw.cn:47918(6671f9af-54b0-3f89-a532-556156066733)", server: fs-cm.alhttdw.cn, port: 47918, type: vmess, uuid: 6671f9af-54b0-3f89-a532-556156066733, alterId: 0, cipher: auto, network: ws, tls: false, ws-opts: {path: /ny, headers: {host: fs-cm.alhttdw.cn}}}
+  - {name: "[🇨🇳]fs-cm.alhttdw.cn:18953(6671f9af-54b0-3f89-a532-556156066733)", server: fs-cm.alhttdw.cn, port: 18953, type: vmess, uuid: 6671f9af-54b0-3f89-a532-556156066733, alterId: 0, cipher: auto, network: ws, tls: false, ws-opts: {path: /ny, headers: {host: fs-cm.alhttdw.cn}}}
+  - {name: "[🇯🇵]141.147.149.186:80(6671f9af-54b0-3f89-a532-556156066733)", server: 141.147.149.186, port: 80, type: vmess, uuid: 6671f9af-54b0-3f89-a532-556156066733, alterId: 0, cipher: auto, network: ws, tls: false, ws-opts: {path: /ny}}
+  - {name: "[🇰🇷]152.67.220.184:80(6671f9af-54b0-3f89-a532-556156066733)", server: 152.67.220.184, port: 80, type: vmess, uuid: 6671f9af-54b0-3f89-a532-556156066733, alterId: 0, cipher: auto, network: ws, tls: false, ws-opts: {path: /ny}}
+  - {name: "[🇸🇬]138.2.72.37:80(6671f9af-54b0-3f89-a532-556156066733)", server: 138.2.72.37, port: 80, type: vmess, uuid: 6671f9af-54b0-3f89-a532-556156066733, alterId: 0, cipher: auto, network: ws, tls: false, ws-opts: {path: /ny}}
+  - {name: "[🇹🇼]165.154.246.150:80(6671f9af-54b0-3f89-a532-556156066733)", server: 165.154.246.150, port: 80, type: vmess, uuid: 6671f9af-54b0-3f89-a532-556156066733, alterId: 0, cipher: auto, network: ws, tls: false, ws-opts: {path: /ny}}
+  - {name: "[🇸🇬]165.154.253.155:80(6671f9af-54b0-3f89-a532-556156066733)", server: 165.154.253.155, port: 80, type: vmess, uuid: 6671f9af-54b0-3f89-a532-556156066733, alterId: 0, cipher: auto, network: ws, tls: false, ws-opts: {path: /ny}}
+  - {name: "[🇨🇳]fs-cm.alhttdw.cn:45793(6671f9af-54b0-3f89-a532-556156066733)", server: fs-cm.alhttdw.cn, port: 45793, type: vmess, uuid: 6671f9af-54b0-3f89-a532-556156066733, alterId: 0, cipher: auto, network: ws, tls: false, ws-opts: {path: /ny, headers: {host: fs-cm.alhttdw.cn}}}
+  - {name: "[🇨🇳]fs-cm.alhttdw.cn:15617(6671f9af-54b0-3f89-a532-556156066733)", server: fs-cm.alhttdw.cn, port: 15617, type: vmess, uuid: 6671f9af-54b0-3f89-a532-556156066733, alterId: 0, cipher: auto, network: ws, tls: false, ws-opts: {path: /ny, headers: {host: fs-cm.alhttdw.cn}}}
+  - {name: "[🇨🇳]fs-cm.alhttdw.cn:35673(6671f9af-54b0-3f89-a532-556156066733)", server: fs-cm.alhttdw.cn, port: 35673, type: vmess, uuid: 6671f9af-54b0-3f89-a532-556156066733, alterId: 0, cipher: auto, network: ws, tls: false, ws-opts: {path: /ny, headers: {host: fs-cm.alhttdw.cn}}}
+  - {name: "[🇨🇳]no.aries.ovh:2052(c6f7bae0-36d9-41a6-9962-e79156c899c6)", server: no.aries.ovh, port: 2052, type: vmess, uuid: c6f7bae0-36d9-41a6-9962-e79156c899c6, alterId: 0, cipher: auto, network: ws, tls: false, ws-opts: {path: /ariesed=2048, headers: {host: vn.cloudflare.quest}}}
+  - {name: "[🇨🇳]e78b1f.rydkud.xyz:27101(CreamData)", server: e78b1f.rydkud.xyz, port: 27101, type: ss, cipher: aes-128-gcm, password: CreamData}
+  - {name: "[🇨🇳]4be755.ffeexd.xyz:27401(CreamData)", server: 4be755.ffeexd.xyz, port: 27401, type: ss, cipher: aes-128-gcm, password: CreamData}
+  - {name: "[🇨🇳]4be755.ffeexd.xyz:27402(CreamData)", server: 4be755.ffeexd.xyz, port: 27402, type: ss, cipher: aes-128-gcm, password: CreamData}
+  - {name: "[🇨🇳]4be755.ffeexd.xyz:27403(CreamData)", server: 4be755.ffeexd.xyz, port: 27403, type: ss, cipher: aes-128-gcm, password: CreamData}
+  - {name: "[🇨🇳]4be755.ffeexd.xyz:27404(CreamData)", server: 4be755.ffeexd.xyz, port: 27404, type: ss, cipher: aes-128-gcm, password: CreamData}
+  - {name: "[🇨🇳]4be755.ffeexd.xyz:27405(CreamData)", server: 4be755.ffeexd.xyz, port: 27405, type: ss, cipher: aes-128-gcm, password: CreamData}
+  - {name: "[🇨🇳]4be755.ffeexd.xyz:27418(CreamData)", server: 4be755.ffeexd.xyz, port: 27418, type: ss, cipher: aes-128-gcm, password: CreamData}
+  - {name: "[🇨🇳]4be755.ffeexd.xyz:27417(CreamData)", server: 4be755.ffeexd.xyz, port: 27417, type: ss, cipher: aes-128-gcm, password: CreamData}
+  - {name: "[🇨🇳]4be755.ffeexd.xyz:27416(CreamData)", server: 4be755.ffeexd.xyz, port: 27416, type: ss, cipher: aes-128-gcm, password: CreamData}
+  - {name: "[🇨🇳]4be755.ffeexd.xyz:27414(CreamData)", server: 4be755.ffeexd.xyz, port: 27414, type: ss, cipher: aes-128-gcm, password: CreamData}
+  - {name: "[🇨🇳]4be755.ffeexd.xyz:27413(CreamData)", server: 4be755.ffeexd.xyz, port: 27413, type: ss, cipher: aes-128-gcm, password: CreamData}
+  - {name: "[🇨🇳]4be755.ffeexd.xyz:27411(CreamData)", server: 4be755.ffeexd.xyz, port: 27411, type: ss, cipher: aes-128-gcm, password: CreamData}
+  - {name: "[🇨🇳]4be755.ffeexd.xyz:27412(CreamData)", server: 4be755.ffeexd.xyz, port: 27412, type: ss, cipher: aes-128-gcm, password: CreamData}
+  - {name: "[🇨🇳]4be755.ffeexd.xyz:27407(CreamData)", server: 4be755.ffeexd.xyz, port: 27407, type: ss, cipher: aes-128-gcm, password: CreamData}
+  - {name: "[🇨🇳]4be755.ffeexd.xyz:27410(CreamData)", server: 4be755.ffeexd.xyz, port: 27410, type: ss, cipher: aes-128-gcm, password: CreamData}
+  - {name: "[🇨🇳]4be755.ffeexd.xyz:27409(CreamData)", server: 4be755.ffeexd.xyz, port: 27409, type: ss, cipher: aes-128-gcm, password: CreamData}
+  - {name: "[🇨🇳]NO.ARIES.OVH:2052(c6f7bae0-36d9-41a6-9962-e79156c899c6)", server: NO.ARIES.OVH, port: 2052, type: vmess, uuid: c6f7bae0-36d9-41a6-9962-e79156c899c6, alterId: 0, cipher: auto, network: ws, tls: false, ws-opts: {path: /ariesed=2048, headers: {host: gcore-in.cloudflare.quest}}}
+  - {name: "[🇨🇳]e78b1f.rydkud.xyz:27227(CreamData)", server: e78b1f.rydkud.xyz, port: 27227, type: ss, cipher: aes-128-gcm, password: CreamData}
+  - {name: "[🇨🇳]e78b1f.rydkud.xyz:27226(CreamData)", server: e78b1f.rydkud.xyz, port: 27226, type: ss, cipher: aes-128-gcm, password: CreamData}
+  - {name: "[🇨🇳]e78b1f.rydkud.xyz:27225(CreamData)", server: e78b1f.rydkud.xyz, port: 27225, type: ss, cipher: aes-128-gcm, password: CreamData}
+  - {name: "[🇨🇳]e78b1f.rydkud.xyz:27224(CreamData)", server: e78b1f.rydkud.xyz, port: 27224, type: ss, cipher: aes-128-gcm, password: CreamData}
+  - {name: "[🇨🇳]4be755.ffeexd.xyz:27704(CreamData)", server: 4be755.ffeexd.xyz, port: 27704, type: ss, cipher: aes-128-gcm, password: CreamData}
+  - {name: "[🇨🇳]4be755.ffeexd.xyz:27702(CreamData)", server: 4be755.ffeexd.xyz, port: 27702, type: ss, cipher: aes-128-gcm, password: CreamData}
+  - {name: "[🇨🇳]4be755.ffeexd.xyz:27703(CreamData)", server: 4be755.ffeexd.xyz, port: 27703, type: ss, cipher: aes-128-gcm, password: CreamData}
+  - {name: "[🇨🇳]e78b1f.rydkud.xyz:27612(CreamData)", server: e78b1f.rydkud.xyz, port: 27612, type: ss, cipher: aes-128-gcm, password: CreamData}
+  - {name: "[🇨🇳]e78b1f.rydkud.xyz:27611(CreamData)", server: e78b1f.rydkud.xyz, port: 27611, type: ss, cipher: aes-128-gcm, password: CreamData}
+  - {name: "[🇨🇳]e78b1f.rydkud.xyz:27610(CreamData)", server: e78b1f.rydkud.xyz, port: 27610, type: ss, cipher: aes-128-gcm, password: CreamData}
+  - {name: "[🇨🇳]e78b1f.rydkud.xyz:27609(CreamData)", server: e78b1f.rydkud.xyz, port: 27609, type: ss, cipher: aes-128-gcm, password: CreamData}
+  - {name: "[🇨🇳]e78b1f.rydkud.xyz:27608(CreamData)", server: e78b1f.rydkud.xyz, port: 27608, type: ss, cipher: aes-128-gcm, password: CreamData}
+  - {name: "[🇨🇳]e78b1f.rydkud.xyz:27607(CreamData)", server: e78b1f.rydkud.xyz, port: 27607, type: ss, cipher: aes-128-gcm, password: CreamData}
+  - {name: "[🇨🇳]e78b1f.rydkud.xyz:27606(CreamData)", server: e78b1f.rydkud.xyz, port: 27606, type: ss, cipher: aes-128-gcm, password: CreamData}
+  - {name: "[🇨🇳]e78b1f.rydkud.xyz:27613(CreamData)", server: e78b1f.rydkud.xyz, port: 27613, type: ss, cipher: aes-128-gcm, password: CreamData}
+  - {name: "[🇨🇳]e78b1f.rydkud.xyz:27614(CreamData)", server: e78b1f.rydkud.xyz, port: 27614, type: ss, cipher: aes-128-gcm, password: CreamData}
+  - {name: "[🇨🇳]e78b1f.rydkud.xyz:27601(CreamData)", server: e78b1f.rydkud.xyz, port: 27601, type: ss, cipher: aes-128-gcm, password: CreamData}
+  - {name: "[🇨🇳]e78b1f.rydkud.xyz:27602(CreamData)", server: e78b1f.rydkud.xyz, port: 27602, type: ss, cipher: aes-128-gcm, password: CreamData}
+  - {name: "[🇨🇳]e78b1f.rydkud.xyz:27603(CreamData)", server: e78b1f.rydkud.xyz, port: 27603, type: ss, cipher: aes-128-gcm, password: CreamData}
+  - {name: "[🇨🇳]e78b1f.rydkud.xyz:27604(CreamData)", server: e78b1f.rydkud.xyz, port: 27604, type: ss, cipher: aes-128-gcm, password: CreamData}
+  - {name: "[🇨🇳]e78b1f.rydkud.xyz:27605(CreamData)", server: e78b1f.rydkud.xyz, port: 27605, type: ss, cipher: aes-128-gcm, password: CreamData}
+  - {name: "[🇨🇳]e78b1f.rydkud.xyz:27125(CreamData)", server: e78b1f.rydkud.xyz, port: 27125, type: ss, cipher: aes-128-gcm, password: CreamData}
+  - {name: "[🇨🇳]e78b1f.rydkud.xyz:27124(CreamData)", server: e78b1f.rydkud.xyz, port: 27124, type: ss, cipher: aes-128-gcm, password: CreamData}
+  - {name: "[🇨🇳]e78b1f.rydkud.xyz:27123(CreamData)", server: e78b1f.rydkud.xyz, port: 27123, type: ss, cipher: aes-128-gcm, password: CreamData}
+  - {name: "[🇨🇳]e78b1f.rydkud.xyz:27122(CreamData)", server: e78b1f.rydkud.xyz, port: 27122, type: ss, cipher: aes-128-gcm, password: CreamData}
+  - {name: "[🇨🇳]e78b1f.rydkud.xyz:27121(CreamData)", server: e78b1f.rydkud.xyz, port: 27121, type: ss, cipher: aes-128-gcm, password: CreamData}
+  - {name: "[🇨🇳]e78b1f.rydkud.xyz:27120(CreamData)", server: e78b1f.rydkud.xyz, port: 27120, type: ss, cipher: aes-128-gcm, password: CreamData}
+  - {name: "[🇨🇳]e78b1f.rydkud.xyz:27119(CreamData)", server: e78b1f.rydkud.xyz, port: 27119, type: ss, cipher: aes-128-gcm, password: CreamData}
   - {name: "[🇨🇳]e78b1f.rydkud.xyz:27118(CreamData)", server: e78b1f.rydkud.xyz, port: 27118, type: ss, cipher: aes-128-gcm, password: CreamData}
   - {name: "[🇨🇳]e78b1f.rydkud.xyz:27117(CreamData)", server: e78b1f.rydkud.xyz, port: 27117, type: ss, cipher: aes-128-gcm, password: CreamData}
   - {name: "[🇨🇳]e78b1f.rydkud.xyz:27116(CreamData)", server: e78b1f.rydkud.xyz, port: 27116, type: ss, cipher: aes-128-gcm, password: CreamData}
@@ -50,7 +127,6 @@ proxies:
   - {name: "[🇨🇳]e78b1f.rydkud.xyz:27205(CreamData)", server: e78b1f.rydkud.xyz, port: 27205, type: ss, cipher: aes-128-gcm, password: CreamData}
   - {name: "[🇨🇳]e78b1f.rydkud.xyz:27204(CreamData)", server: e78b1f.rydkud.xyz, port: 27204, type: ss, cipher: aes-128-gcm, password: CreamData}
   - {name: "[🇨🇳]e78b1f.rydkud.xyz:27201(CreamData)", server: e78b1f.rydkud.xyz, port: 27201, type: ss, cipher: aes-128-gcm, password: CreamData}
-  - {name: "[🇺🇸]cf-yd-dns.sharecentre.online:443(20e92881-5fb4-4b05-bc77-57929476dc69)", server: cf-yd-dns.sharecentre.online, port: 443, type: vmess, uuid: 20e92881-5fb4-4b05-bc77-57929476dc69, alterId: 0, cipher: auto, network: ws, tls: true, ws-opts: {path: /shirker, headers: {host: sg-1.sharecentre.online}}}
   - {name: "[🇨🇳]shct.lbbb.tk:35103(d03898d8-5b09-4545-b877-198b398a92f4)", server: shct.lbbb.tk, port: 35103, type: vmess, uuid: d03898d8-5b09-4545-b877-198b398a92f4, alterId: 0, cipher: auto, network: ws, tls: false, ws-opts: {path: /, headers: {host: shct.lbbb.tk}}}
   - {name: "[🇦🇶]free-zf-us1.tencent.cfd:50328(d1860587-aa33-4b76-85cd-c191edecb338)", server: free-zf-us1.tencent.cfd, port: 50328, type: vmess, uuid: d1860587-aa33-4b76-85cd-c191edecb338, alterId: 0, cipher: auto, network: ws, tls: false, ws-opts: {path: /, headers: {host: free-zf-us1.tencent.cfd}}}
   - {name: "[🇨🇳]4be755.ffeexd.xyz:27232(CreamData)", server: 4be755.ffeexd.xyz, port: 27232, type: ss, cipher: aes-128-gcm, password: CreamData}
