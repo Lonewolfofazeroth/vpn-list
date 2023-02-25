@@ -56,7 +56,6 @@ external-ui: /usr/share/yacd/
 proxy-groups:
   - name: PROXY
     type: select
-    url: "http://www.gstatic.com/generate_204"
     use:
       - 0.c
       - 1.c
@@ -76,48 +75,80 @@ proxy-providers:
     url: "https://raw.githubusercontent.com/songtao1873/clash/main/subscription/0.yaml"
     interval: 2000
     path: subscription/0.yaml
+    health-check:
+      enable: true
+      interval: 2000
+      url: "http://www.gstatic.com/generate_204"
 
   1.c:
     type: file
     url: "https://raw.githubusercontent.com/songtao1873/clash/main/subscription/1.yaml"
     interval: 2000
     path: subscription/1.yaml
+    health-check:
+      enable: true
+      interval: 2000
+      url: "http://www.gstatic.com/generate_204"
 
   2.c:
     type: file
     url: "https://raw.githubusercontent.com/songtao1873/clash/main/subscription/2.yaml"
     interval: 2000
     path: subscription/2.yaml
+    health-check:
+      enable: true
+      interval: 2000
+      url: "http://www.gstatic.com/generate_204"
 
   3.c:
     type: file
     url: "https://raw.githubusercontent.com/songtao1873/clash/main/subscription/3.yaml"
     interval: 2000
     path: subscription/3.yaml
+    health-check:
+      enable: true
+      interval: 2000
+      url: "http://www.gstatic.com/generate_204"
 
   4.c:
     type: file
     url: "https://raw.githubusercontent.com/songtao1873/clash/main/subscription/4.yaml"
     interval: 2000
     path: subscription/4.yaml
+    health-check:
+      enable: true
+      interval: 2000
+      url: "http://www.gstatic.com/generate_204"
 
   5.c:
     type: file
     url: "https://raw.githubusercontent.com/songtao1873/clash/main/subscription/5.yaml"
     interval: 2000
     path: subscription/5.yaml
+    health-check:
+      enable: true
+      interval: 2000
+      url: "http://www.gstatic.com/generate_204"
 
   6.c:
     type: file
     url: "https://raw.githubusercontent.com/songtao1873/clash/main/subscription/6.yaml"
     interval: 2000
     path: subscription/6.yaml
+    health-check:
+      enable: true
+      interval: 2000
+      url: "http://www.gstatic.com/generate_204"
 
   7.c:
     type: file
     url: "https://raw.githubusercontent.com/songtao1873/clash/main/subscription/7.yaml"
     interval: 2000
     path: subscription/7.yaml
+    health-check:
+      enable: true
+      interval: 2000
+      url: "http://www.gstatic.com/generate_204"
 
   # 8.c:
   #   type: file
@@ -126,7 +157,7 @@ proxy-providers:
   #   path: subscription/8.yaml
   #   health-check:
   #     enable: true
-  #     interval: 1800
+  #     interval: 2000
   #     url: "http://www.gstatic.com/generate_204"
 
   # 9.c:
@@ -136,7 +167,7 @@ proxy-providers:
   #   path: subscription/9.yaml
   #   health-check:
   #     enable: true
-  #     interval: 1800
+  #     interval: 2000
   #     url: "http://www.gstatic.com/generate_204"
 
 
