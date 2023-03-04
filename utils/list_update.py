@@ -105,7 +105,7 @@ class update_url():
                     resp_content = resp_content.split('\n')
                     for line in resp_content:
                         if 'http' in line:
-                            url_update_array.append(line)
+                            url_update_array.append(line.replace('\r',''))
                         else:
                             continue
                 url_update = '|'.join(url_update_array)
