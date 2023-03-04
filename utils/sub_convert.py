@@ -131,7 +131,7 @@ class sub_convert():
                     continue
             elif 'trojan://' in node:
                 try:
-                    node_del_head = node.replace('trojan://', '')
+                    node_del_head = node.replace('trojan://', '').split('#')[0]
                     node_password = node_del_head.rsplit('@',1)[0]
                     node_list_expassword = re.split('\?|#', node_del_head.rsplit('@',1)[1])
                     node_part = [node_password] + node_list_expassword
@@ -639,5 +639,5 @@ class sub_convert():
 
         return yaml_content
 if __name__ == '__main__':
-    # sub_convert.format("trojan://18844@zxcvbn@os-tr-2.cats22.net:443?allowInsecure=1#%5B%F0%9F%87%A6%F0%9F%87%B6%5Dzxcvbn%40os-tr-2.cats22.net%3A443%2818844%29")
-    sub_convert.yaml_encode(["trojan://18844@zxcvbn@os-tr-2.cats22.net:443?allowInsecure=1#%5B%F0%9F%87%A6%F0%9F%87%B6%5Dzxcvbn%40os-tr-2.cats22.net%3A443%2818844%29"])
+    sub_convert.format("trojan://bc7593fe-0604-4fbe-a70bYWVzLTI1Ni1nYlWNFc1RmRBNk5NQU5KSnga3fa58ac5a3ef0-b4ab-11eb-b65e-1239d0255272@ca-trojan.bonds.id:443?allowInsecure=1#🇫🇷FR 7 → tg@nicevpn123")
+    # sub_convert.yaml_encode(["trojan://18844@zxcvbn@os-tr-2.cats22.net:443?allowInsecure=1#%5B%F0%9F%87%A6%F0%9F%87%B6%5Dzxcvbn%40os-tr-2.cats22.net%3A443%2818844%29"])
