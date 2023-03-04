@@ -33,7 +33,7 @@ def check_url(url):  # 判断远程远程链接是否已经更新
 
 class update_url():
 
-    def update_main(update_enable_list=[0, 11, 25, 35, 43, 54, 57, 67, 75]):
+    def update_main(update_enable_list=[0, 11, 25, 34, 43, 54, 57, 67, 75]):
         if len(update_enable_list) > 0:
             for id in update_enable_list:
                 status = update_url.update(id)
@@ -80,19 +80,7 @@ class update_url():
             else:
                 return [21, 404]
 
-        elif id == 43:
-            # remarks: v2raydy/v2ray, 将原链接更新至 https://https://raw.githubusercontent.com/v2raydy/v2ray/main/%MM-%(DD - 1)%str%1.txt
-            # 得到当前日期前一天 https://blog.csdn.net/wanghuafengc/article/details/42458721
-            today = datetime.today().strftime('%Y%m%d')
-            month = datetime.today().strftime('%Y%m') + '/'
-            front_url = 'https://nodefree.org/dy/'
-            end_url = '.txt'
-            url_update = front_url + month + today + end_url
-            if check_url(url_update):
-                return [43, url_update]
-            else:
-                return [43, 404]
-
+        
         elif id == 25:
             today = datetime.today().strftime('%Y%m%d')
             month = datetime.today().strftime('%m') + '/'
@@ -105,24 +93,59 @@ class update_url():
             else:
                 return [25, 404]
 
-        elif id == 35:
-            url_raw = 'https://raw.githubusercontent.com/arielherself/autosub/main/subs.txt'
+        elif id == 34:
+            url_raw = [
+                "https://raw.githubusercontent.com/WilliamStar007/ClashX-V2Ray-TopFreeProxy/main/combine/clashsub.txt",
+            ]
             url_update_array = []
-
             try:
-                resp = requests.get(url_raw, timeout=2)
-                resp_content = resp.content.decode('utf-8')
-                resp_content = resp_content.split('\n')
-                for line in resp_content:
-                    if 'http' in line:
-                        url_update_array.append(line)
-                    else:
-                        continue
+                for url in url_raw:
+                    resp = requests.get(url, timeout=3)
+                    resp_content = resp.content.decode('utf-8')
+                    resp_content = resp_content.split('\n')
+                    for line in resp_content:
+                        if 'http' in line:
+                            url_update_array.append(line)
+                        else:
+                            continue
                 url_update = '|'.join(url_update_array)
-                return [35, url_update]
+                return [34, url_update]
             except Exception as err:
                 print(err)
-                return [37, 404]
+                return [34, 404]
+
+        # elif id == 35:
+        #     url_raw = 'https://raw.githubusercontent.com/arielherself/autosub/main/subs.txt'
+        #     url_update_array = []
+
+        #     try:
+        #         resp = requests.get(url_raw, timeout=2)
+        #         resp_content = resp.content.decode('utf-8')
+        #         resp_content = resp_content.split('\n')
+        #         for line in resp_content:
+        #             if 'http' in line:
+        #                 url_update_array.append(line)
+        #             else:
+        #                 continue
+        #         url_update = '|'.join(url_update_array)
+        #         return [35, url_update]
+        #     except Exception as err:
+        #         print(err)
+        #         return [37, 404]
+            
+        elif id == 43:
+            # remarks: v2raydy/v2ray, 将原链接更新至 https://https://raw.githubusercontent.com/v2raydy/v2ray/main/%MM-%(DD - 1)%str%1.txt
+            # 得到当前日期前一天 https://blog.csdn.net/wanghuafengc/article/details/42458721
+            today = datetime.today().strftime('%Y%m%d')
+            year = datetime.today().strftime('%Y')
+            month = datetime.today().strftime('%m')
+            front_url = 'https://nodefree.org/dy/'
+            end_url = '.txt'
+            url_update = front_url + year + '/' + month + '/' + today + end_url
+            if check_url(url_update):
+                return [43, url_update]
+            else:
+                return [43, 404]
 
         elif id == 54:
             url_raw = [
